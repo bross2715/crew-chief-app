@@ -9,6 +9,7 @@ body{background:radial-gradient(900px 420px at 10% -10%,rgba(232,51,74,.14),tran
 .brand{font-family:var(--hd);font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;line-height:1;letter-spacing:.5px}.brand b{color:var(--brand)}
 .sub{color:var(--mut);font-size:11.5px;margin-top:3px}
 .drv{display:flex;align-items:center;gap:9px;background:var(--c1);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 5px;flex:none}
+.drv img.av{width:32px;height:32px;border-radius:50%;object-fit:cover;display:block}
 .drv i{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--brand),#6d1424);display:grid;place-items:center;font:700 14px var(--hd);font-style:normal}
 .drv b{display:block;font:700 15px var(--hd);letter-spacing:.5px;line-height:1}.drv small{color:var(--mut);font-size:10.5px}
 nav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;padding:8px 0 10px;background:linear-gradient(180deg,var(--bg) 70%,transparent);scrollbar-width:none}
@@ -280,7 +281,7 @@ return'<button class="'+cl+'" data-open="'+esc(n)+'"><span class="dot"></span><d
 function renderHome(){cur=null;var nx=SCHED[RACED],q=[];
 D.tracks.forEach(function(t){if(t.league&&t.league.fin)q.push(t.league.fin)});
 var best=q.length?Math.min.apply(null,q):null,avg=q.length?q.reduce(function(a,b){return a+b},0)/q.length:null,t5=q.filter(function(x){return x<=5}).length,t10=q.filter(function(x){return x<=10}).length;
-var h='<div class="app-top"><div class="logo">Crew Chief <b>HQ</b><small>NASCAR 26 &middot; Cup Next Gen &middot; 50% race &middot; 2x tire wear</small></div><div class="drv"><i>21</i><div><b>SOUTHPAW</b><small>Car 21 &middot; CCR</small></div></div></div>';
+var h='<div class="app-top"><div class="logo">Crew Chief <b>HQ</b><small>NASCAR 26 &middot; Cup Next Gen &middot; 50% race &middot; 2x tire wear</small></div><div class="drv"><img class="av" src="avatar.png" alt=""><div><b>SOUTHPAW</b><small>Car 21 &middot; CCR</small></div></div></div>';
 var nt=trk(nx),np=nt?'<p>Practice in progress on the DualSense. Best '+f3(nt.pb)+' ('+(nt.pb_status||'')+'). '+esc(nt.next_obj||'')+'</p>':'<p>Road course. None of your oval data carries over.</p>';
 h+='<div style="height:8px"></div>'+hero(nx,np+'<button class="go" data-open="'+esc(nx)+'">Open '+esc(nx)+'</button>');
 h+='<div class="card" style="grid-column:span 12"><div class="mini" style="grid-template-columns:repeat(4,1fr)"><div><small>Starts</small><b>'+q.length+'</b></div><div><small>Best finish</small><b class="g">'+(best?'P'+best:'n/a')+'</b></div><div><small>Avg finish</small><b>'+(avg?'P'+avg.toFixed(1):'n/a')+'</b></div><div><small>Top 5 / 10</small><b>'+t5+' / '+t10+'</b></div></div></div>';

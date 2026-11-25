@@ -22,10 +22,12 @@ pwa = ('<link rel="manifest" href="manifest.webmanifest">'
        '<link rel="apple-touch-icon" href="apple-touch-icon.png">'
        '<link rel="icon" href="icon-192.png">')
 
-site = tpl.replace("__PWA__", pwa).replace("__EMBED__", "false").replace("__DATA__", "null").replace("__MAPS__", "null")
+import base64
+avatar_uri = "data:image/png;base64," + base64.b64encode((root / "avatar.png").read_bytes()).decode()
+site = tpl.replace("__AVATAR__", "avatar.png").replace("__PWA__", pwa).replace("__EMBED__", "false").replace("__DATA__", "null").replace("__MAPS__", "null")
 (root / "index.html").write_text(site)
 
-art = tpl.replace("__PWA__", "").replace("__EMBED__", "true").replace("__DATA__", data).replace("__MAPS__", maps)
+art = tpl.replace("__AVATAR__", avatar_uri).replace("__PWA__", "").replace("__EMBED__", "true").replace("__DATA__", data).replace("__MAPS__", maps)
 (root / "dist").mkdir(exist_ok=True)
 (root / "dist" / "artifact.html").write_text(art)
 print("built index.html and dist/artifact.html")
