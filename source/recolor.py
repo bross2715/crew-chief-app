@@ -18,7 +18,7 @@ ap.add_argument("--sectors", required=True)
 ap.add_argument("--run", required=True)
 a = ap.parse_args()
 
-PRO = {"S1": 12.40, "S2": 14.18, "S3": 9.09, "S4": 9.39, "S5": 17.18, "S6": 9.35, "S7": 23.13}  # Pro Line hot lap sectors
+PRO = {"S1": 12.47, "S2": 14.16, "S3": 9.06, "S4": 9.38, "S5": 17.17, "S6": 9.36, "S7": 23.12}  # Pro Line hot lap sectors, HUD re-read 2026-11-25
 LEADER = 98.431  # field leader qualifying lap, seconds
 GREEN, AMBER = 0.015, 0.04
 scale = LEADER / sum(PRO.values())

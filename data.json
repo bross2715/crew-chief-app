@@ -753,17 +753,17 @@
        "n": 12,
        "incidents": 1,
        "best_ever": 12.78,
-       "target": 12.89,
-       "gap": 0.37,
-       "pct": 2.9
+       "target": 12.96,
+       "gap": 0.3,
+       "pct": 2.3
       },
-      "why": "S1: you average 13.26 s on clean laps, target 12.89 s, +0.37 s (+2.9%). Spread 0.40 s (loose). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S1: you average 13.26 s on clean laps, target 12.96 s, +0.30 s (+2.3%). Spread 0.40 s (loose). 1 spin, off or cut lap(s) not counted. ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "amber",
-        "gap": 0.37,
-        "pct": 2.9
+        "gap": 0.3,
+        "pct": 2.3
        }
       ]
      },
@@ -782,17 +782,17 @@
        "n": 12,
        "incidents": 2,
        "best_ever": 15.0,
-       "target": 14.74,
-       "gap": 0.56,
-       "pct": 3.8
+       "target": 14.71,
+       "gap": 0.58,
+       "pct": 3.9
       },
-      "why": "S2: you average 15.29 s on clean laps, target 14.74 s, +0.56 s (+3.8%). Spread 0.26 s (tight). 2 spin, off or cut lap(s) not counted. ",
+      "why": "S2: you average 15.29 s on clean laps, target 14.71 s, +0.58 s (+3.9%). Spread 0.26 s (tight). 2 spin, off or cut lap(s) not counted. ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "amber",
-        "gap": 0.56,
-        "pct": 3.8
+        "gap": 0.58,
+        "pct": 3.9
        }
       ]
      },
@@ -811,17 +811,17 @@
        "n": 14,
        "incidents": 0,
        "best_ever": 9.6,
-       "target": 9.45,
-       "gap": 0.81,
-       "pct": 8.6
+       "target": 9.41,
+       "gap": 0.84,
+       "pct": 8.9
       },
-      "why": "S3: you average 10.25 s on clean laps, target 9.45 s, +0.81 s (+8.6%). Spread 0.33 s (loose). ",
+      "why": "S3: you average 10.25 s on clean laps, target 9.41 s, +0.84 s (+8.9%). Spread 0.33 s (loose). ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
-        "gap": 0.81,
-        "pct": 8.6
+        "gap": 0.84,
+        "pct": 8.9
        }
       ]
      },
@@ -840,17 +840,17 @@
        "n": 10,
        "incidents": 3,
        "best_ever": 10.0,
-       "target": 9.76,
-       "gap": 0.65,
-       "pct": 6.7
+       "target": 9.75,
+       "gap": 0.66,
+       "pct": 6.8
       },
-      "why": "S4: you average 10.41 s on clean laps, target 9.76 s, +0.65 s (+6.7%). Spread 0.32 s (loose). 3 spin, off or cut lap(s) not counted. ",
+      "why": "S4: you average 10.41 s on clean laps, target 9.75 s, +0.66 s (+6.8%). Spread 0.32 s (loose). 3 spin, off or cut lap(s) not counted. ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
-        "gap": 0.65,
-        "pct": 6.7
+        "gap": 0.66,
+        "pct": 6.8
        }
       ]
      },
@@ -869,17 +869,17 @@
        "n": 9,
        "incidents": 1,
        "best_ever": 18.06,
-       "target": 17.85,
-       "gap": 1.1,
-       "pct": 6.1
+       "target": 17.84,
+       "gap": 1.11,
+       "pct": 6.2
       },
-      "why": "S5: you average 18.95 s on clean laps, target 17.85 s, +1.10 s (+6.1%). Spread 0.59 s (loose). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S5: you average 18.95 s on clean laps, target 17.84 s, +1.11 s (+6.2%). Spread 0.59 s (loose). 1 spin, off or cut lap(s) not counted. ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
-        "gap": 1.1,
-        "pct": 6.1
+        "gap": 1.11,
+        "pct": 6.2
        }
       ]
      },
@@ -898,17 +898,17 @@
        "n": 12,
        "incidents": 1,
        "best_ever": 9.8,
-       "target": 9.72,
-       "gap": 0.45,
-       "pct": 4.6
+       "target": 9.73,
+       "gap": 0.44,
+       "pct": 4.5
       },
-      "why": "S6: you average 10.17 s on clean laps, target 9.72 s, +0.45 s (+4.6%). Spread 0.22 s (tight). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S6: you average 10.17 s on clean laps, target 9.73 s, +0.44 s (+4.5%). Spread 0.22 s (tight). 1 spin, off or cut lap(s) not counted. ",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
-        "gap": 0.45,
-        "pct": 4.6
+        "gap": 0.44,
+        "pct": 4.5
        }
       ]
      },
@@ -927,17 +927,17 @@
        "n": 11,
        "incidents": 0,
        "best_ever": 24.685,
-       "target": 24.04,
-       "gap": 1.18,
-       "pct": 4.9
+       "target": 24.03,
+       "gap": 1.19,
+       "pct": 5.0
       },
-      "why": "S7: you average 25.22 s on clean laps, target 24.04 s, +1.18 s (+4.9%). Spread 0.48 s (loose). Biggest gap on the lap.",
+      "why": "S7: you average 25.22 s on clean laps, target 24.03 s, +1.19 s (+5.0%). Spread 0.48 s (loose). Biggest gap on the lap.",
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
-        "gap": 1.18,
-        "pct": 4.9
+        "gap": 1.19,
+        "pct": 5.0
        }
       ]
      }
@@ -965,7 +965,7 @@
       "y": 66.7,
       "lx": 217.3,
       "ly": 72.7,
-      "spot": "2"
+      "spot": "5"
      },
      {
       "n": "4",
@@ -973,7 +973,7 @@
       "y": 58.0,
       "lx": 205.4,
       "ly": 54.1,
-      "spot": "2"
+      "spot": "5"
      },
      {
       "n": "5",
@@ -1093,7 +1093,7 @@
       "stats": [
        [
         "Apex",
-        "41 mph, 1st gear"
+        "43 mph, 1st gear"
        ],
        [
         "S1 clean avg",
@@ -1105,6 +1105,12 @@
        ]
       ],
       "blocks": [
+       {
+        "h": "Front straight",
+        "i": [
+         "Top speed 151-152 mph in 5th just after the line. Speed starts dropping for T1 about 2.6 s after the line on your best lap."
+        ]
+       },
        {
         "h": "What happened",
         "i": [
@@ -1138,7 +1144,7 @@
         ],
         [
          "You",
-         "1st, 41 mph"
+         "1st, 43 mph"
         ]
        ],
        "items": [
@@ -1153,75 +1159,74 @@
      {
       "id": "2",
       "turns": [
-       "2",
-       "3",
-       "4"
+       "2"
       ],
-      "title": "Esses, T2 to T4",
+      "title": "T2",
       "chip": "Small gain",
       "tier": "amber",
-      "sub": "Fast and steady. Don't touch it.",
+      "sub": "Fast right-hander after the T1 exit. About 5 s flat out follows it, up to 133 mph, before T3.",
       "stats": [
        [
-        "Speed",
-        "100-116 mph, 3rd-4th"
+        "T2",
+        "100 mph, 3rd"
+       ],
+       [
+        "Peak after it",
+        "133 mph, 4th to 5th"
        ],
        [
         "S2 spread",
         "0.26 s, 2nd of 7"
-       ],
-       [
-        "S2 best",
-        "15.00 s"
        ]
       ],
       "blocks": [
        {
         "h": "What the data says",
         "i": [
-         "Clean laps are steady, range 0.75 s.",
-         "The only problems in S2 are two corner-cut penalties at T5 and T6.",
-         "Where one turn ends and the next starts inside the esses is Grokbot's guess."
+         "Best lap: 100 mph in 3rd at T2, then flat out to 133 mph before T3.",
+         "Clean S2 laps are steady, range 0.75 s. The only S2 problems are the T5 and T6 cuts."
         ]
        }
       ],
       "line": null,
       "src": "Grokbot sector report",
       "sec": "S2",
-      "pro": {
-       "stats": null,
-       "items": [
-        "Cuts the esses in a straight line. NASCAR 26 is more forgiving here than older games, but there is still a limit.",
-        "A lot of time is won or lost in the esses."
-       ],
-       "gap": "You cut the same line every lap, which matches. Your esses are already steady."
-      }
+      "pro": null
      },
      {
       "id": "5",
       "turns": [
+       "3",
+       "4",
        "5",
        "6"
       ],
-      "title": "T5 and T6",
+      "title": "T3 to T6",
       "chip": "No cutting",
       "tier": "red",
-      "sub": "Two corner-cut penalties cost about 13 s. The car handles fine here.",
+      "sub": "Four quick flicks back to back, about 20.5 to 26.5 s on the lap clock. The car handles fine here. The only losses are corner cuts at T5 and T6.",
       "stats": [
        [
-        "Speed",
-        "112-116 mph at T5"
+        "T3 and T4",
+        "110-118 mph, 5th"
        ],
        [
-        "Cost",
+        "T5 and T6",
+        "95-105 mph, 4th"
+       ],
+       [
+        "Cost of cuts",
         "+7.54 s and +6.23 s"
-       ],
-       [
-        "Type",
-        "Driver fix only"
        ]
       ],
       "blocks": [
+       {
+        "h": "What the data says",
+        "i": [
+         "Best lap: T3 118 mph, T4 110-114 mph, both in 5th. T5 105 mph and T6 95-98 mph in 4th.",
+         "The 112-116 mph at T5 was the lap you cut it (clip 2 lap 8), not your best lap."
+        ]
+       },
        {
         "h": "What happened",
         "i": [
@@ -1261,7 +1266,7 @@
       "stats": [
        [
         "Best lap apex",
-        "49 mph"
+        "48 mph"
        ],
        [
         "Slow lap",
@@ -1276,7 +1281,7 @@
        {
         "h": "What the data says",
         "i": [
-         "49 mph at the apex on your best lap (clip 3 lap 4). Clip 3 lap 5 was 41 mph and lost about 1 s.",
+         "48 mph at the apex on your best lap (clip 3 lap 4). Clip 3 lap 5 was 41 mph and lost about 1 s.",
          "A car spinning alongside at 6A cost time on clip 4 lap 9."
         ]
        },
@@ -1346,16 +1351,12 @@
       "pro": {
        "stats": [
         [
-         "Min speed",
-         "92-93 mph, 3rd"
-        ],
-        [
-         "You",
-         "80-82 mph, 2nd"
-        ],
-        [
          "S3 gap",
-         "+0.91 s best lap"
+         "+0.94 s best lap"
+        ],
+        [
+         "Best-ever gap",
+         "+0.54 s"
         ]
        ],
        "items": [
@@ -1399,7 +1400,7 @@
        {
         "h": "Where the speed is (Grokbot turn read)",
         "i": [
-         "Top speed about 118 mph against 126. Same T12 braking point, so the difference comes off 6B."
+         "Top speed about 119 mph against 126. Same T12 braking point, so the difference comes off 6B."
         ]
        }
       ],
@@ -1414,7 +1415,7 @@
         ],
         [
          "You",
-         "~118 mph"
+         "~119 mph"
         ],
         [
          "T12 brake",
@@ -1424,9 +1425,9 @@
        "items": [
         "Shifts 3rd to 4th at 115 mph.",
         "Brakes for T12 at about the same spot as you, peak about 83% on his bar, then tapers off over 3.2 s.",
-        "Arrives at T12 about 8 mph faster because he left 6B faster."
+        "Arrives at T12 about 7 mph faster because he left 6B faster."
        ],
-       "gap": "Your braking point is the same. The 8 mph is carried off 6B, so fix 6B first. At T12 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
+       "gap": "Your braking point is the same. The 7 mph is carried off 6B, so fix 6B first. At T12 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
       }
      },
      {
@@ -1505,11 +1506,11 @@
       "stats": [
        [
         "T13",
-        "43 mph, 1st"
+        "45 mph, 1st"
        ],
        [
         "T14",
-        "69-76 mph, 1st-2nd"
+        "68 mph in 1st, then 2nd at 82-90"
        ],
        [
         "S5 spread",
@@ -1547,7 +1548,7 @@
         ],
         [
          "S5 gap",
-         "+1.82 s best lap"
+         "+1.83 s best lap"
         ]
        ],
        "items": [
@@ -1570,7 +1571,7 @@
       "stats": [
        [
         "Apex",
-        "43 mph, 1st"
+        "41 mph, 1st"
        ],
        [
         "Exit",
@@ -1622,7 +1623,7 @@
       "stats": [
        [
         "Speed",
-        "87-106 mph, 3rd-4th"
+        "90-108 mph, 3rd only"
        ],
        [
         "S6 spread",
@@ -1645,7 +1646,7 @@
        {
         "h": "Where the speed is (Grokbot turn read)",
         "i": [
-         "Consistent but slow: three separate slowdowns, 89, 94 and 91 mph, all in 3rd.",
+         "Consistent but slow: three separate slowdowns, 90, 95 and 91 mph, all in 3rd.",
          "The middle one, around T17, looks like a brake stab (inferred from the speed trace)."
         ]
        }
@@ -1661,11 +1662,11 @@
         ],
         [
          "You",
-         "89 mph, 3rd"
+         "90 mph, 3rd"
         ],
         [
          "S6 gap",
-         "+0.65 s best lap"
+         "+0.64 s best lap"
         ]
        ],
        "items": [
@@ -1673,7 +1674,7 @@
         "Then a steady throttle build through T17 to T18: 26-31%, then 51-57%, then 69-83%.",
         "One small dip to 17% at T18, full throttle by the exit. Speed climbs 95 to 116 with no dips."
        ],
-       "gap": "You slow down three times (89, 94, 91 mph in 3rd), and the middle one looks like a brake stab (inferred, no input display). Try one lift at T16, a beat later than the bridge, then a steady squeeze with no brake mid-carousel. Aim for 92+ mph and no second or third dip."
+       "gap": "You slow down three times (90, 95, 91 mph in 3rd), and the middle one looks like a brake stab (inferred, no input display). Try one lift at T16, a beat later than the bridge, then a steady squeeze with no brake mid-carousel. Aim for 92+ mph and no second or third dip."
       }
      },
      {
@@ -1748,7 +1749,7 @@
       "stats": [
        [
         "Speed",
-        "48 mph, 1st gear"
+        "47 mph, 1st gear"
        ],
        [
         "S7 range",
@@ -1783,7 +1784,7 @@
         ],
         [
          "S7 gap",
-         "+1.56 s with T19"
+         "+1.57 s with T19"
         ]
        ],
        "items": [
