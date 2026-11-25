@@ -179,6 +179,9 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .rls button{border:0;border-radius:4px;height:26px;color:#06090d;font:800 11px var(--bd);padding:0;min-width:0}
 .rls .red{background:var(--red)}.rls .amber{background:var(--gold)}.rls .green{background:var(--green)}
 .rls button.on{outline:2px solid var(--cy);outline-offset:1px}
+.cpri{margin:6px 0 4px 18px;padding:0;font-size:13.5px;line-height:1.4}.cpri li{margin:0 0 6px}.cpri b{color:var(--gold)}.ckeep{margin:6px 0 4px 18px;padding:0;font-size:13.5px;line-height:1.4;color:#cfd5de}.ch4{font:700 11px var(--bd);letter-spacing:1.2px;text-transform:uppercase;color:var(--cy);margin:14px 0 4px}.ch4.g{color:var(--green)}
+.crow{border-top:1px solid rgba(255,255,255,.08);padding:10px 0}.crow .ch{display:flex;justify-content:space-between;align-items:center}.crow .ch b{font:800 italic 20px var(--hd)}.cv{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0}.cv div{background:rgba(255,255,255,.04);border-radius:6px;padding:7px;font-size:13px;font-weight:700}.cv small{display:block;color:var(--mut);font-size:10px;letter-spacing:.8px;text-transform:uppercase;font-weight:600}
+.cg,.cf{font-size:13.5px;line-height:1.4;margin-top:4px}.cg em,.cf em{font-style:normal;font:700 10px var(--bd);letter-spacing:1px;text-transform:uppercase;margin-right:4px}.cg em{color:var(--green)}.cf em{color:var(--red)}
 .rls.was{margin:3px 0 0}.rls.was span{height:6px;border-radius:3px;opacity:.85}.rls.was .red{background:var(--red)}.rls.was .amber{background:var(--gold)}.rls.was .green{background:var(--green)}.wlb{color:var(--mut);font-size:11px;margin:4px 0 0;line-height:1.35}
 .rlg{display:flex;gap:12px;flex-wrap:wrap;color:var(--mut);font-size:11px;margin:4px 0 0}.rlg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 .rp{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.03);padding:12px}
@@ -308,6 +311,11 @@ sp.blocks.forEach(function(b){h+='<h4>'+esc(b.h)+'</h4><ul>'+b.i.map(function(i)
 if(sp.line)h+='<div class="ln">'+esc(sp.line)+'</div>';
 if(sp.src)h+='<div class="ln">Source: '+esc(sp.src)+'</div>'}
 h+='<div class="nv"><button data-spot="'+pv.id+'">&lsaquo; '+esc(repChipLbl(pv))+'</button><button data-spot="'+nx.id+'">'+esc(repChipLbl(nx))+' &rsaquo;</button></div>';return h}
+function cornerList(t){var r=t&&t.report;if(!r||!r.priorities)return'';
+var pri='<ol class="cpri">'+r.priorities.map(function(x){return'<li><b>'+esc(x[0])+'</b> '+esc(x[1])+'</li>'}).join('')+'</ol>';
+var keep='<ul class="ckeep">'+r.keep.map(function(x){return'<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+var rows=r.spots.filter(function(s){return s.row}).map(function(s){var w=s.row;return'<div class="crow" data-spot="'+s.id+'"><div class="ch"><b>'+esc(repChipLbl(s))+'</b><span class="pill '+s.tier+'">'+esc(s.chip)+'</span></div><div class="cv"><div><small>You</small>'+esc(w.you)+'</div><div><small>Pro Line</small>'+esc(w.pro)+'</div></div><div class="cg"><em>Good</em> '+esc(w.good)+'</div><div class="cf"><em>Fix</em> '+esc(w.fix)+'</div></div>'}).join('');
+return'<div class="card" style="grid-column:span 12"><div class="lbl">Corner by corner<em>in lap order</em></div><h4 class="ch4">Fix first, in order</h4>'+pri+'<h4 class="ch4 g">Keep doing</h4>'+keep+'<h4 class="ch4">Every corner, you against the Pro Line</h4>'+rows+'</div>'}
 function progressCard(t){var p=t.progress;if(!p)return'';var mx=Math.max.apply(null,p.steps.map(function(x){return x[1]})),mn=Math.min.apply(null,p.steps.map(function(x){return x[1]}));
 var h='<div class="card prog" style="grid-column:span 12"><div class="lbl">'+esc(p.title)+'<em>'+esc(p.sub)+'</em></div><div class="mini" style="grid-template-columns:repeat(3,1fr)">'+p.stats.map(function(x,i){return'<div><small>'+esc(x[0])+'</small><b'+(i===1?' class="g"':'')+' style="font-size:'+(i===2?'20':'24')+'px">'+esc(x[1])+'</b></div>'}).join('')+'</div>';
 h+='<h4 class="ph">Best lap, setup by setup</h4><div class="stp">'+p.steps.map(function(x){var w=30+70*(1-(x[1]-mn)/((mx-mn)||1));return'<div class="sr"><span class="sn">'+esc(x[0])+'</span><span class="sb"><i style="width:'+w.toFixed(0)+'%"></i></span><b>'+f3(x[1])+'</b><em class="'+(x[2]==null?'':'g')+'">'+(x[2]==null?'start':(x[2]>0?'+':'')+x[2].toFixed(3))+'</em></div>'}).join('')+'</div>';
@@ -402,7 +410,7 @@ var first=L.length?L[0].lap:null,pb=t.pb;
 var solo=soloLaps(L).map(function(l){return l.lap}),hot=solo.length?Math.min.apply(null,solo):null,bs=best(S,t);
 var h=bar(name)+hero(name,'');
 h+='<div class="bento">';
-h+=reportCard(t)+progressCard(t)+proCard(t);h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
+h+=reportCard(t)+cornerList(t)+progressCard(t)+proCard(t);h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
 h+='<div class="card s6"><div class="lbl">Key issue</div><div style="font-size:13.5px;line-height:1.45">'+(t.key_issue||"None logged")+'</div></div><div class="card s6"><div class="lbl">Next objective</div><div style="font-size:13.5px;line-height:1.45;color:#dfe3ea">'+(t.next_obj||'None set')+'</div></div>';
 h+=controllerCard(t)+hotCard(L)+stintCard(t);
 h+=seasonCard(name);

@@ -1154,6 +1154,12 @@
         "Throttle starts around 20-30% and builds as the wheel unwinds."
        ],
        "gap": "Your fix lines up with this: small throttle first, then build. The gear is the difference. Automatic picks 1st for you."
+      },
+      "row": {
+       "you": "43 mph, 1st",
+       "pro": "46-47 mph, 2nd",
+       "good": "Braking point and exit speed are about the same as the Pro Line. T1 was clean on both race laps.",
+       "fix": "Exit spins in 1st when throttle goes down before the wheel is straight. Hold about a quarter throttle until the wheel unwinds."
       }
      },
      {
@@ -1191,7 +1197,13 @@
       "line": null,
       "src": "Grokbot sector report",
       "sec": "S2",
-      "pro": null
+      "pro": null,
+      "row": {
+       "you": "100 mph, 3rd",
+       "pro": "no read yet",
+       "good": "Fast and steady, then flat out to 133 mph. No incidents.",
+       "fix": "Nothing to fix. No Pro Line read of this corner yet."
+      }
      },
      {
       "id": "5",
@@ -1252,6 +1264,12 @@
         "A lot of time is won or lost in the esses."
        ],
        "gap": "You went over the limit three times: clip 2 out lap and lap 8, clip 3 lap 1. Find the edge, then stay a car width wider than it."
+      },
+      "row": {
+       "you": "T3 118, T4 110-114, T5 105, T6 95-98",
+       "pro": "no read yet",
+       "good": "Fast and steady. You passed cars here in the race.",
+       "fix": "Corner cuts at T5/T6 cost 6 to 8 s each, four times so far. Keep the outside tires on the asphalt."
       }
      },
      {
@@ -1305,6 +1323,12 @@
         "Lots of partial throttle on the way out so the car doesn't spin."
        ],
        "gap": "Your braking point is already right. The gain is starting the turn a fraction earlier."
+      },
+      "row": {
+       "you": "48 mph, 1st",
+       "pro": "52-53 mph, 2nd",
+       "good": "Your braking point is already right: straight line at the gantry.",
+       "fix": "Start the turn a fraction earlier and carry 48-50 mph through the apex."
       }
      },
      {
@@ -1365,6 +1389,12 @@
         "Stays in 3rd the whole way onto the back straight."
        ],
        "gap": "You lift and coast down to about 82 mph in 2nd (your inputs are inferred, no input display). Treat 6B as a part-throttle corner: light throttle through the apex and aim for 88-90 mph. This sets up the whole back straight."
+      },
+      "row": {
+       "you": "80-82 mph, 2nd",
+       "pro": "92-93 mph, 3rd",
+       "good": "No spins or penalties in 15 timed laps.",
+       "fix": "You lift and coast. The Pro Line driver holds 20-26% throttle. Use light throttle through the apex and aim for 88-90 mph."
       }
      },
      {
@@ -1428,6 +1458,12 @@
         "Arrives at T12 about 7 mph faster because he left 6B faster."
        ],
        "gap": "Your braking point is the same. The 7 mph is carried off 6B, so fix 6B first. At T12 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
+      },
+      "row": {
+       "you": "top 119 mph",
+       "pro": "top 126 mph",
+       "good": "You brake for T12 at about the same spot as the Pro Line.",
+       "fix": "The speed gap comes off 6B. Fix 6B first."
       }
      },
      {
@@ -1491,6 +1527,12 @@
         "Work the throttle up gradually."
        ],
        "gap": "Your clean laps at T12 do this. The four incidents all came from throttle going down while the car was still turning."
+      },
+      "row": {
+       "you": "43 mph, 1st",
+       "pro": "55-56 mph, 2nd",
+       "good": "Clean on both race laps and in clip 4.",
+       "fix": "Lost the car 3 times in clip 3. Quarter throttle until the nose points at the tower. The Pro Line driver trail brakes for 3.2 s, then 3-25% throttle."
       }
      },
      {
@@ -1557,6 +1599,12 @@
         "Stays in 2nd, so the exit has less wheelspin."
        ],
        "gap": "You are about 7 mph slower at the apex and in 1st. Release the brake a bit earlier and aim for about 50 mph. S5 is also your least consistent sector. Timing error is about 0.4 s per sector."
+      },
+      "row": {
+       "you": "45 mph, 1st",
+       "pro": "52-53 mph, 2nd",
+       "good": "The speed is in you: your best-ever S5 is 18.06 s.",
+       "fix": "Your least consistent sector. Release the brake earlier, aim for about 50 mph, and first throttle at the apex."
       }
      },
      {
@@ -1607,6 +1655,12 @@
         "Front feels numb and the rear wants to snap. Green paint is very slippery under power."
        ],
        "gap": "Grokbot reads this as your T15 exit, not confirmed. Automatic puts you in 1st here. Your partial throttle is what fixed it."
+      },
+      "row": {
+       "you": "41 mph, 1st",
+       "pro": "49-52 mph, 2nd",
+       "good": "Exit clean on every timed lap in clips 3 and 4. This was a spin and an off before.",
+       "fix": "Apex speed. Hold 10-20% throttle through the apex like the Pro Line driver."
       }
      },
      {
@@ -1675,6 +1729,12 @@
         "One small dip to 17% at T18, full throttle by the exit. Speed climbs 95 to 116 with no dips."
        ],
        "gap": "You slow down three times (90, 95, 91 mph in 3rd), and the middle one looks like a brake stab (inferred, no input display). Try one lift at T16, a beat later than the bridge, then a steady squeeze with no brake mid-carousel. Aim for 92+ mph and no second or third dip."
+      },
+      "row": {
+       "you": "90, 95, 91 mph, 3rd",
+       "pro": "95 mph, 4th",
+       "good": "Your most consistent sector: spread 0.22 s.",
+       "fix": "Three slowdowns, and the middle one looks like a brake stab. One lift at T16, then a steady squeeze. Aim for 92+ mph."
       }
      },
      {
@@ -1735,6 +1795,12 @@
         "Cuts the inside of the corner."
        ],
        "gap": "This is the biggest speed gap on the lap, about 20 mph, and it is driving, not setup. Use about half the brake and come off it sooner. Aim for 85 mph, then 90. Try any inside cut in practice only, since the game penalizes cuts."
+      },
+      "row": {
+       "you": "74-77 mph, 2nd",
+       "pro": "95-97 mph, 3rd",
+       "good": "Your best lap holds the best-ever S7. Same braking point as the Pro Line (about 128 mph).",
+       "fix": "You slow down too much, about 20 mph. Use about half the brake and come off sooner. Aim for 85 mph, then 90."
       }
      },
      {
@@ -1792,6 +1858,12 @@
         "No separate throttle read for this corner."
        ],
        "gap": "Same pattern as the other slow corners: you are slower at the apex and in 1st. Most of the S7 gap is T19, so fix that first."
+      },
+      "row": {
+       "you": "47 mph, 1st",
+       "pro": "54-56 mph, 2nd",
+       "good": "No spins of your own at T20.",
+       "fix": "About 8 mph slower at the apex. Fix T19 first, most of the S7 gap is there."
       }
      }
     ],
@@ -1812,7 +1884,40 @@
     "runs": [
      "Nov 24 practice (clips 2-4)"
     ],
-    "goal": "Goal: every sector at or under 1.5% off the target (leader qualifying pace 98.431). Colors are recomputed from each run's clean laps."
+    "goal": "Goal: every sector at or under 1.5% off the target (leader qualifying pace 98.431). Colors are recomputed from each run's clean laps.",
+    "priorities": [
+     [
+      "T5/T6 cuts",
+      "Stay on the asphalt. A cut cost 6 to 8 s in the race. Free time."
+     ],
+     [
+      "T19",
+      "Half brake, off sooner, 85 mph minimum. Biggest sector gap on the lap, about 1.2 s."
+     ],
+     [
+      "T1 and T12 exits",
+      "Quarter throttle until the wheel unwinds. Every spin so far is here, in 1st."
+     ],
+     [
+      "T13 and T15 apex",
+      "Brake release earlier, about 50 mph, light throttle through the apex. S5 is your least consistent sector."
+     ],
+     [
+      "6B exit",
+      "Light throttle instead of coasting. It sets up the whole back straight."
+     ],
+     [
+      "Carousel",
+      "One lift at T16, no brake mid-carousel. Consistent already, just slow."
+     ]
+    ],
+    "keep": [
+     "Esses T2 to T6: fast and steady, apart from the cuts.",
+     "Braking points at T1, 6A, T12 and T19 match the Pro Line.",
+     "T15 exit: clean on every timed lap since the throttle fix.",
+     "T1 and T12 exits were clean on the race laps.",
+     "Carousel is your most consistent sector."
+    ]
    },
    "progress": {
     "title": "Your progress",
