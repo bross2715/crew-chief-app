@@ -152,6 +152,47 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .plan{display:grid;gap:8px;margin-top:4px}.plan div{background:var(--c2);border-radius:6px;padding:10px 12px;font-size:13.5px;line-height:1.4;color:#dfe5ee;border-left:3px solid var(--cy)}
 .plan b{display:block;font:700 12px var(--bd);letter-spacing:1.1px;text-transform:uppercase;color:var(--cy);margin-bottom:2px}
 .tile .mfill,.hmap .mfill{stroke:none}
+
+/* track report */
+.rep{padding:12px 12px 14px}
+.rep .hd2{font:600 12.5px var(--bd);color:#cfd5de;margin:-2px 0 6px}
+.rep svg{width:100%;height:auto;display:block;touch-action:manipulation}
+.rep .cs{fill:none;stroke:#1a212c;stroke-width:20;stroke-linecap:round;stroke-linejoin:round}
+.rep .sg{fill:none;stroke-width:12.5;stroke-linecap:butt;stroke-linejoin:round}
+.rep .sg.red{stroke:var(--red)}.rep .sg.amber{stroke:var(--gold)}.rep .sg.green{stroke:var(--green)}
+.rep .ld{stroke:rgba(255,255,255,.3);stroke-width:1.2}
+.rep .dt{fill:#fff}.rep .dt.on{fill:var(--cy);animation:pl 1.4s ease-in-out infinite}
+@keyframes pl{50%{r:6}}
+.rep .tc{fill:#0a0e14;stroke:rgba(255,255,255,.6);stroke-width:1.7}
+.rep .tx{fill:#fff;font:700 13px var(--bd);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.rep .tn.on .tc{fill:#0d3b52;stroke:var(--cy);stroke-width:3}
+.rep .tn.on .tx{fill:var(--cy)}
+.rep .bsl{fill:#9aa7b8;font:700 11px var(--bd);letter-spacing:1.4px;text-anchor:middle}
+.rep .bsl.on{fill:var(--cy)}
+.rep .sfm{stroke:#fff;stroke-width:3.5;stroke-dasharray:4 4}
+.rep .sft{fill:#fff;font:700 12px var(--bd)}
+.rrow{display:flex;gap:6px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}.rrow::-webkit-scrollbar{display:none}
+.rc{flex:none;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#dfe5ee;border-radius:999px;padding:7px 12px;font:700 12.5px var(--bd);border-left:4px solid #6b7686}
+.rc.red{border-left-color:var(--red)}.rc.amber{border-left-color:var(--gold)}.rc.green{border-left-color:var(--green)}
+.rc.on{background:rgba(95,208,255,.16);border-color:var(--cy);color:#fff}
+.rls{display:flex;gap:3px;margin:8px 0 2px}
+.rls button{border:0;border-radius:4px;height:26px;color:#06090d;font:800 11px var(--bd);padding:0;min-width:0}
+.rls .red{background:var(--red)}.rls .amber{background:var(--gold)}.rls .green{background:var(--green)}
+.rls button.on{outline:2px solid var(--cy);outline-offset:1px}
+.rlg{display:flex;gap:12px;flex-wrap:wrap;color:var(--mut);font-size:11px;margin:4px 0 0}.rlg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.rp{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.03);padding:12px}
+.rp .top{display:flex;align-items:center;gap:8px}
+.rp h3{font:800 italic 24px/1.05 var(--hd);text-transform:uppercase;flex:1;min-width:0}
+.rp .pill{font:800 11px var(--bd);letter-spacing:.8px;text-transform:uppercase;border-radius:999px;padding:4px 10px;color:#06090d;background:#8391a3;white-space:nowrap}
+.rp .pill.red{background:var(--red)}.rp .pill.amber{background:var(--gold)}.rp .pill.green{background:var(--green)}
+.rp .sub{color:#cfd5de;font-size:13.5px;line-height:1.4;margin:6px 0 10px}
+.rp .st{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
+.rp .st div{background:rgba(255,255,255,.04);border-radius:6px;padding:7px 8px}
+.rp .st small{display:block;color:var(--mut);font-size:10px;letter-spacing:.8px;text-transform:uppercase}.rp .st b{font:700 15px/1.15 var(--hd);display:block;margin-top:2px}
+.rp h4{font:700 11px var(--bd);letter-spacing:1.2px;text-transform:uppercase;color:var(--cy);margin:10px 0 4px}
+.rp ul{margin:0;padding-left:17px}.rp li{font-size:13.5px;line-height:1.42;margin:3px 0;color:#e6eaf0}
+.rp .ln{margin-top:10px;font-size:12px;color:var(--mut);line-height:1.4}
+.rp .nv{display:flex;gap:8px;margin-top:12px}.rp .nv button{flex:1;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;border-radius:8px;padding:9px;font:700 12.5px var(--bd)}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d5a"/><stop offset=".5" stop-color="#ffc83d"/><stop offset="1" stop-color="#2ee27a"/></linearGradient>
@@ -238,6 +279,34 @@ h+=O.map(function(l){return'<div class="lap"><b>'+f3(l.lap)+'</b><span>'+l.label
 var RL=(t&&t.race_log)||(name==="Darlington"?D.race:null);if(RL)h+='<div class="lbl" style="margin-top:12px">Race log</div>'+RL.map(function(r){return'<div class="lap"><b>'+r.t+'</b><span>'+r.d+'</span><small>'+tag(r.s)+'</small></div>'}).join('');
 return h||'<div class="mut sm">No laps logged.</div>'}
 function controllerCard(t){var c=t.controller;if(!c)return'';return'<div class="card" style="grid-column:span 12"><div class="lbl">Controller profile<em>'+esc(c.device)+' &middot; '+esc(c.status)+'</em></div><div class="psi" style="grid-template-columns:repeat(auto-fill,minmax(112px,1fr));text-align:left">'+c.rows.map(function(r){return'<div style="padding:6px 8px"><small style="font-size:10px">'+esc(r[0])+'</small><b>'+r[1]+'</b></div>'}).join('')+'</div>'+(c.note?'<div class="mut sm" style="margin-top:8px">'+esc(c.note)+'</div>':'')+'</div>'}
+
+var repSel=null;
+function repTurnsLbl(sp){var a=sp.turns;if(!a.length)return'';return a.length>1?'T'+a[0]+'-'+a[a.length-1]:(/A|B/.test(a[0])?a[0]:'T'+a[0])}
+function repChipLbl(sp){if(sp.id==='bs')return'Straight';var a=sp.turns;if(a.length===1)return/[AB]/.test(a[0])?a[0]:'T'+a[0];return'T'+a[0]+'-'+a[a.length-1]}
+function repPanel(r,sp){var ix=r.spots.indexOf(sp),k=r.spots.length,pv=r.spots[(ix-1+k)%k],nx=r.spots[(ix+1)%k];
+var h='<div class="top"><h3>'+esc(sp.title)+'</h3><span class="pill '+sp.tier+'">'+esc(sp.chip)+'</span></div><div class="sub">'+esc(sp.sub)+'</div>';
+h+='<div class="st">'+sp.stats.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>'}).join('')+'</div>';
+sp.blocks.forEach(function(b){h+='<h4>'+esc(b.h)+'</h4><ul>'+b.i.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul>'});
+if(sp.line)h+='<div class="ln">'+esc(sp.line)+'</div>';
+if(sp.src)h+='<div class="ln">Source: '+esc(sp.src)+'</div>';
+h+='<div class="nv"><button data-spot="'+pv.id+'">&lsaquo; '+esc(repChipLbl(pv))+'</button><button data-spot="'+nx.id+'">'+esc(repChipLbl(nx))+' &rsaquo;</button></div>';return h}
+function reportCard(t){var r=t.report;if(!r)return'';repSel=r.first;
+var v=r.vb,sp0=r.spots.filter(function(x){return x.id===repSel})[0];
+var svg='<svg viewBox="'+v.join(' ')+'" role="img" aria-label="'+esc(t.track)+' track report"><path class="cs" d="'+r.loop+'"/>';
+r.sectors.forEach(function(s){svg+='<path class="sg '+s.tier+'" d="'+s.d+'"/>'});
+var f=r.sf,nx=-f.ty,ny=f.tx;svg+='<line class="sfm" x1="'+(f.x-nx*13)+'" y1="'+(f.y-ny*13)+'" x2="'+(f.x+nx*13)+'" y2="'+(f.y+ny*13)+'"/><text class="sft" x="'+(f.x-nx*24-8)+'" y="'+(f.y-ny*24+4)+'">S/F</text>';
+r.turns.forEach(function(q){svg+='<g class="tn" data-spot="'+q.spot+'" data-t="'+q.n+'"><line class="ld" x1="'+q.x+'" y1="'+q.y+'" x2="'+q.lx+'" y2="'+q.ly+'"/><circle class="dt" cx="'+q.x+'" cy="'+q.y+'" r="3.4"/><circle class="tc" cx="'+q.lx+'" cy="'+q.ly+'" r="13.5"/><text class="tx" x="'+q.lx+'" y="'+(q.ly+.5)+'">'+q.n+'</text><circle cx="'+q.lx+'" cy="'+q.ly+'" r="22" fill="transparent"/></g>'});
+svg+='<g class="bsg" data-spot="bs"><text class="bsl" x="'+r.bs.x+'" y="'+r.bs.y+'">BACK STRAIGHT</text><rect x="'+(r.bs.x-62)+'" y="'+(r.bs.y-16)+'" width="124" height="24" fill="transparent"/></g></svg>';
+var chips='<div class="rrow">'+r.spots.map(function(s){return'<button class="rc '+s.tier+'" data-spot="'+s.id+'">'+esc(repChipLbl(s))+'</button>'}).join('')+'</div>';
+var strip='<div class="rls">'+r.sectors.map(function(s){return'<button class="'+s.tier+'" data-sec="'+s.id+'" data-spot="'+s.spot+'" style="flex:'+(s.f1-s.f0).toFixed(3)+'">'+s.id+'</button>'}).join('')+'</div>';
+return'<div class="card rep" style="grid-column:span 12"><div class="lbl">Track report<em>tap a turn</em></div><div class="hd2">'+esc(r.head)+'</div>'+svg+chips+strip+'<div class="rlg"><span><i style="background:var(--green)"></i>Good</span><span><i style="background:var(--gold)"></i>Small gain</span><span><i style="background:var(--red)"></i>Needs work</span><span>Sectors S1-S7 to scale</span></div><div class="rp" id="rp">'+repPanel(r,sp0)+'</div><div class="mut sm" style="margin-top:8px">'+esc(r.note)+'</div></div>'}
+function selSpot(id){var t=trk(cur),r=t&&t.report;if(!r)return;var sp=r.spots.filter(function(x){return x.id===id})[0];if(!sp)return;repSel=id;
+document.getElementById("rp").innerHTML=repPanel(r,sp);
+Array.prototype.forEach.call(document.querySelectorAll(".rep .tn"),function(g){g.classList.toggle("on",g.getAttribute("data-spot")===id);var d=g.querySelector(".dt");if(d)d.classList.toggle("on",g.getAttribute("data-spot")===id)});
+var b=document.querySelector(".rep .bsg .bsl");if(b)b.classList.toggle("on",id==="bs");
+Array.prototype.forEach.call(document.querySelectorAll(".rep .rc"),function(c){var on=c.getAttribute("data-spot")===id;c.classList.toggle("on",on);if(on&&c.scrollIntoView){try{c.scrollIntoView({block:"nearest",inline:"center"})}catch(x){}}});
+Array.prototype.forEach.call(document.querySelectorAll(".rep .rls button"),function(c){c.classList.toggle("on",c.getAttribute("data-sec")===sp.sec)})}
+function repInit(){var t=trk(cur);if(t&&t.report)selSpot(t.report.first)}
 function soloLaps(L){return L.filter(function(l){return !l.pack})}
 function hotCard(L){var s=soloLaps(L).slice().sort(function(a,b){return a.lap-b.lap}).slice(0,8);
 var p=L.filter(function(l){return l.pack});
@@ -307,7 +376,7 @@ var first=L.length?L[0].lap:null,pb=t.pb;
 var solo=soloLaps(L).map(function(l){return l.lap}),hot=solo.length?Math.min.apply(null,solo):null,bs=best(S,t);
 var h=bar(name)+hero(name,'');
 h+='<div class="bento">';
-h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
+h+=reportCard(t);h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
 h+='<div class="card s6"><div class="lbl">Key issue</div><div style="font-size:13.5px;line-height:1.45">'+(t.key_issue||"None logged")+'</div></div><div class="card s6"><div class="lbl">Next objective</div><div style="font-size:13.5px;line-height:1.45;color:#dfe3ea">'+(t.next_obj||'None set')+'</div></div>';
 h+=controllerCard(t)+hotCard(L)+stintCard(t);
 h+=seasonCard(name);
@@ -320,7 +389,7 @@ h+=paceCard(t,L)+setupCard(S)+'<div class="card s4"><div class="lbl">Lap trend</
 h+=carCard(t)+readCard(t)+compareCard(t);
 h+='<div class="card s6"><div class="lbl">All laps<em>'+(name==="Darlington"?"unordered samples":"as logged")+'</em></div><div style="max-height:520px;overflow:auto">'+lapList(L,O,pb,name,t)+'</div></div>';
 h+='</div></details>';
-document.getElementById("main").innerHTML=h}
+document.getElementById("main").innerHTML=h;repInit()}
 function fmt(v){return v==null?"not set":Number(v).toFixed(1)}
 function buildMsg(s){var L=[s.track+" setup "+s.id];
 L.push("Left front "+fmt(s.lf)+", Right front "+fmt(s.rf));
@@ -333,6 +402,7 @@ return L.join("\n")}
 var sheet=document.getElementById("sheet"),msgEl=document.getElementById("msg");
 document.getElementById("main").addEventListener("click",function(e){
 var b=e.target.closest(".send");if(b){var s=D.setups.filter(function(x){return x.id===b.getAttribute("data-id")})[0];if(!s)return;msgEl.value=buildMsg(s);sheet.hidden=false;document.getElementById("shr").style.display=navigator.share?"":"none";return}
+var spt=e.target.closest("[data-spot]");if(spt){selSpot(spt.getAttribute("data-spot"));return}
 var sn=e.target.closest("[data-snap]");if(sn){snapI=+sn.getAttribute("data-snap");render(cur);return}
 var tr=e.target.closest("[data-track]");if(tr){openTrack(tr.getAttribute("data-track"));return}
 var op=e.target.closest("[data-open]");if(op){openTrack(op.getAttribute("data-open"));return}
