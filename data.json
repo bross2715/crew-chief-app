@@ -615,8 +615,8 @@
    "long_run": null,
    "finish": null,
    "pref_race": "15 / 15 / 17.5 / 17.5, wedge 51, Neutral",
-   "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T12 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap.",
-   "next_obj": "Next run, one setup change: Braking Strength 75 to 65 (proposed, not loaded yet). Everything else stays: Neutral, LF 15, RF 15, LR 17.5, RR 17.5, wedge 51, Throttle Non Linear 60. 1 warmup lap, 10 timed laps, record a clip. Driving: T12, T13, T15, T20 release the brake earlier, aim about 50 mph at the apex with a little throttle through it; T19 about half brake, aim 85 mph minimum; about a quarter throttle at T1 and T12 until the wheel unwinds. If T1 runs wide on entry, Braking Strength goes up to 70. Report: best lap, clean average, clean laps of 10, T19 minimum speed, wide entries, spins and where. Also read back Stability Help and Brake Smoothing values. Automatic only, no manual.",
+   "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T12 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
+   "next_obj": "Next run, one setup change: Braking Strength 75 to 65 (proposed, not loaded yet). Everything else stays: Neutral, LF 15, RF 15, LR 17.5, RR 17.5, wedge 51, Throttle Non Linear 60. 1 warmup lap, 10 timed laps, record a clip. Driving: T12, T13, T15, T20 release the brake earlier, aim about 50 mph at the apex with a little throttle through it; T19 about half brake, aim 85 mph minimum; about a quarter throttle at T1 and T12 until the wheel unwinds. If T1 runs wide on entry, Braking Strength goes up to 70. Report: best lap, clean average, clean laps of 10, T19 minimum speed, wide entries, spins and where. Also read back Stability Help and Brake Smoothing values. Automatic only, no manual. Race rule: treat T5/T6 as a no-cut zone, keep the outside tires on the asphalt. After passing up to the mid-teens, leave a car length before T15.",
    "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T12 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 17 turns numbered 1 to 6, 6A, 6B, 12 to 20, no T7 to T11 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
    "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.685 (13th fastest, 2.839 s off the leader when reported). Race 8, not run yet",
@@ -1191,6 +1191,13 @@
         "i": [
          "No spins or penalties here in 15 timed laps."
         ]
+       },
+       {
+        "h": "Where the speed is (Grokbot turn read)",
+        "i": [
+         "You coast down to about 82 mph in 2nd after a light lift (inferred).",
+         "The Pro Line driver never brakes here and keeps 92-93 mph in 3rd."
+        ]
        }
       ],
       "line": "Sector line: 6B exit, red/white exit curb on the right, long straight opening up.",
@@ -1199,19 +1206,24 @@
       "pro": {
        "stats": [
         [
-         "S3 gap",
-         "+0.91 s best lap"
+         "Min speed",
+         "92-93 mph, 3rd"
         ],
         [
-         "Best-ever gap",
-         "+0.51 s"
+         "You",
+         "80-82 mph, 2nd"
+        ],
+        [
+         "S3 gap",
+         "+0.91 s best lap"
         ]
        ],
        "items": [
-        "No separate read of 6B. The only measurement is sector 3, which covers 6A and 6B together.",
-        "6A speed: 52-53 mph in 2nd, against your ~45 in 1st."
+        "No brake at all through 6B.",
+        "Holds 20-26% throttle for about 1.4 s, then full throttle.",
+        "Stays in 3rd the whole way onto the back straight."
        ],
-       "gap": "About half of the S3 gap probably comes from the 6A entry speed. Treat 6B as unmeasured until we get a clip of it."
+       "gap": "You lift and coast down to about 82 mph in 2nd (your inputs are inferred, no input display). Treat 6B as a part-throttle corner: light throttle through the apex and aim for 88-90 mph. This sets up the whole back straight."
       }
      },
      {
@@ -1243,6 +1255,12 @@
          "A light-blue AI car alongside on the back straight on clip 4 lap 9.",
          "Clip 2 lap 9: contact under braking with AI cars at the end of this straight."
         ]
+       },
+       {
+        "h": "Where the speed is (Grokbot turn read)",
+        "i": [
+         "Top speed about 118 mph against 126. Same T12 braking point, so the difference comes off 6B."
+        ]
        }
       ],
       "line": null,
@@ -1251,15 +1269,24 @@
       "pro": {
        "stats": [
         [
-         "S4 gap",
-         "+0.61 s best lap"
+         "Top speed",
+         "126 mph"
+        ],
+        [
+         "You",
+         "~118 mph"
+        ],
+        [
+         "T12 brake",
+         "3.2 s, trail braking"
         ]
        ],
        "items": [
-        "No separate read of the back straight. Sector 4 runs from the back straight to the T12 exit.",
-        "T12 apex: 55-56 mph in 2nd, against your 42-45 in 1st. He holds 3-25% throttle for about 1.4 s, then builds."
+        "Shifts 3rd to 4th at 115 mph.",
+        "Brakes for T12 at about the same spot as you, peak about 83% on his bar, then tapers off over 3.2 s.",
+        "Arrives at T12 about 8 mph faster because he left 6B faster."
        ],
-       "gap": "The S4 gap is mostly the T12 apex speed and the exit, not the straight. Fix T12 first."
+       "gap": "Your braking point is the same. The 8 mph is carried off 6B, so fix 6B first. At T12 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
       }
      },
      {
@@ -1474,6 +1501,13 @@
          "The one big number here, +4.44 s on clip 2 lap 10, was recovering from the T15 off in the grass. It wasn't the carousel.",
          "The exit is where your line changes most. Timing precision there is about 0.3 s, so some time moves between S6 and S7."
         ]
+       },
+       {
+        "h": "Where the speed is (Grokbot turn read)",
+        "i": [
+         "Consistent but slow: three separate slowdowns, 89, 94 and 91 mph, all in 3rd.",
+         "The middle one, around T17, looks like a brake stab (inferred from the speed trace)."
+        ]
        }
       ],
       "line": "Sector line: T18 exit, blue/red curb on the left, short chute toward T19.",
@@ -1482,19 +1516,24 @@
       "pro": {
        "stats": [
         [
-         "S6 gap",
-         "+0.65 s best lap"
+         "T16 min",
+         "95 mph, 4th"
         ],
         [
-         "Best-ever gap",
-         "+0.45 s"
+         "You",
+         "89 mph, 3rd"
+        ],
+        [
+         "S6 gap",
+         "+0.65 s best lap"
         ]
        ],
        "items": [
-        "No turn-by-turn read of T16 to T18, only the sector time.",
-        "Your best-ever S6 is already close, so the gap is small."
+        "One lift at T16, no brake, 0% throttle for about 1.2 s.",
+        "Then a steady throttle build through T17 to T18: 26-31%, then 51-57%, then 69-83%.",
+        "One small dip to 17% at T18, full throttle by the exit. Speed climbs 95 to 116 with no dips."
        ],
-       "gap": "This is the smallest gap on the lap and it is within the timing error of about 0.4 s. Not a priority."
+       "gap": "You slow down three times (89, 94, 91 mph in 3rd), and the middle one looks like a brake stab (inferred, no input display). Try one lift at T16, a beat later than the bridge, then a steady squeeze with no brake mid-carousel. Aim for 92+ mph and no second or third dip."
       }
      },
      {
