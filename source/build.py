@@ -20,7 +20,12 @@ pwa = ('<link rel="manifest" href="manifest.webmanifest">'
        '<meta name="apple-mobile-web-app-title" content="Crew Chief">'
        '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
        '<link rel="apple-touch-icon" href="apple-touch-icon.png">'
-       '<link rel="icon" href="icon-192.png">')
+       '<link rel="icon" href="icon-192.png">'
+       '<meta property="og:title" content="Crew Chief HQ">'
+       '<meta property="og:description" content="NASCAR 26 setups, laps and coaching for Southpaw">'
+       '<meta property="og:image" content="https://bross2715.github.io/crew-chief-app/icon-512.png">'
+       '<meta property="og:url" content="https://bross2715.github.io/crew-chief-app/">'
+       '<meta name="twitter:card" content="summary">')
 
 import base64
 avatar_uri = "data:image/png;base64," + base64.b64encode((root / "avatar.png").read_bytes()).decode()
