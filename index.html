@@ -194,6 +194,17 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .rp .ln{margin-top:10px;font-size:12px;color:var(--mut);line-height:1.4}
 .rp .nv{display:flex;gap:8px;margin-top:12px}.rp .nv button{flex:1;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;border-radius:8px;padding:9px;font:700 12.5px var(--bd)}
 .hdr{padding:4px 2px 12px}.hdr .rn{font:700 15px var(--hd);letter-spacing:1.6px;color:var(--cy);text-transform:uppercase;margin-bottom:4px}.hdr h1{font:800 italic clamp(40px,12vw,64px)/.95 var(--hd);text-transform:uppercase;letter-spacing:.5px}.hdr .res{display:flex;gap:6px 22px;margin-top:12px}.hdr .res div{display:flex;flex-direction:column}.hdr .res small{color:var(--mut);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase}.hdr .res b{font:700 26px/1.05 var(--hd)}
+
+.rtabs{display:flex;gap:6px;margin:8px 0 2px}.rtabs button{flex:1;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cfd5de;border-radius:8px;padding:8px;font:700 12.5px var(--bd);letter-spacing:.6px;text-transform:uppercase}
+.rtabs button.on{background:rgba(95,208,255,.16);border-color:var(--cy);color:#fff}
+.prog .ph,.pro .ph{font:700 11px var(--bd);letter-spacing:1.2px;text-transform:uppercase;color:var(--cy);margin:12px 0 6px}.prog .ph.g{color:var(--green)}.prog .ph.r{color:var(--red)}
+.prog ul{margin:0;padding-left:16px}.prog li{font-size:13px;line-height:1.4;margin:3px 0;color:#e6eaf0}
+.stp .sr{display:grid;grid-template-columns:104px 1fr 62px 52px;gap:8px;align-items:center;margin:6px 0;font-size:12.5px}
+.stp .sn{color:#cfd5de;line-height:1.15}.stp .sb{height:8px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden}.stp .sb i{display:block;height:100%;background:linear-gradient(90deg,var(--green),#7dffb0);border-radius:4px}
+.stp b{font:700 15px var(--hd);text-align:right}.stp em{font-style:normal;font-size:11.5px;color:var(--mut);text-align:right}.stp em.g{color:var(--green)}
+.kvs{margin-top:10px;display:grid;gap:6px}.kvs div{background:rgba(255,255,255,.04);border-radius:6px;padding:8px 10px}.kvs small{display:block;color:var(--mut);font-size:10px;letter-spacing:.8px;text-transform:uppercase}.kvs span{display:block;font-size:12.5px;color:#9aa7b8;margin-top:2px}.kvs b{display:block;font-size:13.5px;margin-top:1px}
+.prog .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:420px){.prog .two{grid-template-columns:1fr}}
+.pro{border-color:rgba(255,210,63,.28)}.prt{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.prt div{background:rgba(255,255,255,.04);border-radius:6px;padding:8px}.prt small{display:block;color:var(--mut);font-size:10px;letter-spacing:.8px;text-transform:uppercase}.prt b{font:700 21px/1.1 var(--hd);color:var(--gold);display:block;margin-top:2px}.prt span{display:block;font-size:11px;color:var(--mut);margin-top:2px;line-height:1.25}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d5a"/><stop offset=".5" stop-color="#ffc83d"/><stop offset="1" stop-color="#2ee27a"/></linearGradient>
@@ -284,14 +295,26 @@ function controllerCard(t){var c=t.controller;if(!c)return'';return'<div class="
 var repSel=null;
 function repTurnsLbl(sp){var a=sp.turns;if(!a.length)return'';return a.length>1?'T'+a[0]+'-'+a[a.length-1]:(/A|B/.test(a[0])?a[0]:'T'+a[0])}
 function repChipLbl(sp){if(sp.id==='bs')return'Straight';var a=sp.turns;if(a.length===1)return/[AB]/.test(a[0])?a[0]:'T'+a[0];return'T'+a[0]+'-'+a[a.length-1]}
+var repTab="you";
 function repPanel(r,sp){var ix=r.spots.indexOf(sp),k=r.spots.length,pv=r.spots[(ix-1+k)%k],nx=r.spots[(ix+1)%k];
-var h='<div class="top"><h3>'+esc(sp.title)+'</h3><span class="pill '+sp.tier+'">'+esc(sp.chip)+'</span></div><div class="sub">'+esc(sp.sub)+'</div>';
+var h='<div class="top"><h3>'+esc(sp.title)+'</h3><span class="pill '+sp.tier+'">'+esc(sp.chip)+'</span></div><div class="rtabs"><button data-rtab="you" class="'+(repTab==="you"?"on":"")+'">You</button><button data-rtab="pro" class="'+(repTab==="pro"?"on":"")+'">Pro Line</button></div>';
+if(repTab==="pro"){var p=sp.pro;h+='<div class="sub">'+(p?'What the benchmark does here, next to what you do.':'Nothing from the Pro Line on this turn yet.')+'</div>';
+if(p){if(p.stats)h+='<div class="st">'+p.stats.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>'}).join('')+'</div>';
+h+='<h4>Pro Line</h4><ul>'+p.items.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul><h4>You against it</h4><div class="sub" style="margin:2px 0 0">'+esc(p.gap)+'</div>'}}
+else{h+='<div class="sub">'+esc(sp.sub)+'</div>';
 h+='<div class="st">'+sp.stats.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>'}).join('')+'</div>';
 sp.blocks.forEach(function(b){h+='<h4>'+esc(b.h)+'</h4><ul>'+b.i.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul>'});
 if(sp.line)h+='<div class="ln">'+esc(sp.line)+'</div>';
-if(sp.src)h+='<div class="ln">Source: '+esc(sp.src)+'</div>';
+if(sp.src)h+='<div class="ln">Source: '+esc(sp.src)+'</div>'}
 h+='<div class="nv"><button data-spot="'+pv.id+'">&lsaquo; '+esc(repChipLbl(pv))+'</button><button data-spot="'+nx.id+'">'+esc(repChipLbl(nx))+' &rsaquo;</button></div>';return h}
-function reportCard(t){var r=t.report;if(!r)return'';repSel=r.first;
+function progressCard(t){var p=t.progress;if(!p)return'';var mx=Math.max.apply(null,p.steps.map(function(x){return x[1]})),mn=Math.min.apply(null,p.steps.map(function(x){return x[1]}));
+var h='<div class="card prog" style="grid-column:span 12"><div class="lbl">'+esc(p.title)+'<em>'+esc(p.sub)+'</em></div><div class="mini" style="grid-template-columns:repeat(3,1fr)">'+p.stats.map(function(x,i){return'<div><small>'+esc(x[0])+'</small><b'+(i===1?' class="g"':'')+' style="font-size:'+(i===2?'20':'24')+'px">'+esc(x[1])+'</b></div>'}).join('')+'</div>';
+h+='<h4 class="ph">Best lap, setup by setup</h4><div class="stp">'+p.steps.map(function(x){var w=30+70*(1-(x[1]-mn)/((mx-mn)||1));return'<div class="sr"><span class="sn">'+esc(x[0])+'</span><span class="sb"><i style="width:'+w.toFixed(0)+'%"></i></span><b>'+f3(x[1])+'</b><em class="'+(x[2]==null?'':'g')+'">'+(x[2]==null?'start':(x[2]>0?'+':'')+x[2].toFixed(3))+'</em></div>'}).join('')+'</div>';
+h+='<div class="kvs">'+p.rows.map(function(r){return'<div><small>'+esc(r[0])+'</small><span>'+esc(r[1])+'</span><b>'+esc(r[2])+'</b></div>'}).join('')+'</div>';
+h+='<div class="two"><div><h4 class="ph g">Fixed</h4><ul>'+p.fixed.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul></div><div><h4 class="ph r">Still open</h4><ul>'+p.open.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul></div></div><div class="mut sm" style="margin-top:8px">'+esc(p.note)+'</div></div>';return h}
+function proCard(t){var p=t.proline,pb=t.pb;if(!p)return'';
+return'<div class="card pro" style="grid-column:span 12"><div class="lbl">'+esc(p.title)+'<em>'+esc(p.sub)+'</em></div><div class="prt">'+p.times.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b><span>'+esc(x[3])+' +'+x[2].toFixed(3)+'</span></div>'}).join('')+'</div><div class="sub" style="margin:8px 0 0;color:#cfd5de;font-size:13.5px">'+esc(p.gaps)+'</div><div class="mut sm" style="margin-top:8px">'+esc(p.note)+'</div></div>'}
+function reportCard(t){var r=t.report;if(!r)return'';repSel=r.first;repTab='you';
 var v=r.vb,k=r.k,sp0=r.spots.filter(function(x){return x.id===repSel})[0];
 var svg='<svg viewBox="'+v.join(' ')+'" style="--k:'+k+'" role="img" aria-label="'+esc(t.track)+' track report"><path class="cs" d="'+r.loop+'"/>';
 r.sectors.forEach(function(s){svg+='<path class="sg '+s.tier+'" d="'+s.d+'"/>'});
@@ -377,7 +400,7 @@ var first=L.length?L[0].lap:null,pb=t.pb;
 var solo=soloLaps(L).map(function(l){return l.lap}),hot=solo.length?Math.min.apply(null,solo):null,bs=best(S,t);
 var h=bar(name)+hero(name,'');
 h+='<div class="bento">';
-h+=reportCard(t);h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
+h+=reportCard(t)+progressCard(t)+proCard(t);h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
 h+='<div class="card s6"><div class="lbl">Key issue</div><div style="font-size:13.5px;line-height:1.45">'+(t.key_issue||"None logged")+'</div></div><div class="card s6"><div class="lbl">Next objective</div><div style="font-size:13.5px;line-height:1.45;color:#dfe3ea">'+(t.next_obj||'None set')+'</div></div>';
 h+=controllerCard(t)+hotCard(L)+stintCard(t);
 h+=seasonCard(name);
@@ -403,6 +426,7 @@ return L.join("\n")}
 var sheet=document.getElementById("sheet"),msgEl=document.getElementById("msg");
 document.getElementById("main").addEventListener("click",function(e){
 var b=e.target.closest(".send");if(b){var s=D.setups.filter(function(x){return x.id===b.getAttribute("data-id")})[0];if(!s)return;msgEl.value=buildMsg(s);sheet.hidden=false;document.getElementById("shr").style.display=navigator.share?"":"none";return}
+var rt=e.target.closest("[data-rtab]");if(rt){repTab=rt.getAttribute("data-rtab");selSpot(repSel);return}
 var spt=e.target.closest("[data-spot]");if(spt){selSpot(spt.getAttribute("data-spot"));return}
 var sn=e.target.closest("[data-snap]");if(sn){snapI=+sn.getAttribute("data-snap");render(cur);return}
 var tr=e.target.closest("[data-track]");if(tr){openTrack(tr.getAttribute("data-track"));return}
