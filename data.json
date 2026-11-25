@@ -615,9 +615,9 @@
    "long_run": null,
    "finish": null,
    "pref_race": "15 / 15 / 17.5 / 17.5, wedge 51, Neutral",
-   "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T12 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
-   "next_obj": "Next run, one change: Braking Strength 75 to 65 (not loaded yet). 10 timed laps with a clip. Apex about 50 mph at T12, T13, T15, T20. T19 half brake, 85 mph minimum. Quarter throttle at T1 and T12 until the wheel unwinds. T1 runs wide on entry: go to 70. In a race, no cutting at T5/T6.",
-   "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T12 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 17 turns numbered 1 to 6, 6A, 6B, 12 to 20, no T7 to T11 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
+   "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T11 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
+   "next_obj": "Next run, one change: Braking Strength 75 to 65 (not loaded yet). 10 timed laps with a clip. Apex about 50 mph at T11, T12, T15, T20. T19 half brake, 85 mph minimum. Quarter throttle at T1 and T11 until the wheel unwinds. T1 runs wide on entry: go to 70. In a race, no cutting at T5/T6.",
+   "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T11 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 18 turns numbered 1 to 6, 6A, 6B, 11 to 20 (NASCAR fan map, 2026-11-25), no T7 to T10 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
    "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.685 (13th fastest, 2.839 s off the leader when reported). Race 8, not run yet",
    "controller": {
@@ -710,7 +710,7 @@
     },
     {
      "t": "Clip 2: wedge 51",
-     "d": "Rears back to 17.5, wedge 51. Laps 1:44.438, 1:42.028, 1:45.968 (T1 slide), 1:51.022 (corner cut stop), 1:45.067 (contact at T12), 1:47.872 (off at T15). Best lap is 1.46 s under the Neutral baseline (Grokbot HUD read)",
+     "d": "Rears back to 17.5, wedge 51. Laps 1:44.438, 1:42.028, 1:45.968 (T1 slide), 1:51.022 (corner cut stop), 1:45.067 (contact at T11), 1:47.872 (off at T15). Best lap is 1.46 s under the Neutral baseline (Grokbot HUD read)",
      "s": "reported"
     },
     {
@@ -720,7 +720,7 @@
     },
     {
      "t": "Clips 3 and 4",
-     "d": "Throttle Non Linear 60, Neutral, wedge 51, rears 17.5. New best 1:41.685. T15 clean on every timed lap. T12 exit lost 3 times in clip 3, clean in clip 4. T1 exit spun in clip 3 lap 8 and clip 4 lap 11. Clean laps 1:43.09 to 1:43.44 average (Grokbot HUD read)",
+     "d": "Throttle Non Linear 60, Neutral, wedge 51, rears 17.5. New best 1:41.685. T15 clean on every timed lap. T11 exit lost 3 times in clip 3, clean in clip 4. T1 exit spun in clip 3 lap 8 and clip 4 lap 11. Clean laps 1:43.09 to 1:43.44 average (Grokbot HUD read)",
      "s": "reported"
     },
     {
@@ -827,7 +827,7 @@
      },
      {
       "id": "S4",
-      "name": "Back straight to T12",
+      "name": "Back straight to T11",
       "tier": "red",
       "f0": 0.389,
       "f1": 0.48,
@@ -856,7 +856,7 @@
      },
      {
       "id": "S5",
-      "name": "T13 to T15",
+      "name": "T12 to T15",
       "tier": "red",
       "f0": 0.48,
       "f1": 0.625,
@@ -1008,7 +1008,7 @@
       "spot": "6b"
      },
      {
-      "n": "12",
+      "n": "11",
       "x": 155.2,
       "y": 18.1,
       "lx": 149.0,
@@ -1016,7 +1016,7 @@
       "spot": "12"
      },
      {
-      "n": "13",
+      "n": "12",
       "x": 191.0,
       "y": 40.0,
       "lx": 200.9,
@@ -1024,12 +1024,20 @@
       "spot": "13"
      },
      {
-      "n": "14",
+      "n": "13",
       "x": 168.2,
       "y": 41.8,
       "lx": 173.0,
       "ly": 51.3,
       "spot": "13"
+     },
+     {
+      "n": "14",
+      "spot": "13",
+      "x": 151.4,
+      "y": 31.3,
+      "lx": 145.0,
+      "ly": 20.5
      },
      {
       "n": "15",
@@ -1312,7 +1320,7 @@
         ]
        }
       ],
-      "line": "Best-ever S3 is 9.60 s (clip 3 lap 3). Lower confidence than the T1 and T12 work.",
+      "line": "Best-ever S3 is 9.60 s (clip 3 lap 3). Lower confidence than the T1 and T11 work.",
       "src": "Grokbot feedback #5",
       "sec": "S3",
       "pro": {
@@ -1400,10 +1408,10 @@
      {
       "id": "bs",
       "turns": [],
-      "title": "Back straight into T12",
+      "title": "Back straight into T11",
       "chip": "Info",
       "tier": "gray",
-      "sub": "Where your speed comes from before the T12 braking zone.",
+      "sub": "Where your speed comes from before the T11 braking zone.",
       "stats": [
        [
         "S4 clean avg",
@@ -1422,7 +1430,7 @@
        {
         "h": "What the data says",
         "i": [
-         "Clean laps here are fine. The big losses in S4 are all at T12 itself.",
+         "Clean laps here are fine. The big losses in S4 are all at T11 itself.",
          "A light-blue AI car alongside on the back straight on clip 4 lap 9.",
          "Clip 2 lap 9: contact under braking with AI cars at the end of this straight."
         ]
@@ -1430,7 +1438,7 @@
        {
         "h": "Where the speed is (Grokbot turn read)",
         "i": [
-         "Top speed about 119 mph against 126. Same T12 braking point, so the difference comes off 6B."
+         "Top speed about 119 mph against 126. Same T11 braking point, so the difference comes off 6B."
         ]
        }
       ],
@@ -1448,30 +1456,30 @@
          "~119 mph"
         ],
         [
-         "T12 brake",
+         "T11 brake",
          "3.2 s, trail braking"
         ]
        ],
        "items": [
         "Shifts 3rd to 4th at 115 mph.",
-        "Brakes for T12 at about the same spot as you, peak about 83% on his bar, then tapers off over 3.2 s.",
-        "Arrives at T12 about 7 mph faster because he left 6B faster."
+        "Brakes for T11 at about the same spot as you, peak about 83% on his bar, then tapers off over 3.2 s.",
+        "Arrives at T11 about 7 mph faster because he left 6B faster."
        ],
-       "gap": "Your braking point is the same. The 7 mph is carried off 6B, so fix 6B first. At T12 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
+       "gap": "Your braking point is the same. The 7 mph is carried off 6B, so fix 6B first. At T11 he ends at 55-56 mph in 2nd and you end at 43-45 in 1st."
       },
       "row": {
        "you": "top 119 mph",
        "pro": "top 126 mph",
-       "good": "You brake for T12 at about the same spot as the Pro Line.",
+       "good": "You brake for T11 at about the same spot as the Pro Line.",
        "fix": "The speed gap comes off 6B. Fix 6B first."
       }
      },
      {
       "id": "12",
       "turns": [
-       "12"
+       "11"
       ],
-      "title": "T12 hairpin",
+      "title": "T11 hairpin",
       "chip": "Fix first",
       "tier": "red",
       "sub": "The corner that keeps biting. 4 incidents on timed laps, about 9.6 s lost.",
@@ -1517,7 +1525,7 @@
         ]
        }
       ],
-      "line": "Sector line: T12 exit, observation tower ahead-right, green paint on the left of the exit.",
+      "line": "Sector line: T11 exit, observation tower ahead-right, green paint on the left of the exit.",
       "src": "Grokbot clips 2-4, feedback #5",
       "sec": "S4",
       "pro": {
@@ -1526,7 +1534,7 @@
         "Green paint is very slippery under power.",
         "Work the throttle up gradually."
        ],
-       "gap": "Your clean laps at T12 do this. The four incidents all came from throttle going down while the car was still turning."
+       "gap": "Your clean laps at T11 do this. The four incidents all came from throttle going down while the car was still turning."
       },
       "row": {
        "you": "43 mph, 1st",
@@ -1538,20 +1546,21 @@
      {
       "id": "13",
       "turns": [
+       "12",
        "13",
        "14"
       ],
-      "title": "T13 and T14",
+      "title": "T12 to T14",
       "chip": "Needs work",
       "tier": "red",
       "sub": "S5 holds the most time and is your least consistent sector.",
       "stats": [
        [
-        "T13",
+        "T12",
         "45 mph, 1st"
        ],
        [
-        "T14",
+        "T13",
         "68 mph in 1st, then 2nd at 82-90"
        ],
        [
@@ -1565,17 +1574,18 @@
         "i": [
          "Best-ever S5 is 18.06 s (clip 4 lap 9). Your best lap had 19.00. Clean laps average 0.89 s slower than best-ever.",
          "The speed is in you here. You just don't get it every lap.",
-         "Alongside an AI car at T13 on clip 2 lap 6 and clip 4 lap 10. Not held up, and the sector was quick."
+         "Alongside an AI car at T12 on clip 2 lap 6 and clip 4 lap 10. Not held up, and the sector was quick.",
+         "T14, the bend before T15, has no read yet."
         ]
        },
        {
         "h": "Next step",
         "i": [
-         "Frame-compare clip 4 lap 9 against clip 3 lap 4 through T13, T14 and T15 to find the line and throttle difference."
+         "Frame-compare clip 4 lap 9 against clip 3 lap 4 through T12, T13 and T15 to find the line and throttle difference."
         ]
        }
       ],
-      "line": "S5 runs from T12 exit to T15 exit.",
+      "line": "S5 runs from T11 exit to T15 exit.",
       "src": "Grokbot sector report",
       "sec": "S5",
       "pro": {
@@ -1831,7 +1841,7 @@
         "h": "What the data says",
         "i": [
          "Clip 3 lap 6: an AI car spun at T20 right in front of you. Not your mistake.",
-         "Automatic puts you in 1st here, like T1, T12 and T15. No spins of yours at T20 so far."
+         "Automatic puts you in 1st here, like T1, T11 and T15. No spins of yours at T20 so far."
         ]
        }
       ],
@@ -1895,11 +1905,11 @@
       "Half brake, off sooner, 85 mph minimum. Biggest sector gap on the lap, about 1.2 s."
      ],
      [
-      "T1 and T12 exits",
+      "T1 and T11 exits",
       "Quarter throttle until the wheel unwinds. Every spin so far is here, in 1st."
      ],
      [
-      "T13 and T15 apex",
+      "T12 and T15 apex",
       "Brake release earlier, about 50 mph, light throttle through the apex. S5 is your least consistent sector."
      ],
      [
@@ -1913,9 +1923,9 @@
     ],
     "keep": [
      "Esses T2 to T6: fast and steady, apart from the cuts.",
-     "Braking points at T1, 6A, T12 and T19 match the Pro Line.",
+     "Braking points at T1, 6A, T11 and T19 match the Pro Line.",
      "T15 exit: clean on every timed lap since the throttle fix.",
-     "T1 and T12 exits were clean on the race laps.",
+     "T1 and T11 exits were clean on the race laps.",
      "Carousel is your most consistent sector."
     ]
    },
@@ -1972,11 +1982,11 @@
     ],
     "fixed": [
      "T15 exit: no off or snap on any timed lap in clips 3 and 4.",
-     "T12 exit: clean on both laps of clip 4."
+     "T11 exit: clean on both laps of clip 4."
     ],
     "open": [
      "T1 exit spins, now the main one.",
-     "T12 on timed laps: 4 incidents, about 9.6 s.",
+     "T11 on timed laps: 4 incidents, about 9.6 s.",
      "T5 and T6 corner cuts."
     ],
     "note": "Practice rank is from different sessions, so it is a rough guide. Lap times are your own HUD readings."
@@ -2512,7 +2522,7 @@
    "track": "COTA",
    "seq": 11,
    "lap": 105.06700000000001,
-   "label": "COT-03 wedge 51, contact at T12",
+   "label": "COT-03 wedge 51, contact at T11",
    "status": "reported",
    "series": "main"
   },
@@ -2544,7 +2554,7 @@
    "track": "COTA",
    "seq": 15,
    "lap": 106.49600000000001,
-   "label": "COT-04 clip 3 lap 3, off at T12 exit",
+   "label": "COT-04 clip 3 lap 3, off at T11 exit",
    "status": "reported",
    "series": "main"
   },
@@ -2560,7 +2570,7 @@
    "track": "COTA",
    "seq": 17,
    "lap": 104.42099999999999,
-   "label": "COT-04 clip 3 lap 5, clean, slow at 6A and T12",
+   "label": "COT-04 clip 3 lap 5, clean, slow at 6A and T11",
    "status": "reported",
    "series": "main"
   },
@@ -2568,7 +2578,7 @@
    "track": "COTA",
    "seq": 18,
    "lap": 107.682,
-   "label": "COT-04 clip 3 lap 6, spun at T12 exit",
+   "label": "COT-04 clip 3 lap 6, spun at T11 exit",
    "status": "reported",
    "series": "main"
   },
@@ -3199,7 +3209,7 @@
    "wedge": "51.0",
    "preset": "Neutral",
    "best_lap": 102.02799999999999,
-   "handling": "Neutral with wedge 51, the only change from COT-01. Best 1:42.028, 1.46 s faster than COT-01. T1 clean on 5 of 6 laps. Only 2 of 6 laps clean: T12 contact and off at T15 exit, corner cut stop at T5",
+   "handling": "Neutral with wedge 51, the only change from COT-01. Best 1:42.028, 1.46 s faster than COT-01. T1 clean on 5 of 6 laps. Only 2 of 6 laps clean: T11 contact and off at T15 exit, corner cut stop at T5",
    "status": "preferred",
    "band": "1:44.438, 1:42.028, 1:45.968, 1:51.022, 1:45.067, 1:47.872",
    "verdict": "Faster. Keep, but only 2 of 6 laps clean"
@@ -3214,7 +3224,7 @@
    "wedge": "51.0",
    "preset": "Neutral",
    "best_lap": 101.685,
-   "handling": "COT-03 with Throttle Non Linear 50 to 60, the only setup change. Clip 3 and 4 (Grokbot HUD read): best 1:41.685, 4 clean laps of 7 in clip 3 averaging 1:43.436, both laps clean in clip 4 (1:43.201, 1:42.977). T15 exit fixed for now, T12 exit better but not solved, T1 exit now the main spin. Clean pace barely moved, so the slider is not proven",
+   "handling": "COT-03 with Throttle Non Linear 50 to 60, the only setup change. Clip 3 and 4 (Grokbot HUD read): best 1:41.685, 4 clean laps of 7 in clip 3 averaging 1:43.436, both laps clean in clip 4 (1:43.201, 1:42.977). T15 exit fixed for now, T11 exit better but not solved, T1 exit now the main spin. Clean pace barely moved, so the slider is not proven",
    "status": "tested",
    "band": "clip 3: 1:55.768, 1:43.224, 1:46.496, 1:41.685, 1:44.421, 1:47.682, 1:44.414. Clip 4: 1:43.201, 1:42.977",
    "verdict": "New best. Clean pace about the same. T1 exit is the next corner"
@@ -3481,8 +3491,8 @@
    "tag": "🟠"
   },
   {
-   "issue": "Exit step-outs in 1st (T12, T1, T15)",
-   "evidence": "COTA clips 3 and 4: T15 clean on every timed lap. T12 exit lost the car 3 times in clip 3, clean in clip 4. T1 exit spun in clip 3 lap 8 and clip 4 lap 11. All in 1st gear with throttle added before the wheel was straight (Grokbot, inputs inferred)",
+   "issue": "Exit step-outs in 1st (T11, T1, T15)",
+   "evidence": "COTA clips 3 and 4: T15 clean on every timed lap. T11 exit lost the car 3 times in clip 3, clean in clip 4. T1 exit spun in clip 3 lap 8 and clip 4 lap 11. All in 1st gear with throttle added before the wheel was straight (Grokbot, inputs inferred)",
    "drill": "About a quarter throttle until the wheel unwinds, then build it. Same trick that fixed T15. Right tires off the green paint",
    "status": "improving",
    "tag": "🟡"
