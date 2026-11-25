@@ -338,11 +338,11 @@ else x+='<div class="mut sm" style="margin-top:10px">Hub numbers only. Send me y
 return x+'</div>'}
 function coachCard(){var C=D.coach||[];if(!C.length)return'';return'<div class="card" style="grid-column:span 12;margin-top:12px"><div class="lbl">Coach file<em>recurring issues across races</em></div><div class="plan">'+C.map(function(c){return'<div><b>'+esc(c.issue)+' &middot; '+esc(c.status)+' '+c.tag+'</b>'+esc(c.evidence)+'<br><span style="color:#fff">Drill: '+esc(c.drill)+'</span></div>'}).join('')+'</div></div>'}
 function resultOf(n){var t=trk(n),q=t&&t.league;return q&&q.fin?q:null}
-function hero(n,extra){var no=raceNo(n),t=trk(n),q=resultOf(n),st;
+function hero(n,extra,full){var no=raceNo(n),t=trk(n),q=resultOf(n),st;
 if(!no)st='Off this season\'s schedule';else if(no<=RACED)st=(q?'Raced':'Raced, not driven by you');else st=(no===RACED+1?'Next race':'Upcoming');
 var chips='<span class="chip '+(no===RACED+1?'k':'')+'">'+st+'</span><span class="chip">'+kind(n)+'</span>'+(t&&t.ai?'<span class="chip">AI '+t.ai+'</span>':'')+(t&&t.active?'<span class="chip on">Active track</span>':'')+(n==="Atlanta"?'<span class="chip">Map: EchoPark</span>':'');
 var res=q?'<div class="res"><div><small>Qualified</small><b>P'+q.qual+'</b></div><div><small>Finished</small><b>P'+q.fin+'</b></div><div><small>Field</small><b>'+q.field+'</b></div></div>':'';
-if(t&&t.report)return'<div class="hdr"><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div>';return'<section class="hero2"><div class="hmap play">'+mapSvg2(n,true)+'</div><div><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div></section>'}
+if(t&&t.report&&!full)return'<div class="hdr"><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div>';return'<section class="hero2"><div class="hmap play">'+mapSvg2(n,true)+'</div><div><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div></section>'}
 function bar(n){var i=ALL.indexOf(n);return'<div class="bar"><button data-home>Circuits</button><span class="sp"></span><button class="sq" data-nav="-1" aria-label="Previous circuit">&lsaquo;</button><button class="sq" data-nav="1" aria-label="Next circuit">&rsaquo;</button></div>'}
 function tile(n){var no=raceNo(n),q=resultOf(n),t=trk(n),cl='tile';var sub;
 if(no&&no<=RACED){cl+=q?' raced':' nodrive';sub=q?'Q P'+q.qual+' &middot; F P'+q.fin:'Not driven'}
@@ -354,7 +354,7 @@ D.tracks.forEach(function(t){if(t.league&&t.league.fin)q.push(t.league.fin)});
 var best=q.length?Math.min.apply(null,q):null,avg=q.length?q.reduce(function(a,b){return a+b},0)/q.length:null,t5=q.filter(function(x){return x<=5}).length,t10=q.filter(function(x){return x<=10}).length;
 var h='<div class="app-top"><div class="logo">Crew Chief <b>HQ</b><small>NASCAR 26 &middot; Cup Next Gen &middot; 50% race &middot; 2x tire wear</small></div><div class="drv"><img class="av" src="avatar.png" alt=""><div><b>SOUTHPAW</b><small>Car 21 &middot; CCR</small></div></div></div>';
 var nt=trk(nx),np=nt?'<p>Practice in progress on the DualSense. Best '+f3(nt.pb)+' ('+(nt.pb_status||'')+'). '+esc(nt.next_obj||'')+'</p>':'<p>Road course. None of your oval data carries over.</p>';
-h+='<div style="height:8px"></div>'+hero(nx,np+'<button class="go" data-open="'+esc(nx)+'">Open '+esc(nx)+'</button>');
+h+='<div style="height:8px"></div>'+hero(nx,np+'<button class="go" data-open="'+esc(nx)+'">Open '+esc(nx)+'</button>',true);
 h+='<div class="card" style="grid-column:span 12"><div class="mini" style="grid-template-columns:repeat(4,1fr)"><div><small>Starts</small><b>'+q.length+'</b></div><div><small>Best finish</small><b class="g">'+(best?'P'+best:'n/a')+'</b></div><div><small>Avg finish</small><b>'+(avg?'P'+avg.toFixed(1):'n/a')+'</b></div><div><small>Top 5 / 10</small><b>'+t5+' / '+t10+'</b></div></div></div>';
 h+=coachCard();h+='<div class="sec"><b>Raced</b><span>'+RACED+' of '+SCHED.length+' league races done</span></div><div class="tiles">'+SCHED.slice(0,RACED).map(tile).join('')+'</div>';
 h+='<div class="sec"><b>Up next</b><span>'+(SCHED.length-RACED)+' races left this season</span></div><div class="tiles">'+SCHED.slice(RACED).map(tile).join('')+'</div>';
