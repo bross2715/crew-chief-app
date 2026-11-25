@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Crew Chief HQ</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#070a0f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Crew Chief"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070a0f;--c1:#0d1219;--c2:#131a24;--line:rgba(130,185,255,.13);--grid:rgba(95,208,255,.07);--txt:#f2f4f7;--mut:#8591a3;--green:#2fe07f;--gold:#ffd23f;--red:#ff4d5a;--brand:#e8334a;--blue:#5aa7ff;--cy:#5fd0ff;--hd:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--bd:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(900px 420px at 10% -10%,rgba(232,51,74,.14),transparent 60%),radial-gradient(800px 420px at 100% 0,rgba(95,208,255,.08),transparent 60%),var(--bg);background-attachment:fixed;color:var(--txt);font-family:var(--bd);font-size:14px;min-height:100vh}
+.wrap{max-width:1180px;margin:0 auto;padding:0 12px 48px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 2px 10px}
+.brand{font-family:var(--hd);font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;line-height:1;letter-spacing:.5px}.brand b{color:var(--brand)}
+.sub{color:var(--mut);font-size:11.5px;margin-top:3px}
+.drv{display:flex;align-items:center;gap:9px;background:var(--c1);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 5px;flex:none}
+.drv i{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--brand),#6d1424);display:grid;place-items:center;font:700 14px var(--hd);font-style:normal}
+.drv b{display:block;font:700 15px var(--hd);letter-spacing:.5px;line-height:1}.drv small{color:var(--mut);font-size:10.5px}
+nav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;padding:8px 0 10px;background:linear-gradient(180deg,var(--bg) 70%,transparent);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:none;background:var(--c1);border:1px solid var(--line);color:var(--mut);font:700 14px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer}
+nav button.on{color:#fff;background:linear-gradient(180deg,#d02a47,var(--brand));border-color:transparent}
+nav button i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-left:7px;box-shadow:0 0 8px var(--green)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.008)),var(--c1);border:1px solid var(--line);border-radius:8px;padding:14px;position:relative;overflow:hidden;min-width:0}
+@media(min-width:820px){.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}.s7{grid-column:span 7}.s8{grid-column:span 8}}
+.lbl{display:flex;align-items:center;gap:7px;color:var(--mut);font:600 11.5px var(--bd);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:10px}
+.lbl:before{content:"";width:6px;height:6px;border-radius:2px;background:var(--brand)}
+.lbl em{margin-left:auto;font-style:normal;letter-spacing:.3px;text-transform:none;color:var(--mut);font-size:11px}
+.g{color:var(--green)}.r{color:var(--red)}.y{color:var(--gold)}.b{color:var(--blue)}
+.big{font:700 44px/1 var(--hd);letter-spacing:.5px}.mid{font:700 28px/1 var(--hd)}
+.mut{color:var(--mut)}.sm{font-size:12px}
+/* fastest lap strip */
+.strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;background:linear-gradient(90deg,rgba(139,92,246,.35),rgba(196,36,63,.25));border:1px solid rgba(139,92,246,.45);padding:12px 16px}
+.strip .t{font:700 15px var(--hd);letter-spacing:1.5px;text-transform:uppercase}
+.strip .k{display:flex;flex-direction:column}.strip .k small{color:#c9c2e8;font-size:10.5px;letter-spacing:1px;text-transform:uppercase}.strip .k b{font:700 24px/1.05 var(--hd)}
+/* hero */
+.hero h2{font:800 italic 34px/1 var(--hd);text-transform:uppercase}.hero h2 b{color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font:600 11px var(--bd);letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:4px 10px;color:#cfd5de}
+.chip.on{color:var(--green);border-color:rgba(46,226,122,.4);background:rgba(46,226,122,.08)}
+.map{height:auto;aspect-ratio:100/52;max-height:260px;display:block;width:100%;margin:6px 0 2px}
+.trace{stroke-dasharray:1;stroke-dashoffset:1}.trace.go{animation:trk 3s linear forwards}@keyframes trk{to{stroke-dashoffset:0}}
+/* gauges */
+.gc{display:grid;place-items:center;text-align:center}
+.gc svg{width:100%;max-width:210px}
+.gc .vv{margin-top:-34px}
+.rings{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rg{text-align:center}.rg svg{width:100%;max-width:92px}
+.rg b{display:block;font:700 12px var(--bd);letter-spacing:1px;color:var(--mut);margin-top:2px}
+.wedge{display:flex;align-items:center;justify-content:space-between;margin-top:12px;background:var(--c2);border-radius:12px;padding:9px 12px}
+.wedge b{font:700 22px var(--hd)}
+/* car */
+.car{display:grid;grid-template-columns:1fr 84px 1fr;gap:8px;align-items:center}
+.cs{display:flex;flex-direction:column;gap:10px}
+.tire{background:var(--c2);border:1px solid var(--line);border-radius:14px;padding:8px 4px;text-align:center}
+.tire svg{width:62px;height:62px}
+.tire small{display:block;color:var(--mut);font-size:10px;letter-spacing:1px;margin-top:2px}
+.tire .tp{font:600 11px var(--bd);color:#cfd5de;margin-top:2px;letter-spacing:.2px}
+.car svg.body{width:100%}
+.bars{display:grid;gap:9px;margin-top:12px}
+.bar{display:grid;grid-template-columns:70px 1fr 40px;align-items:center;gap:8px;font-size:12px}
+.bar span{color:var(--mut);text-transform:uppercase;letter-spacing:1px;font-size:10.5px}
+.bar div{height:7px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}.bar div i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--green),var(--gold))}
+.bar b{font:700 15px var(--hd);text-align:right}
+.tabs{display:flex;gap:6px;margin-bottom:10px;overflow-x:auto}
+.tabs button{flex:none;background:var(--c2);border:1px solid var(--line);color:var(--mut);font:700 12px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:6px 11px;border-radius:999px;cursor:pointer}
+.tabs button.on{color:#fff;border-color:var(--brand)}
+/* tables */
+table{width:100%;border-collapse:collapse}
+th{color:var(--mut);font:600 10.5px var(--bd);letter-spacing:1.2px;text-transform:uppercase;text-align:left;padding:8px 8px;background:rgba(255,255,255,.035)}
+th:first-child{border-radius:10px 0 0 10px}th:last-child{border-radius:0 10px 10px 0}
+td{padding:9px 8px;border-bottom:1px solid var(--line);font-size:13px}
+td.n{font:700 17px var(--hd)}
+tr.go{cursor:pointer}tr.cur td{background:rgba(196,36,63,.12)}
+.up{color:var(--green)}.dn{color:var(--red)}
+/* feed */
+.ev{display:flex;gap:10px;background:var(--c2);border-radius:12px;padding:10px 12px;margin-bottom:8px;border-left:3px solid var(--gold);font-size:12.5px;line-height:1.4;color:#dfe3ea}
+.ev b{display:block;font:700 11px var(--bd);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:2px;color:var(--gold)}
+.ev.gap{border-left-color:var(--blue)}.ev.gap b{color:var(--blue)}
+.ev.ok{border-left-color:var(--green)}.ev.ok b{color:var(--green)}
+.ev.bad{border-left-color:var(--red)}.ev.bad b{color:var(--red)}
+/* setups */
+.sets{display:grid;gap:10px}
+@media(min-width:820px){.sets{grid-template-columns:1fr 1fr}}
+.su{background:var(--c2);border:1px solid var(--line);border-radius:14px;padding:11px;border-left:3px solid #4a5260}
+.su.pref{border-left-color:var(--gold)}.su.ok{border-left-color:var(--green)}.su.bad{border-left-color:var(--red)}
+.su .h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.su .h b{font:700 20px var(--hd)}.su .h small{color:var(--mut);font-size:11px;text-align:right}
+.psi{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:8px 0;text-align:center}
+.psi div{background:rgba(255,255,255,.05);border-radius:8px;padding:5px 0}.psi small{display:block;color:var(--mut);font-size:9.5px;letter-spacing:.8px}.psi b{font:700 17px var(--hd)}
+.su p{color:#b7bec9;font-size:12px;line-height:1.4}
+.send{margin-top:9px;background:linear-gradient(180deg,#d02a47,var(--brand));color:#fff;border:0;border-radius:9px;font:700 13px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:8px 14px;cursor:pointer}
+details{margin-top:2px}summary{cursor:pointer;color:var(--mut);font:600 11.5px var(--bd);letter-spacing:1.2px;text-transform:uppercase;list-style:none;padding:2px 0}
+summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:var(--brand)}details[open] summary:after{content:"  -"}
+.lap{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+.lap b{font:700 18px var(--hd);flex:none;min-width:70px}.lap span{color:#b7bec9;flex:1}.lap small{color:var(--mut);flex:none;font-size:11px}
+.lap.pb b{color:var(--gold)}
+[hidden]{display:none!important}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mini div{background:var(--c2);border-radius:12px;padding:10px 6px;text-align:center}.mini small{display:block;color:var(--mut);font-size:10.5px;letter-spacing:1px;text-transform:uppercase}.mini b{font:700 28px/1.1 var(--hd)}
+.hl{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.hl i{font:700 14px var(--hd);color:var(--mut);width:18px;font-style:normal}.hl b{font:700 24px var(--hd);min-width:84px}.hl span{flex:1;color:#b7bec9;font-size:12px}.hl em{font-style:normal;font-size:11px;color:var(--mut)}.hl.top b{color:var(--gold)}
+.kv{display:flex;gap:8px;font-size:12.5px;margin-top:6px;color:#c9cfd9;line-height:1.35}.kv b{color:var(--mut);font:600 10.5px var(--bd);letter-spacing:1px;text-transform:uppercase;flex:none;min-width:86px;padding-top:2px}
+.tr4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.tr4 .tire svg{width:100%;max-width:62px;height:auto}.tr4 .tp{font-size:9.5px}
+.cmp td,.cmp th{padding:8px 5px;font-size:12px;letter-spacing:0}.cmp td.n{font-size:15px}.more>summary{background:var(--c1);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;color:#cfd5de}
+#sheet{position:fixed;left:0;right:0;bottom:0;max-width:560px;margin:0 auto;background:var(--c1);border:1px solid var(--line);border-top:2px solid var(--brand);border-radius:18px 18px 0 0;padding:12px;z-index:9}
+#sheet textarea{width:100%;height:150px;background:var(--c2);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:8px;font:14px var(--bd);resize:none}
+#sheet .bt{display:flex;gap:8px;margin-top:8px}#sheet .bt button{flex:1;background:var(--c2);color:var(--txt);border:1px solid var(--line);border-radius:9px;font:700 15px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:10px}
+#sheet .bt button.go{background:var(--brand);border-color:var(--brand)}
+
+/* ===== app shell ===== */
+.app-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 2px 6px}
+.logo{font:800 italic 30px/1 var(--hd);text-transform:uppercase;letter-spacing:.5px}.logo b{color:var(--brand)}
+.logo small{display:block;font:500 12px var(--bd);font-style:normal;text-transform:none;letter-spacing:0;color:var(--mut);margin-top:4px}
+.bar{position:sticky;top:0;z-index:7;display:flex;align-items:center;gap:8px;padding:10px 0 10px;background:linear-gradient(180deg,var(--bg) 78%,transparent)}
+.bar .sp{flex:1}
+.bar button{background:var(--c1);border:1px solid var(--line);color:#dbe3ee;font:700 14px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:8px 14px;border-radius:6px;cursor:pointer}
+.bar button.sq{padding:8px 13px;font-size:18px;line-height:1}
+.bar button:focus-visible,.tile:focus-visible,.go:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+.hero2{position:relative;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,#0c1219,#080b10);overflow:hidden;margin:0 0 12px;padding:16px 14px 16px}
+.hero2:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(75% 85% at 62% 42%,#000,transparent);mask-image:radial-gradient(75% 85% at 62% 42%,#000,transparent);pointer-events:none}
+.hero2>*{position:relative}
+.hero2 .hmap{margin:2px -4px 8px}
+.hero2 .hmap svg{display:block;width:100%;max-height:300px;height:auto;filter:drop-shadow(0 0 14px rgba(95,208,255,.3))}
+.hero2 h1{font:800 italic clamp(44px,13vw,84px)/.88 var(--hd);text-transform:uppercase;letter-spacing:.5px}
+.hero2 .rn{font:700 15px var(--hd);letter-spacing:1.6px;color:var(--cy);text-transform:uppercase;margin-bottom:6px}
+.hero2 .res{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:14px}
+.hero2 .res div{display:flex;flex-direction:column}.hero2 .res small{color:var(--mut);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase}.hero2 .res b{font:700 30px/1.05 var(--hd)}
+.hero2 .go{margin-top:14px;display:inline-block;background:linear-gradient(180deg,#f0384f,var(--brand));color:#fff;border:0;border-radius:6px;font:700 15px var(--hd);letter-spacing:1px;text-transform:uppercase;padding:11px 20px;cursor:pointer}
+.hero2 p{color:#c3ccd8;font-size:13.5px;line-height:1.45;margin-top:10px;max-width:60ch}
+@media(min-width:820px){.hero2{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:center}.hero2 .hmap{margin:0}.hero2 .bar-like{display:none}}
+.mfill{fill:#f2f3ef}.mline{fill:none;stroke:var(--cy);stroke-width:1.3;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0}
+.hmap.play .mline{opacity:1;animation:draw 1.5s ease-out forwards,hide .5s 1.6s forwards}
+.hmap.play .mfill{fill-opacity:0;animation:fillin .7s 1.1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes hide{to{opacity:0}}@keyframes fillin{to{fill-opacity:1}}
+@media(prefers-reduced-motion:reduce){.hmap.play .mline{animation:none;opacity:0}.hmap.play .mfill{animation:none;fill-opacity:1}}
+.chips .k{border-color:rgba(255,210,63,.4);color:var(--gold);background:rgba(255,210,63,.08)}
+.sec{display:flex;align-items:baseline;gap:10px;margin:24px 2px 10px}.sec b{font:800 italic 26px/1 var(--hd);text-transform:uppercase}.sec span{color:var(--mut);font-size:12.5px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:640px){.tiles{grid-template-columns:repeat(3,1fr)}}@media(min-width:980px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{position:relative;display:block;width:100%;text-align:left;color:var(--txt);font-family:var(--bd);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008)),var(--c1);border:1px solid var(--line);border-radius:6px;padding:10px 10px 11px;cursor:pointer}
+.tile:before,.tile:after{content:"";position:absolute;width:9px;height:9px;border:1.5px solid var(--cy);opacity:.5;pointer-events:none}
+.tile:before{top:-1px;left:-1px;border-right:0;border-bottom:0}.tile:after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.tile .no{font:700 13px var(--hd);letter-spacing:1px;color:var(--mut)}
+.tile .tm{height:70px;margin:2px 0 6px;display:grid;place-items:center;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:14px 14px}
+.tile .tm svg{width:100%;height:100%}.tile .mfill{fill-opacity:.9;transition:filter .15s}
+.tile:hover .tm svg{filter:drop-shadow(0 0 7px rgba(95,208,255,.55))}
+.tile .tn{font:800 italic 21px/1 var(--hd);text-transform:uppercase}
+.tile .tr{font:600 12px var(--bd);color:var(--mut);margin-top:4px}
+.tile .dot{position:absolute;top:9px;right:9px;width:8px;height:8px;border-radius:50%}
+.tile.raced .dot{background:var(--green);box-shadow:0 0 8px var(--green)}
+.tile.nodrive .dot{border:1.5px solid var(--mut)}
+.tile.next{border-color:rgba(255,210,63,.55)}.tile.next .dot{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.tile.off{border-style:dashed;opacity:.82}
+.tile .mfill{fill:#f2f3ef}.tile.off .mfill{fill-opacity:.55}
+.nomap{height:70px;display:grid;place-items:center;color:var(--mut);font:600 11.5px var(--bd);text-align:center;border:1px dashed var(--line);border-radius:4px;margin:2px 0 6px}
+.plan{display:grid;gap:8px;margin-top:4px}.plan div{background:var(--c2);border-radius:6px;padding:10px 12px;font-size:13.5px;line-height:1.4;color:#dfe5ee;border-left:3px solid var(--cy)}
+.plan b{display:block;font:700 12px var(--bd);letter-spacing:1.1px;text-transform:uppercase;color:var(--cy);margin-bottom:2px}
+.tile .mfill,.hmap .mfill{stroke:none}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d5a"/><stop offset=".5" stop-color="#ffc83d"/><stop offset="1" stop-color="#2ee27a"/></linearGradient>
+</defs></svg>
+<div class="wrap"><div id="main"></div></div>
+<div id="sheet" hidden><textarea id="msg"></textarea><div class="bt"><button id="shr" class="go">Share</button><button id="cpy">Copy</button><button id="cls">Close</button></div></div>
+<script>
+var D_EMBED=false;var D=null;
+var MAPS=null;
+var ORDER=["COTA","Michigan","Darlington","Iowa","Dover","Texas","Las Vegas"];
+var SCHED=["Daytona","Las Vegas","Dover","Texas","Iowa","Darlington","Michigan","COTA","Bristol","The Rock","Indianapolis","Richmond","San Diego","Chicagoland","Charlotte","Atlanta","Kansas","Phoenix","Watkins Glen","Martinsville","Homestead"];
+var OFF=["Nashville","New Hampshire","North Wilkesboro","Pocono","Sonoma","Talladega","WWT Raceway"];
+var RACED=7,HUB="https://bross2715.github.io/pace-point-standings/";
+var MAPKEY={"Atlanta":"EchoPark","Homestead":"Homestead-Miami"};
+var KIND={"COTA":"Road course","San Diego":"Street course","Sonoma":"Road course","Watkins Glen":"Road course"};
+var ALL=SCHED.concat(OFF);
+function kind(n){return KIND[n]||"Oval"}
+function trk(n){return D.tracks.filter(function(x){return x.track===n})[0]}
+function raceNo(n){var i=SCHED.indexOf(n);return i<0?null:i+1}
+function esc(x){return String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function mapSvg2(n,big){var m=MAPS[MAPKEY[n]||n];if(!m)return'<div class="nomap">Map not in your sheet yet</div>';
+return'<svg viewBox="0 0 '+m.w+' '+m.h+'" role="img" aria-label="'+esc(n)+' track map"><path class="mfill" fill-rule="evenodd" d="'+m.d+'"/>'+(big?'<path class="mline" pathLength="1" d="'+m.d+'"/>':'')+'</svg>'}
+var ST={verified:["🟢","Verified"],reported:["🟡","Reported"],recalled:["🟡","Recalled"],approx:["🟠","Approx"],unknown:["⚪","Unknown"]};
+function tag(s){var t=ST[s];return t?t[0]+" "+t[1]:(s||"")}
+function f3(x){if(x==null)return"n/a";if(x>=60){var m=Math.floor(x/60),q=x-m*60;return m+":"+(q<10?"0":"")+q.toFixed(3)}return x.toFixed(3)}
+function tcol(p){return p>=75?'#2ee27a':(p>=55?'#ffc83d':'#ff4d5a')}
+var cur=null,snapI=0;
+/* ring: pct 0..100, centre text */
+function ring(p,col,txt,sz){p=Math.max(0,Math.min(100,p||0));
+return '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="9"/><circle cx="50" cy="50" r="40" fill="none" stroke="'+col+'" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="'+p+' 100" transform="rotate(-90 50 50)"/><text x="50" y="'+(txt.sub?47:56)+'" text-anchor="middle" fill="#f2f4f7" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="'+(sz||28)+'">'+txt.main+'</text>'+(txt.sub?'<text x="50" y="66" text-anchor="middle" fill="#7f8896" font-family="Barlow,Arial,sans-serif" font-size="11">'+txt.sub+'</text>':'')+'</svg>'}
+function semi(p){p=Math.max(0,Math.min(100,p||0));
+return '<svg viewBox="0 0 200 118"><path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="16" stroke-linecap="round"/><path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="'+p+' 100"/></svg>'}
+function mk(name){var f=D.fl[name];if(!f)return"";var L=4.4,x=f[0],y=f[1],nx=f[2],ny=f[3];
+var a=[(x-nx*L).toFixed(1),(y-ny*L).toFixed(1)],b=[(x+nx*L).toFixed(1),(y+ny*L).toFixed(1)];
+var p='x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'"';
+return'<line '+p+' stroke="#111" stroke-width="2.6"/><line '+p+' stroke="#fff" stroke-width="2.6" stroke-dasharray="1.1 1.1"/>'}
+function mapSvg(name){var p=D.paths[name];
+return'<svg class="map" viewBox="0 0 100 60"><path d="'+p+'" fill="none" stroke="rgba(0,0,0,.7)" stroke-width="7" stroke-linejoin="round"/><path d="'+p+'" fill="none" stroke="#2a313b" stroke-width="4" stroke-linejoin="round"/><path d="'+p+'" fill="none" stroke="rgba(46,226,122,.25)" stroke-width="6.5" stroke-linejoin="round" filter="blur(1.2px)"/><path class="trace" pathLength="1" d="'+p+'" fill="none" stroke="#2ee27a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>'+mk(name)+'<circle r="1.7" fill="#fff"><animateMotion dur="9s" repeatCount="indefinite" path="'+p+'"/></circle></svg>'}
+function carBody(){return '<svg class="body" viewBox="0 0 84 200"><rect x="12" y="8" width="60" height="184" rx="24" fill="#10141a" stroke="#3a4350" stroke-width="2.5"/><rect x="24" y="44" width="36" height="42" rx="9" fill="#06070a" stroke="#242b35"/><rect x="26" y="118" width="32" height="48" rx="7" fill="#06070a" stroke="#242b35"/><rect x="2" y="26" width="9" height="30" rx="3" fill="#2a313b"/><rect x="73" y="26" width="9" height="30" rx="3" fill="#2a313b"/><rect x="2" y="140" width="9" height="30" rx="3" fill="#2a313b"/><rect x="73" y="140" width="9" height="30" rx="3" fill="#2a313b"/></svg>'}
+function tire(s,k){var q=s.tires[k];return '<div class="tire">'+ring(q.p,tcol(q.p),{main:q.p+'%'},26)+'<small>'+k.toUpperCase()+'</small><div class="tp">'+q.t.join(' · ')+'</div></div>'}
+function carCard(t){var S=t.snaps||[];if(!S.length)return'<div class="card s7"><div class="lbl">Car status</div><div class="mut sm">No car status snapshot logged for this track yet.</div></div>';
+if(snapI>=S.length)snapI=S.length-1;var s=S[snapI];
+var tabs=S.length>1?'<div class="tabs">'+S.map(function(x,i){return'<button data-snap="'+i+'" class="'+(i===snapI?'on':'')+'">'+x.label.split(' · ').slice(0,2).join(' · ')+'</button>'}).join('')+'</div>':'';
+var h='<div class="card s7"><div class="lbl">Car status<em>'+s.label+'</em></div>'+tabs+'<div class="car"><div class="cs">'+tire(s,'lf')+tire(s,'lr')+'</div>'+carBody()+'<div class="cs">'+tire(s,'rf')+tire(s,'rr')+'</div></div>';
+h+='<div class="bars">'+[['Aero',s.aero],['Engine',s.engine],['Radiator',s.radiator]].map(function(a){return'<div class="bar"><span>'+a[0]+'</span><div><i style="width:'+a[1]+'%"></i></div><b>'+a[1]+'%</b></div>'}).join('')+'</div>';
+h+='<div class="wedge" style="flex-wrap:wrap;gap:6px"><span class="mut sm" style="flex:1 1 100%">Setup <b style="margin-left:6px;font-size:17px">'+s.setup+'</b></span><span class="mut sm">Fuel <b class="y" style="margin-left:6px">'+s.fuel+'</b></span></div>';
+if(s.best!=null||s.prev!=null)h+='<div class="mut sm" style="margin-top:8px">Best lap '+f3(s.best)+' · Previous '+f3(s.prev)+'</div>';
+h+='</div>';return h}
+function readCard(t){var S=t.snaps||[];if(!S.length)return'';var s=S[Math.min(snapI,S.length-1)];
+return'<div class="card s5"><div class="lbl">Analysis<em>'+s.label.split(' · ').slice(0,2).join(' · ')+'</em></div>'+s.read.map(function(r){var c=/🟢/.test(r)?'ok':(/not recorded|not read/i.test(r)?'gap':'');return'<div class="ev '+c+'"><b>'+(c==='ok'?'Verified':(c==='gap'?'Data gap':'Note'))+'</b>'+r+'</div>'}).join('')+'</div>'}
+function compareCard(t){var S=t.snaps||[];if(S.length<2)return'';
+var hd=function(s){var p=s.label.split(' · ');return p[0]+'<br><span class="mut" style="font-weight:400">'+p[1]+'</span>'};
+var spread=function(s){var T=s.tires.rf.t;return Math.max.apply(null,T)-Math.min.apply(null,T)};
+var rows=['lf','rf','lr','rr'].map(function(k){return'<tr><td class="n">'+k.toUpperCase()+'</td>'+S.map(function(s){return'<td class="n">'+s.tires[k].p+'%</td>'}).join('')+'</tr>'}).join('');
+rows+='<tr><td class="n">RF temp spread</td>'+S.map(function(s){return'<td class="n">'+spread(s)+'</td>'}).join('')+'</tr>';
+return'<div class="card s6"><div class="lbl">Stint compare<em>tire life shown on the panel</em></div><div style="overflow-x:auto"><table><tr><th></th>'+S.map(function(s){return'<th>'+hd(s)+'</th>'}).join('')+'</tr>'+rows+'</table></div><div class="mut sm" style="margin-top:8px">Each column is about 20 laps on one set of tires. MIC-07 temps are low because of a cool down after the lock up.</div></div>'}
+function best(S,t){var a=S.filter(function(x){return x.status==="preferred"&&x.lf!=null});if(a.length)return a[a.length-1];var b=S.filter(function(x){return x.lf!=null});return b.length?b[b.length-1]:null}
+function setupCard(S){var s=best(S);if(!s)return'<div class="card s4"><div class="lbl">Race setup</div><div class="mut sm">No custom setup values logged. Presets only.</div></div>';
+var mx=0;D.setups.forEach(function(x){['lf','rf','lr','rr'].forEach(function(k){if(x[k]>mx)mx=x[k]})});
+var r=['lf','rf','lr','rr'].map(function(k){return'<div class="rg">'+ring(s[k]/mx*100,'#2ee27a',{main:s[k]},30)+'<b>'+k.toUpperCase()+'</b></div>'}).join('');
+return'<div class="card s4"><div class="lbl">Race setup<em>'+s.id+' · '+s.status+'</em></div><div class="rings">'+r+'</div><div class="wedge"><span class="mut sm">Wedge</span><b>'+(s.wedge==null?'-':s.wedge)+'</b></div>'+(s.best_lap?'<div class="mut sm" style="margin-top:8px">Best lap on this setup '+f3(s.best_lap)+'</div>':'')+'</div>'}
+function paceCard(t,L){var pb=t.pb,tg=t.target;var pct=pb&&tg?tg/pb*100:0;var gap=pb&&tg?(pb-tg).toFixed(3):null;
+return'<div class="card s4 gc"><div class="lbl" style="width:100%">Pace vs target<em>'+tag(t.pb_status)+'</em></div>'+semi(pct)+'<div class="vv"><div class="mid">'+(gap?gap+' s':'n/a')+'</div><div class="mut sm">'+(gap?'off the '+f3(tg)+' goal':'target not set')+'</div>'+(t.pace_note?'<div class="mut sm" style="margin-top:6px;padding:0 8px">'+t.pace_note+'</div>':'')+'</div></div>'}
+function lapChart(L){if(L.length<2)return'';var v=L.map(function(x){return x.lap}),mn=Math.min.apply(null,v),mx=Math.max.apply(null,v),pad=(mx-mn)*.15||.05;mn-=pad;mx+=pad;
+var W=300,H=110,pts=L.map(function(x,i){return[10+i*(W-20)/(L.length-1),8+(x.lap-mn)/(mx-mn)*(H-24)]});
+var d=pts.map(function(p,i){return(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)}).join(' ');
+var dots=pts.map(function(p,i){var pbp=L[i].lap===Math.min.apply(null,v);return'<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+(pbp?4.5:3)+'" fill="'+(pbp?'#ffc83d':'#2ee27a')+'"/>'}).join('');
+return'<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;display:block"><path d="'+d+'" fill="none" stroke="#2ee27a" stroke-width="2" stroke-linejoin="round" opacity=".7"/>'+dots+'</svg><div class="mut sm">Faster is higher. Gold dot is the fastest lap logged. Laps are in the order logged, not one stint.</div>'}
+function seasonCard(cur){var rows=ORDER.map(function(n){var t=D.tracks.filter(function(x){return x.track===n})[0],q=t.league;
+var gap=(t.pb!=null&&q&&q.lap)?(t.pb-q.lap):null;
+return'<tr class="go '+(n===cur?'cur':'')+'" data-track="'+n+'"><td class="n">'+n+'</td><td class="n">'+(t.pb!=null?f3(t.pb):'-')+'</td><td class="n">'+(q&&q.qlap?f3(q.qlap):'-')+'</td><td class="n">'+(q&&q.lap?f3(q.lap):'-')+'</td><td>'+(q?'P'+q.qual+'/P'+q.fin:'-')+'</td><td class="'+(gap==null?'':(gap<0?'up':'dn'))+'">'+(gap==null?'-':(gap>0?'+':'')+gap.toFixed(3))+'</td><td class="n">'+(q&&q.bro&&q.bro.lap?f3(q.bro.lap):'-')+'</td><td>'+(q&&q.bro&&q.bro.fin?'P'+q.bro.fin:'-')+'</td></tr>'}).join('');
+var t=D.tracks.filter(function(x){return x.track===cur})[0],q=t.league;
+var note=q?'<div class="mut sm" style="margin-top:10px">'+cur+' league: qualified P'+q.qual+' of '+q.field+(q.qlap?' on '+f3(q.qlap):'')+(q.pole?', pole was '+f3(q.pole):'')+'. Finished P'+q.fin+', fastest race lap '+f3(q.lap)+(q.fl_field?', field fastest '+f3(q.fl_field):'')+(q.led?', led '+q.led+' laps':'')+'.</div>':'<div class="mut sm" style="margin-top:10px">'+cur+' has no league race yet. Offline practice only.</div>';
+return'<div class="card" style="grid-column:span 12"><div class="lbl">Practice vs league<em>race hub 🟢 · gap is practice minus league race lap, negative means practice is faster. Bro is car 15, same setups, race laps only</em></div><div style="overflow-x:auto"><table class="cmp"><tr><th>Track</th><th>Practice best</th><th>League qual</th><th>League race</th><th>Q / F</th><th>Gap</th><th>Bro lap</th><th>Bro F</th></tr>'+rows+'</table></div>'+note+'</div>'}
+function feed(t){var out='';(t.flags||"").split(" | ").forEach(function(f){if(!f)return;var gap=/not recorded|never read|unread|not confirmed|conflict|unknown|not separated|not assigned|not reported|pending/i.test(f);var bad=/unusable|unable to turn|spun/i.test(f);
+out+='<div class="ev '+(bad?'bad':(gap?'gap':''))+'"><b>'+(bad?'Warning':(gap?'Data gap':'Note'))+'</b>'+f+'</div>'});return out}
+function setupList(S){if(!S.length)return'<div class="mut sm">No setups logged.</div>';
+var pv=function(l,v){return'<div><small>'+l+'</small><b>'+(v==null?"-":v)+'</b></div>'};
+return'<div class="sets">'+S.map(function(s){var cls=s.status==="preferred"?"pref":(s.status==="rejected"?"bad":(s.best_lap?"ok":""));
+return'<div class="su '+cls+'"><div class="h"><b>'+s.id+'</b><small>'+(s.preset||"custom")+' · '+s.status+'</small></div><div class="psi">'+pv("LF",s.lf)+pv("RF",s.rf)+pv("LR",s.lr)+pv("RR",s.rr)+pv("WEDGE",s.wedge)+'</div><p>'+(s.best_lap?'<b class="y">Best '+f3(s.best_lap)+'</b> · ':'')+s.handling+'</p><button class="send" data-id="'+s.id+'">Send to team</button></div>'}).join('')+'</div>'}
+function lapList(L,O,pb,name,t){var sorted=L.slice();if(name==="Darlington")sorted.sort(function(a,b){return a.lap-b.lap});
+var h=sorted.map(function(l){return'<div class="lap '+(l.lap===pb?'pb':'')+'"><b>'+f3(l.lap)+'</b><span>'+l.label+'</span><small>'+tag(l.status)+'</small></div>'}).join('');
+h+=O.map(function(l){return'<div class="lap"><b>'+f3(l.lap)+'</b><span>'+l.label+'</span><small>'+tag(l.status)+' · online</small></div>'}).join('');
+var RL=(t&&t.race_log)||(name==="Darlington"?D.race:null);if(RL)h+='<div class="lbl" style="margin-top:12px">Race log</div>'+RL.map(function(r){return'<div class="lap"><b>'+r.t+'</b><span>'+r.d+'</span><small>'+tag(r.s)+'</small></div>'}).join('');
+return h||'<div class="mut sm">No laps logged.</div>'}
+function controllerCard(t){var c=t.controller;if(!c)return'';return'<div class="card" style="grid-column:span 12"><div class="lbl">Controller profile<em>'+esc(c.device)+' &middot; '+esc(c.status)+'</em></div><div class="psi" style="grid-template-columns:repeat(auto-fill,minmax(112px,1fr));text-align:left">'+c.rows.map(function(r){return'<div style="padding:6px 8px"><small style="font-size:10px">'+esc(r[0])+'</small><b>'+r[1]+'</b></div>'}).join('')+'</div>'+(c.note?'<div class="mut sm" style="margin-top:8px">'+esc(c.note)+'</div>':'')+'</div>'}
+function soloLaps(L){return L.filter(function(l){return !l.pack})}
+function hotCard(L){var s=soloLaps(L).slice().sort(function(a,b){return a.lap-b.lap}).slice(0,8);
+var p=L.filter(function(l){return l.pack});
+var h='<div class="card s6"><div class="lbl">Hot laps<em>solo, fastest first</em></div>'+s.map(function(l,i){var id=(l.label.match(/^(MIC-\d+\w*|DAR-\d+|[A-Z]{3}-\d+|Qualifying)/)||[''])[0];
+return'<div class="hl '+(i===0?'top':'')+'"><i>'+(i+1)+'</i><b>'+f3(l.lap)+'</b><span>'+(id||'')+(id?' · ':'')+l.label.replace(/^(MIC-\d+\w*|DAR-\d+|[A-Z]{3}-\d+|Qualifying),?\s*/,'')+'</span><em>'+tag(l.status)+'</em></div>'}).join('');
+if(p.length)h+='<div class="mut sm" style="margin-top:8px">Pack lap, left out of the ranking: '+p.map(function(l){return f3(l.lap)}).join(', ')+' (draft helps)</div>';
+return h+'</div>'}
+function stintCard(t){var S=t.snaps||[];if(!S.length)return'<div class="card s6"><div class="lbl">Latest tire check</div><div class="mut sm">No tire snapshot logged.</div></div>';
+var s=S[S.length-1];return'<div class="card s6"><div class="lbl">Latest tire check<em>'+s.label.split(' · ').slice(0,2).join(' · ')+'</em></div><div class="tr4">'+['lf','rf','lr','rr'].map(function(k){return tire(s,k)}).join('')+'</div><div class="mut sm" style="margin-top:8px">'+s.setup+(s.best!=null?' · best '+f3(s.best):'')+(s.prev!=null?' · previous '+f3(s.prev):'')+' · aero '+s.aero+'%</div></div>'}
+function scoreCards(S,t){if(!S.length)return'<div class="mut sm">No setups logged.</div>';
+var pv=function(l,v){return'<div><small>'+l+'</small><b>'+(v==null?"-":v)+'</b></div>'};
+var snaps=t.snaps||[];
+var card=function(s){var cls=s.status==="preferred"?"pref":(s.status==="rejected"?"bad":(s.best_lap?"ok":""));
+var sn=snaps.filter(function(x){return x.label.indexOf(s.id)===0}).pop();
+var tires=sn?['lf','rf','lr','rr'].map(function(k){return sn.tires[k].p}).join(' / ')+' at '+sn.label.split(' · ')[1].replace('practice ',''):null;
+return'<div class="su '+cls+'"><div class="h"><b>'+s.id+'</b><small>'+(s.best_lap?'<span class="y" style="font:700 17px var(--hd)">'+f3(s.best_lap)+'</span> · ':'')+(s.preset||"custom")+' · '+s.status+'</small></div><div class="psi">'+pv("LF",s.lf)+pv("RF",s.rf)+pv("LR",s.lr)+pv("RR",s.rr)+pv("WEDGE",s.wedge)+'</div>'+
+(s.band?'<div class="kv"><b>Consistency</b><span>'+s.band+'</span></div>':'')+(tires?'<div class="kv"><b>Tires</b><span>'+tires+'</span></div>':'')+(s.verdict?'<div class="kv"><b>Verdict</b><span>'+s.verdict+'</span></div>':'')+
+'<details><summary>Full notes</summary><p style="margin-top:6px">'+s.handling+'</p></details><button class="send" data-id="'+s.id+'">Send to team</button></div>'};
+var all=S.slice().reverse(),a=all.slice(0,4).map(card).join(''),b=all.slice(4).map(card).join('');
+return'<div class="sets">'+a+'</div>'+(b?'<details style="margin-top:12px"><summary>Older setups ('+(all.length-4)+')</summary><div class="sets" style="margin-top:10px">'+b+'</div></details>':'')}
+function recapCard(n){var r=D.recaps&&D.recaps[n];if(!r)return'';var H=r.hub,N=r.narrative,x='';
+x+='<div class="card" style="grid-column:span 12"><div class="lbl">Race recap<em>race '+r.n+' &middot; hub numbers 🟢</em></div>';
+x+='<div class="mini" style="grid-template-columns:repeat(4,1fr)"><div><small>Qualified</small><b>P'+H.qual+'</b></div><div><small>Finished</small><b>P'+H.fin+'</b></div><div><small>Best race lap</small><b>'+f3(H.lap)+'</b></div><div><small>Lap rank</small><b>'+(H.lap_rank?H.lap_rank+' / '+H.lap_of:'n/a')+'</b></div></div>';
+if(H.fl_field)x+='<div class="kv"><b>Field</b><span>Best lap '+f3(H.fl_field)+', median '+f3(H.median)+(H.qlap?', your qualifying '+f3(H.qlap):'')+'</span></div>';
+if(N){x+='<div class="kv"><b>Setup</b><span>'+esc(N.setup)+'</span></div><div class="kv"><b>Practice to race</b><span>'+esc(N.bridge)+'</span></div><div class="kv"><b>What happened</b><span>'+esc(N.chain)+'</span></div>';
+x+='<div class="plan" style="margin-top:12px"><div><b>What worked</b>'+N.worked.map(esc).join('<br>')+'</div><div><b>What cost you</b>'+N.cost.map(esc).join('<br>')+'</div><div><b>Drills before the next race</b>'+N.drills.map(esc).join('<br>')+'</div></div><div class="mut sm" style="margin-top:8px">'+N.tag+'</div>'}
+else x+='<div class="mut sm" style="margin-top:10px">Hub numbers only. Send me your notes on this race and I will add the breakdown.</div>';
+return x+'</div>'}
+function coachCard(){var C=D.coach||[];if(!C.length)return'';return'<div class="card" style="grid-column:span 12;margin-top:12px"><div class="lbl">Coach file<em>recurring issues across races</em></div><div class="plan">'+C.map(function(c){return'<div><b>'+esc(c.issue)+' &middot; '+esc(c.status)+' '+c.tag+'</b>'+esc(c.evidence)+'<br><span style="color:#fff">Drill: '+esc(c.drill)+'</span></div>'}).join('')+'</div></div>'}
+function resultOf(n){var t=trk(n),q=t&&t.league;return q&&q.fin?q:null}
+function hero(n,extra){var no=raceNo(n),t=trk(n),q=resultOf(n),st;
+if(!no)st='Off this season\'s schedule';else if(no<=RACED)st=(q?'Raced':'Raced, not driven by you');else st=(no===RACED+1?'Next race':'Upcoming');
+var chips='<span class="chip '+(no===RACED+1?'k':'')+'">'+st+'</span><span class="chip">'+kind(n)+'</span>'+(t&&t.ai?'<span class="chip">AI '+t.ai+'</span>':'')+(t&&t.active?'<span class="chip on">Active track</span>':'')+(n==="Atlanta"?'<span class="chip">Map: EchoPark</span>':'');
+var res=q?'<div class="res"><div><small>Qualified</small><b>P'+q.qual+'</b></div><div><small>Finished</small><b>P'+q.fin+'</b></div><div><small>Field</small><b>'+q.field+'</b></div></div>':'';
+return'<section class="hero2"><div class="hmap play">'+mapSvg2(n,true)+'</div><div><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div></section>'}
+function bar(n){var i=ALL.indexOf(n);return'<div class="bar"><button data-home>Circuits</button><span class="sp"></span><button class="sq" data-nav="-1" aria-label="Previous circuit">&lsaquo;</button><button class="sq" data-nav="1" aria-label="Next circuit">&rsaquo;</button></div>'}
+function tile(n){var no=raceNo(n),q=resultOf(n),t=trk(n),cl='tile';var sub;
+if(no&&no<=RACED){cl+=q?' raced':' nodrive';sub=q?'Q P'+q.qual+' &middot; F P'+q.fin:'Not driven'}
+else if(no===RACED+1){cl+=' next';sub=kind(n)}
+else{sub=kind(n);if(!no)cl+=' off'}
+return'<button class="'+cl+'" data-open="'+esc(n)+'"><span class="dot"></span><div class="no">'+(no?'R'+no:'Off schedule')+'</div><div class="tm">'+mapSvg2(n,false)+'</div><div class="tn">'+esc(n)+'</div><div class="tr">'+sub+'</div></button>'}
+function renderHome(){cur=null;var nx=SCHED[RACED],q=[];
+D.tracks.forEach(function(t){if(t.league&&t.league.fin)q.push(t.league.fin)});
+var best=q.length?Math.min.apply(null,q):null,avg=q.length?q.reduce(function(a,b){return a+b},0)/q.length:null,t5=q.filter(function(x){return x<=5}).length,t10=q.filter(function(x){return x<=10}).length;
+var h='<div class="app-top"><div class="logo">Crew Chief <b>HQ</b><small>NASCAR 26 &middot; Cup Next Gen &middot; 50% race &middot; 2x tire wear</small></div><div class="drv"><i>21</i><div><b>SOUTHPAW</b><small>Car 21 &middot; CCR</small></div></div></div>';
+var nt=trk(nx),np=nt?'<p>Practice in progress on the DualSense. Best '+f3(nt.pb)+' ('+(nt.pb_status||'')+'). '+esc(nt.next_obj||'')+'</p>':'<p>Road course. None of your oval data carries over.</p>';
+h+='<div style="height:8px"></div>'+hero(nx,np+'<button class="go" data-open="'+esc(nx)+'">Open '+esc(nx)+'</button>');
+h+='<div class="card" style="grid-column:span 12"><div class="mini" style="grid-template-columns:repeat(4,1fr)"><div><small>Starts</small><b>'+q.length+'</b></div><div><small>Best finish</small><b class="g">'+(best?'P'+best:'n/a')+'</b></div><div><small>Avg finish</small><b>'+(avg?'P'+avg.toFixed(1):'n/a')+'</b></div><div><small>Top 5 / 10</small><b>'+t5+' / '+t10+'</b></div></div></div>';
+h+=coachCard();h+='<div class="sec"><b>Raced</b><span>'+RACED+' of '+SCHED.length+' league races done</span></div><div class="tiles">'+SCHED.slice(0,RACED).map(tile).join('')+'</div>';
+h+='<div class="sec"><b>Up next</b><span>'+(SCHED.length-RACED)+' races left this season</span></div><div class="tiles">'+SCHED.slice(RACED).map(tile).join('')+'</div>';
+h+='<div class="sec"><b>Off the schedule</b><span>In the game, not in this season. Kept for later.</span></div><div class="tiles">'+OFF.map(tile).join('')+'</div>';
+h+='<div class="mut sm" style="margin:22px 2px 0">Schedule and results from the <a href="'+HUB+'" style="color:var(--cy)">league race hub</a>. Maps traced from your PACE track sheet.'+(D.updated?' Data updated '+esc(D.updated)+'.':'')+'</div>';
+document.getElementById("main").innerHTML=h;kickoff()}
+function kickoff(){/* trace-in plays through CSS on .hmap.play */}
+function renderOther(n){var no=raceNo(n),extra='';
+if(n==="COTA")extra='<p>Road course, race '+no+'. No practice data yet.</p>';
+var h=bar(n)+hero(n,extra);
+if(n==="COTA"){h+='<div class="card" style="grid-column:span 12"><div class="lbl">First session plan<em>a plan, not data</em></div><div class="plan"><div><b>Device test</b>8 laps on the controller, then 8 on the wheel. Same preset, same tires, same lap count.</div><div><b>Send me</b>Average lap and your worst lap for each device, plus the preset you started on.</div><div><b>Where you lose time</b>Braking zones, the esses, the hairpin. One line each is enough.</div><div><b>Rule</b>One change per run. Tell me every slider you touch, even one click.</div></div></div>'}
+else if(no&&no<=RACED){h+='<div class="card" style="grid-column:span 12"><div class="lbl">Daytona</div><div class="mut" style="font-size:13.5px;line-height:1.5">League race 1. You did not run it, so there are no laps, setups or notes here.</div></div>'}
+else{h+='<div class="card" style="grid-column:span 12"><div class="lbl">No data yet</div><div class="mut" style="font-size:13.5px;line-height:1.5">'+(no?'Not raced yet. Send me your first practice laps and the setup you ran and I will start the log.':'Not on this season\'s league schedule. Send me laps and a setup any time and I will log them here.')+'</div></div>'}
+document.getElementById("main").innerHTML=h}
+function render(name){cur=name;
+var t=trk(name);if(!t){renderOther(name);return}
+var L=D.laps.filter(function(x){return x.track===name&&x.series==="main"}),O=D.laps.filter(function(x){return x.track===name&&x.series==="online"});
+var S=D.setups.filter(function(x){return x.track===name});
+var first=L.length?L[0].lap:null,pb=t.pb;
+var solo=soloLaps(L).map(function(l){return l.lap}),hot=solo.length?Math.min.apply(null,solo):null,bs=best(S,t);
+var h=bar(name)+hero(name,'');
+h+='<div class="bento">';
+h+=recapCard(name);h+='<div class="card" style="grid-column:span 12"><div class="mini"><div><small>Hot lap (solo)</small><b class="g">'+f3(hot)+'</b></div><div><small>Qualifying</small><b>'+(t.comp_lap?f3(t.comp_lap):'n/a')+'</b></div><div><small>Race setup</small><b class="y">'+(bs?bs.id:'n/a')+'</b></div></div></div>';
+h+='<div class="card s6"><div class="lbl">Key issue</div><div style="font-size:13.5px;line-height:1.45">'+(t.key_issue||"None logged")+'</div></div><div class="card s6"><div class="lbl">Next objective</div><div style="font-size:13.5px;line-height:1.45;color:#dfe3ea">'+(t.next_obj||'None set')+'</div></div>';
+h+=controllerCard(t)+hotCard(L)+stintCard(t);
+h+=seasonCard(name);
+h+='<div class="card" style="grid-column:span 12"><div class="lbl">Setups<em>newest first</em></div>'+scoreCards(S,t)+'</div>';
+h+='<div class="card" style="grid-column:span 12"><div class="lbl">Notes<em>your commentary and crew chief alerts</em></div><div style="max-height:420px;overflow:auto">'+feed(t)+'</div></div>';
+h+='</div>';
+h+='<details class="more" style="margin-top:12px"><summary>More detail: pace, car status, compare, race control, all laps</summary><div class="bento" style="margin-top:12px">';
+h+='<div class="card strip" style="grid-column:span 12"><span class="t">Fastest lap</span><div class="k"><small>Personal best</small><b>'+f3(pb)+'</b></div><div class="k"><small>Target</small><b class="y">'+f3(t.target)+'</b></div><div class="k"><small>Gain from first lap</small><b>'+(first&&pb?'-'+(first-pb).toFixed(3):'n/a')+'</b></div><span class="chip" style="margin-left:auto">'+tag(t.pb_status)+'</span></div>';
+h+=paceCard(t,L)+setupCard(S)+'<div class="card s4"><div class="lbl">Lap trend</div>'+(lapChart(L)||'<div class="mut sm">Needs at least two laps.</div>')+'</div>';
+h+=carCard(t)+readCard(t)+compareCard(t);
+h+='<div class="card s6"><div class="lbl">All laps<em>'+(name==="Darlington"?"unordered samples":"as logged")+'</em></div><div style="max-height:520px;overflow:auto">'+lapList(L,O,pb,name,t)+'</div></div>';
+h+='</div></details>';
+document.getElementById("main").innerHTML=h}
+function fmt(v){return v==null?"not set":Number(v).toFixed(1)}
+function buildMsg(s){var L=[s.track+" setup "+s.id];
+L.push("Left front "+fmt(s.lf)+", Right front "+fmt(s.rf));
+L.push("Left rear "+fmt(s.lr)+", Right rear "+fmt(s.rr));
+L.push("Wedge "+(s.wedge==null?"not set":s.wedge));
+if(s.preset)L.push("Base preset: "+s.preset);
+if(s.best_lap)L.push("Best lap on this setup: "+s.best_lap.toFixed(3));
+if(s.status==="recalled"||s.status==="approx")L.push("Note: some values are recalled, not read straight from the garage.");
+return L.join("\n")}
+var sheet=document.getElementById("sheet"),msgEl=document.getElementById("msg");
+document.getElementById("main").addEventListener("click",function(e){
+var b=e.target.closest(".send");if(b){var s=D.setups.filter(function(x){return x.id===b.getAttribute("data-id")})[0];if(!s)return;msgEl.value=buildMsg(s);sheet.hidden=false;document.getElementById("shr").style.display=navigator.share?"":"none";return}
+var sn=e.target.closest("[data-snap]");if(sn){snapI=+sn.getAttribute("data-snap");render(cur);return}
+var tr=e.target.closest("[data-track]");if(tr){openTrack(tr.getAttribute("data-track"));return}
+var op=e.target.closest("[data-open]");if(op){openTrack(op.getAttribute("data-open"));return}
+if(e.target.closest("[data-home]")){goHome();return}
+var nv=e.target.closest("[data-nav]");if(nv&&cur){var i=ALL.indexOf(cur),k=ALL.length;openTrack(ALL[(i+Number(nv.getAttribute("data-nav"))+k)%k])}});
+document.getElementById("cls").addEventListener("click",function(){sheet.hidden=true});
+document.getElementById("cpy").addEventListener("click",function(){var b=this;function ok(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1500)}
+try{navigator.clipboard.writeText(msgEl.value).then(ok,function(){msgEl.select();try{document.execCommand("copy");ok()}catch(x){}})}catch(x){msgEl.select();try{document.execCommand("copy");ok()}catch(y){}}});
+document.getElementById("shr").addEventListener("click",function(){try{navigator.share({text:msgEl.value})}catch(x){}});
+function openTrack(n){snapI=1e9;render(n);window.scrollTo(0,0);try{history.replaceState(null,"","#"+encodeURIComponent(n))}catch(x){}}
+function goHome(){renderHome();window.scrollTo(0,0);try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}}
+function boot(){var h="";try{h=decodeURIComponent((location.hash||"").slice(1))}catch(x){}
+if(h&&ALL.indexOf(h)>=0)openTrack(h);else renderHome()}
+if(D&&MAPS)boot();else{document.getElementById("main").innerHTML='<div class="mut" style="padding:48px 8px">Loading Crew Chief HQ...</div>';
+Promise.all([fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}),fetch("maps.json").then(function(r){return r.json()})]).then(function(a){D=a[0];MAPS=a[1];boot()}).catch(function(){document.getElementById("main").innerHTML='<div class="mut" style="padding:48px 8px">Could not load data. Check your connection and reopen.</div>'})}
+if('serviceWorker' in navigator&&location.protocol==='https:'&&!D_EMBED){try{navigator.serviceWorker.register('sw.js')}catch(x){}}
+</script></body></html>
