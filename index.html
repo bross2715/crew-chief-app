@@ -193,6 +193,7 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .rp ul{margin:0;padding-left:17px}.rp li{font-size:13.5px;line-height:1.42;margin:3px 0;color:#e6eaf0}
 .rp .ln{margin-top:10px;font-size:12px;color:var(--mut);line-height:1.4}
 .rp .nv{display:flex;gap:8px;margin-top:12px}.rp .nv button{flex:1;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;border-radius:8px;padding:9px;font:700 12.5px var(--bd)}
+.hdr{padding:4px 2px 12px}.hdr .rn{font:700 15px var(--hd);letter-spacing:1.6px;color:var(--cy);text-transform:uppercase;margin-bottom:4px}.hdr h1{font:800 italic clamp(40px,12vw,64px)/.95 var(--hd);text-transform:uppercase;letter-spacing:.5px}.hdr .res{display:flex;gap:6px 22px;margin-top:12px}.hdr .res div{display:flex;flex-direction:column}.hdr .res small{color:var(--mut);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase}.hdr .res b{font:700 26px/1.05 var(--hd)}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d5a"/><stop offset=".5" stop-color="#ffc83d"/><stop offset="1" stop-color="#2ee27a"/></linearGradient>
@@ -341,7 +342,7 @@ function hero(n,extra){var no=raceNo(n),t=trk(n),q=resultOf(n),st;
 if(!no)st='Off this season\'s schedule';else if(no<=RACED)st=(q?'Raced':'Raced, not driven by you');else st=(no===RACED+1?'Next race':'Upcoming');
 var chips='<span class="chip '+(no===RACED+1?'k':'')+'">'+st+'</span><span class="chip">'+kind(n)+'</span>'+(t&&t.ai?'<span class="chip">AI '+t.ai+'</span>':'')+(t&&t.active?'<span class="chip on">Active track</span>':'')+(n==="Atlanta"?'<span class="chip">Map: EchoPark</span>':'');
 var res=q?'<div class="res"><div><small>Qualified</small><b>P'+q.qual+'</b></div><div><small>Finished</small><b>P'+q.fin+'</b></div><div><small>Field</small><b>'+q.field+'</b></div></div>':'';
-return'<section class="hero2"><div class="hmap play">'+mapSvg2(n,true)+'</div><div><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div></section>'}
+if(t&&t.report)return'<div class="hdr"><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div>';return'<section class="hero2"><div class="hmap play">'+mapSvg2(n,true)+'</div><div><div class="rn">'+(no?'Race '+no+' of '+SCHED.length:'Not on the schedule')+'</div><h1>'+esc(n)+'</h1><div class="chips">'+chips+'</div>'+res+(extra||'')+'</div></section>'}
 function bar(n){var i=ALL.indexOf(n);return'<div class="bar"><button data-home>Circuits</button><span class="sp"></span><button class="sq" data-nav="-1" aria-label="Previous circuit">&lsaquo;</button><button class="sq" data-nav="1" aria-label="Next circuit">&rsaquo;</button></div>'}
 function tile(n){var no=raceNo(n),q=resultOf(n),t=trk(n),cl='tile';var sub;
 if(no&&no<=RACED){cl+=q?' raced':' nodrive';sub=q?'Q P'+q.qual+' &middot; F P'+q.fin:'Not driven'}
