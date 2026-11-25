@@ -179,6 +179,7 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .rls button{border:0;border-radius:4px;height:26px;color:#06090d;font:800 11px var(--bd);padding:0;min-width:0}
 .rls .red{background:var(--red)}.rls .amber{background:var(--gold)}.rls .green{background:var(--green)}
 .rls button.on{outline:2px solid var(--cy);outline-offset:1px}
+.rls.was{margin:3px 0 0}.rls.was span{height:6px;border-radius:3px;opacity:.85}.rls.was .red{background:var(--red)}.rls.was .amber{background:var(--gold)}.rls.was .green{background:var(--green)}.wlb{color:var(--mut);font-size:11px;margin:4px 0 0;line-height:1.35}
 .rlg{display:flex;gap:12px;flex-wrap:wrap;color:var(--mut);font-size:11px;margin:4px 0 0}.rlg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 .rp{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.03);padding:12px}
 .rp .top{display:flex;align-items:center;gap:8px}
@@ -301,7 +302,7 @@ var h='<div class="top"><h3>'+esc(sp.title)+'</h3><span class="pill '+sp.tier+'"
 if(repTab==="pro"){var p=sp.pro;h+='<div class="sub">'+(p?'What the benchmark does here, next to what you do.':'Nothing from the Pro Line on this turn yet.')+'</div>';
 if(p){if(p.stats)h+='<div class="st">'+p.stats.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>'}).join('')+'</div>';
 h+='<h4>Pro Line</h4><ul>'+p.items.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul><h4>You against it</h4><div class="sub" style="margin:2px 0 0">'+esc(p.gap)+'</div>'}}
-else{h+='<div class="sub">'+esc(sp.sub)+'</div>';
+else{h+='<div class="sub">'+esc(sp.sub)+'</div>';var sx=r.sectors.filter(function(x){return x.id===sp.sec})[0];if(sx&&sx.why)h+='<div class="sub" style="color:#cfd5de">'+esc(sx.why)+'</div>';
 h+='<div class="st">'+sp.stats.map(function(x){return'<div><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>'}).join('')+'</div>';
 sp.blocks.forEach(function(b){h+='<h4>'+esc(b.h)+'</h4><ul>'+b.i.map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul>'});
 if(sp.line)h+='<div class="ln">'+esc(sp.line)+'</div>';
@@ -323,7 +324,8 @@ r.turns.forEach(function(q){svg+='<g class="tn" data-spot="'+q.spot+'" data-t="'
 svg+='<g class="bsg" data-spot="bs"><text class="bsl" x="'+r.bs.x+'" y="'+r.bs.y+'">BACK STRAIGHT</text><rect x="'+(r.bs.x-62*k)+'" y="'+(r.bs.y-14*k)+'" width="'+(124*k)+'" height="'+(22*k)+'" fill="transparent"/></g></svg>';
 var chips='<div class="rrow">'+r.spots.map(function(s){return'<button class="rc '+s.tier+'" data-spot="'+s.id+'">'+esc(repChipLbl(s))+'</button>'}).join('')+'</div>';
 var strip='<div class="rls">'+r.sectors.map(function(s){return'<button class="'+s.tier+'" data-sec="'+s.id+'" data-spot="'+s.spot+'" style="flex:'+(s.f1-s.f0).toFixed(3)+'">'+s.id+'</button>'}).join('')+'</div>';
-return'<div class="card rep" style="grid-column:span 12"><div class="lbl">Track report<em>tap a turn</em></div><div class="hd2">'+esc(r.head)+'</div>'+svg+chips+strip+'<div class="rlg"><span><i style="background:var(--green)"></i>Good</span><span><i style="background:var(--gold)"></i>Small gain</span><span><i style="background:var(--red)"></i>Needs work</span><span>Sectors S1-S7 to scale</span></div><div class="rp" id="rp">'+repPanel(r,sp0)+'</div><div class="mut sm" style="margin-top:8px">'+esc(r.note)+'</div></div>'}
+var was=r.sectors[0].hist&&r.sectors[0].hist.length?'<div class="rls was">'+r.sectors.map(function(s){return'<span class="'+s.hist[0].tier+'" style="flex:'+(s.f1-s.f0).toFixed(3)+'"></span>'}).join('')+'</div><div class="wlb">Top: now. Thin bar: baseline ('+esc(r.sectors[0].hist[0].run)+'). '+r.sectors.filter(function(s){return s.tier==="green"}).length+' green, '+r.sectors.filter(function(s){return s.tier==="amber"}).length+' yellow, '+r.sectors.filter(function(s){return s.tier==="red"}).length+' red now.'+(r.goal?' '+esc(r.goal):'')+'</div>':'';
+return'<div class="card rep" style="grid-column:span 12"><div class="lbl">Track report<em>tap a turn</em></div><div class="hd2">'+esc(r.head)+'</div>'+svg+chips+strip+was+'<div class="rlg"><span><i style="background:var(--green)"></i>Good</span><span><i style="background:var(--gold)"></i>Small gain</span><span><i style="background:var(--red)"></i>Needs work</span><span>Sectors S1-S7 to scale</span></div><div class="rp" id="rp">'+repPanel(r,sp0)+'</div><div class="mut sm" style="margin-top:8px">'+esc(r.note)+'</div></div>'}
 function selSpot(id){var t=trk(cur),r=t&&t.report;if(!r)return;var sp=r.spots.filter(function(x){return x.id===id})[0];if(!sp)return;repSel=id;
 document.getElementById("rp").innerHTML=repPanel(r,sp);
 Array.prototype.forEach.call(document.querySelectorAll(".rep .tn"),function(g){g.classList.toggle("on",g.getAttribute("data-spot")===id);var d=g.querySelector(".dt");if(d)d.classList.toggle("on",g.getAttribute("data-spot")===id)});
