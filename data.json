@@ -1195,7 +1195,24 @@
       ],
       "line": "Sector line: 6B exit, red/white exit curb on the right, long straight opening up.",
       "src": "Grokbot sector report",
-      "sec": "S3"
+      "sec": "S3",
+      "pro": {
+       "stats": [
+        [
+         "S3 gap",
+         "+0.91 s best lap"
+        ],
+        [
+         "Best-ever gap",
+         "+0.51 s"
+        ]
+       ],
+       "items": [
+        "No separate read of 6B. The only measurement is sector 3, which covers 6A and 6B together.",
+        "6A speed: 52-53 mph in 2nd, against your ~45 in 1st."
+       ],
+       "gap": "About half of the S3 gap probably comes from the 6A entry speed. Treat 6B as unmeasured until we get a clip of it."
+      }
      },
      {
       "id": "bs",
@@ -1230,7 +1247,20 @@
       ],
       "line": null,
       "src": "Grokbot sector report",
-      "sec": "S4"
+      "sec": "S4",
+      "pro": {
+       "stats": [
+        [
+         "S4 gap",
+         "+0.61 s best lap"
+        ]
+       ],
+       "items": [
+        "No separate read of the back straight. Sector 4 runs from the back straight to the T12 exit.",
+        "T12 apex: 55-56 mph in 2nd, against your 42-45 in 1st. He holds 3-25% throttle for about 1.4 s, then builds."
+       ],
+       "gap": "The S4 gap is mostly the T12 apex speed and the exit, not the straight. Fix T12 first."
+      }
      },
      {
       "id": "12",
@@ -1337,7 +1367,29 @@
       ],
       "line": "S5 runs from T12 exit to T15 exit.",
       "src": "Grokbot sector report",
-      "sec": "S5"
+      "sec": "S5",
+      "pro": {
+       "stats": [
+        [
+         "Min speed",
+         "52-53 mph, 2nd"
+        ],
+        [
+         "You",
+         "~45 mph, 1st"
+        ],
+        [
+         "S5 gap",
+         "+1.82 s best lap"
+        ]
+       ],
+       "items": [
+        "First throttle goes in at the apex, then builds to full over about 3.5 s.",
+        "Releases the brake earlier so the apex is faster.",
+        "Stays in 2nd, so the exit has less wheelspin."
+       ],
+       "gap": "You are about 7 mph slower at the apex and in 1st. Release the brake a bit earlier and aim for about 50 mph. S5 is also your least consistent sector. Timing error is about 0.4 s per sector."
+      }
      },
      {
       "id": "15",
@@ -1426,7 +1478,24 @@
       ],
       "line": "Sector line: T18 exit, blue/red curb on the left, short chute toward T19.",
       "src": "Grokbot sector report",
-      "sec": "S6"
+      "sec": "S6",
+      "pro": {
+       "stats": [
+        [
+         "S6 gap",
+         "+0.65 s best lap"
+        ],
+        [
+         "Best-ever gap",
+         "+0.45 s"
+        ]
+       ],
+       "items": [
+        "No turn-by-turn read of T16 to T18, only the sector time.",
+        "Your best-ever S6 is already close, so the gap is small."
+       ],
+       "gap": "This is the smallest gap on the lap and it is within the timing error of about 0.4 s. Not a priority."
+      }
      },
      {
       "id": "19",
@@ -1463,7 +1532,30 @@
       ],
       "line": null,
       "src": "Grokbot sector report",
-      "sec": "S7"
+      "sec": "S7",
+      "pro": {
+       "stats": [
+        [
+         "Min speed",
+         "95-97 mph, 3rd"
+        ],
+        [
+         "You",
+         "74-77 mph, 2nd"
+        ],
+        [
+         "S7 gap",
+         "+1.56 s"
+        ]
+       ],
+       "items": [
+        "Brakes from about the same speed as you, about 128 mph.",
+        "Uses only a third to half brake for about 2 s.",
+        "Back on 20-35% throttle through the middle, full throttle about 3 s after turn-in.",
+        "Cuts the inside of the corner."
+       ],
+       "gap": "This is the biggest speed gap on the lap, about 20 mph, and it is driving, not setup. Use about half the brake and come off it sooner. Aim for 85 mph, then 90. Try any inside cut in practice only, since the game penalizes cuts."
+      }
      },
      {
       "id": "20",
@@ -1499,7 +1591,28 @@
       ],
       "line": "S7 ends at the start/finish gantry, where the HUD lap clock resets.",
       "src": "Grokbot turn map and sector report",
-      "sec": "S7"
+      "sec": "S7",
+      "pro": {
+       "stats": [
+        [
+         "Min speed",
+         "54-56 mph, 2nd"
+        ],
+        [
+         "You",
+         "~47 mph, 1st"
+        ],
+        [
+         "S7 gap",
+         "+1.56 s with T19"
+        ]
+       ],
+       "items": [
+        "Carries about 8 mph more through the corner and stays in 2nd.",
+        "No separate throttle read for this corner."
+       ],
+       "gap": "Same pattern as the other slow corners: you are slower at the apex and in 1st. Most of the S7 gap is T19, so fix that first."
+      }
      }
     ],
     "bs": {
@@ -1603,7 +1716,7 @@
      ]
     ],
     "gaps": "Your theoretical best, 1:39.925, is only 0.079 s off the practice goal.",
-    "note": "Times are leaderboard and HUD numbers. Technique notes come from a reference guide to the NASCAR 26 Cup COTA layout. Tap a turn in the track report and switch to Pro Line to see it turn by turn."
+    "note": "Times are leaderboard and HUD numbers. Technique notes come from a reference guide to the NASCAR 26 Cup COTA layout and from Grokbot's sector read of a benchmark hot lap (timing error about 0.4 s per sector). Where nothing was measured, the turn says so. Tap a turn in the track report and switch to Pro Line to see it turn by turn."
    }
   }
  ],
