@@ -1,5 +1,5 @@
 // Network first so a new data.json shows up right away. The cache is only the offline fallback.
-var C = 'cchq-v2';
+var C = 'cchq-v3';
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(C).then(function (c) {
     return c.addAll(['./', 'index.html', 'maps.json', 'data.json', 'manifest.webmanifest', 'icon-192.png', 'avatar.png']);
