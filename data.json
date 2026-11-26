@@ -2097,7 +2097,7 @@
      "plan": [
       "Load Braking Strength 70. Do not touch anything else.",
       "1 warmup lap, then timed laps. Record a clip.",
-      "Look at tire % on the HUD at the end of the run and note it.",
+      "Note tire % after each 3 laps and at the end. Last run: into the 60s after 6 laps (about 6% a lap).",
       "If T1 runs wide on entry: stay at 70 and brake a touch earlier, do not change settings."
      ],
      "targets": [
@@ -2178,7 +2178,7 @@
      [
       "Braking Strength 65",
       "about 1:41 (unverified)",
-      "Your report: faster, but too strong. Grokbot has not read it yet."
+      "Your report: faster, but too strong. Tires were already in the 60s % after 6 laps (2x wear). Grokbot has not read the video yet."
      ]
     ]
    }
