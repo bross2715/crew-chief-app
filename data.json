@@ -608,7 +608,7 @@
    "link": "cota",
    "active": true,
    "ai": "104",
-   "pb": 101.685,
+   "pb": 101.467,
    "pb_status": "reported",
    "target": 99.846,
    "comp_lap": 103.085,
@@ -619,7 +619,7 @@
    "next_obj": "Braking Strength 70 is loaded and ran (best 1:41.704, feels better, tires better). Waiting on Grokbot's read of the video. Next single change after that. Hardest part: T11 to T15 and the turtles.",
    "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T11 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 18 turns numbered 1 to 6, 6A, 6B, 11 to 20 (NASCAR fan map, 2026-11-25), no T7 to T10 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
-   "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.685 (13th fastest, 2.839 s off the leader when reported). Race 8, not run yet",
+   "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.467 (Grokbot HUD read, Nov 26, Braking Strength 65). Race 8, not run yet",
    "controller": {
     "device": "DualSense, automatic",
     "status": "proposed",
@@ -1174,7 +1174,7 @@
        "you": "43 mph, 1st",
        "pro": "46-47 mph, 2nd",
        "good": "Braking point and exit speed are about the same as the Pro Line. T1 was clean on both race laps.",
-       "fix": "Exit spins in 1st when throttle goes down before the wheel is straight. Hold about a quarter throttle until the wheel unwinds."
+       "fix": "Brake 65 over-slows T1 (34-42 mph, was 43) and the exit is soft. Release the brake a touch earlier, aim for 40-43, then feed throttle in gradually. Hold about a quarter throttle until the wheel unwinds."
       },
       "how": [
        "Brake late up the hill in a straight line, but do not turn in late.",
@@ -1656,7 +1656,7 @@
        "you": "45 mph, 1st",
        "pro": "52-53 mph, 2nd",
        "good": "The speed is in you: your best-ever S5 is 18.06 s.",
-       "fix": "Your least consistent sector. Release the brake earlier, aim for about 50 mph, and first throttle at the apex."
+       "fix": "Four spins in one session, all on the apex curb or green paint (T12 and T15, none in a braking zone). Turn in later, stay off the inside curb and paint until the car is straight, no throttle or upshift on the curb. Release the brake earlier, aim for about 50 mph."
       },
       "how": [
        "Release the brake earlier than you do now.",
@@ -1816,7 +1816,7 @@
       "stats": [
        [
         "Speed",
-        "about 74 mph, 2nd"
+        "78-82 mph, 3rd (brake 65)"
        ],
        [
         "S7 clean avg",
@@ -1864,10 +1864,10 @@
        "gap": "This is the biggest speed gap on the lap, about 20 mph, and it is driving, not setup. Use about half the brake and come off it sooner. Aim for 85 mph, then 90. Try any inside cut in practice only, since the game penalizes cuts."
       },
       "row": {
-       "you": "74-77 mph, 2nd",
+       "you": "78-82 mph, 3rd",
        "pro": "95-97 mph, 3rd",
-       "good": "Your best lap holds the best-ever S7. Same braking point as the Pro Line (about 128 mph).",
-       "fix": "You slow down too much, about 20 mph. Use about half the brake and come off sooner. Aim for 85 mph, then 90."
+       "good": "Brake 65 helped: you now stay in 3rd at 78-82 mph (was 74 in 2nd). Same braking point as the Pro Line (about 128 mph).",
+       "fix": "Still short of 85-90. Use about half the brake and come off it sooner."
       },
       "how": [
        "Brake from about 128 mph but only a third to half brake for about 2 s.",
@@ -1955,7 +1955,7 @@
      "ty": 0.227
     },
     "k": 0.483,
-    "head": "Best 1:41.685 · theoretical 1:39.925 · 1.76 s on the table",
+    "head": "Best 1:41.467 · old theoretical 1:39.925, recompute pending Grokbot's sector file",
     "first": "1",
     "note": "Sector colors come from Grokbot's clean-lap numbers. Turn positions follow the official NASCAR National Course map.",
     "runs": [
@@ -1963,6 +1963,10 @@
     ],
     "goal": "Goal: every sector at or under 1.5% off the target (leader qualifying pace 98.431). Colors are recomputed from each run's clean laps.",
     "priorities": [
+     [
+      "Stadium apex curbs",
+      "T12 and T15 inside curb and paint: four spins, 10 to 18 s lost each bad lap. Turn in later, stay off the curb until straight. If you spin at T12, go easy through T15, both T15 spins came right after."
+     ],
      [
       "T5/T6 cuts",
       "Stay on the asphalt. A cut cost 6 to 8 s in the race. Free time."
@@ -2002,11 +2006,11 @@
     "stats": [
      [
       "Best lap",
-      "1:41.685"
+      "1:41.467"
      ],
      [
       "Since baseline",
-      "-1.802 s"
+      "-2.020 s"
      ],
      [
       "Qualifying",
@@ -2028,6 +2032,11 @@
       "Throttle Non Linear 60",
       101.685,
       -0.343
+     ],
+     [
+      "Braking Strength 65",
+      101.467,
+      -0.218
      ]
     ],
     "rows": [
@@ -2065,23 +2074,23 @@
      [
       "HUD practice goal",
       "1:39.846",
-      1.839,
+      1.621,
       "your best is"
      ],
      [
       "Practice leader",
       "1:39.657",
-      2.028,
+      1.81,
       "your best is"
      ],
      [
       "Qualifying leader",
       "1:38.431",
-      4.654,
+      3.036,
       "you qualified"
      ]
     ],
-    "gaps": "Your theoretical best, 1:39.925, is only 0.079 s off the practice goal.",
+    "gaps": "Your best lap, 1:41.467, is 1.621 s off the practice goal and 3.036 s off the qualifying leader.",
     "note": "Times are leaderboard and HUD numbers. Technique notes come from a reference guide to the NASCAR 26 Cup COTA layout and from Grokbot's sector read of a benchmark hot lap (timing error about 0.4 s per sector). Where nothing was measured, the turn says so. Tap a turn in the track report and switch to Pro Line to see it turn by turn."
    },
    "crew": {
@@ -2132,7 +2141,7 @@
      [
       "Braking Strength",
       "70",
-      "Loaded. Slow down less than 75, easier to control than 65."
+      "65 gave a new best and a better T19. 70 loaded since, feels easier."
      ],
      [
       "Throttle Non Linear",
@@ -2173,15 +2182,16 @@
      ],
      [
       "Braking Strength 65",
-      "about 1:41 (unverified)",
-      "Too strong for feel. Tires into the 60s % after 6 laps."
+      "1:41.467 (lap 1)",
+      "New best by 0.218 s. Stable in every braking zone. T19 now 3rd at 78-82. Four spins, all at the stadium curbs, none in braking zones."
      ],
      [
       "Braking Strength 70",
       "1:41.704 (lap 2, unverified)",
       "Your report: braking feels better, tires wore less. Not a new best (best is 1:41.685)."
      ]
-    ]
+    ],
+    "theo": "1:39.925*"
    }
   }
  ],
