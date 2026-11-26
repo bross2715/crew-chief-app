@@ -2198,6 +2198,11 @@
       "All four tires 17.5",
       "1:41.703 (practice board)",
       "Same pace as 15 fronts. Stadium noticeably better (Brandon). Tire wear not known. No footage. Brake setting assumed 70, not confirmed."
+     ],
+     [
+      "Throttle Non Linear 70 + tires 17.5",
+      "not read (online)",
+      "Felt loose on 15 fronts, good after all four went to 17.5, more consistent and faster laps (your report). Second time 17.5 helped by feel. Waiting on Grokbot."
      ]
     ],
     "theo": "1:39.925*",
@@ -2507,6 +2512,28 @@
       ],
       "bad": [
        "Not known. No footage and no tire % taken."
+      ]
+     },
+     {
+      "id": "D",
+      "name": "Nov 26 online practice",
+      "tag": "D · online",
+      "setup": "Throttle Non Linear 70 · Neutral · tires 15/15/17.5/17.5, then all four 17.5 partway. Brake and wedge assumed 70 and 51, not confirmed.",
+      "best": "not read",
+      "clean": "",
+      "spread": "",
+      "src": "Your report. 21 min video with your brother, waiting on Grokbot. No sector times yet.",
+      "sectors": null,
+      "bestlap": null,
+      "spins": [],
+      "good": [
+       "After the tires went to 17.5 the car felt good.",
+       "Laps were more consistent and faster in the second half (your report).",
+       "Fastest lap of the session came after the tire change."
+      ],
+      "bad": [
+       "First part on the stock tires felt loose, with Throttle Non Linear 70 and the Neutral preset.",
+       "Online traffic and lobby settings not read yet."
       ]
      }
     ]
