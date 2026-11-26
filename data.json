@@ -616,7 +616,7 @@
    "finish": null,
    "pref_race": "15 / 15 / 17.5 / 17.5, wedge 51, Neutral",
    "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T11 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
-   "next_obj": "Setup now: Braking Strength 70, wedge 51, all tires 17.5. The stadium ran much better with 17.5 (your report, no footage). Tire wear is unknown. Record the next run and note tire % after 3 laps and at the end.",
+   "next_obj": "Setup now: Braking Strength 70, wedge 51, all tires 17.5. Session B (70) was tighter than 65 but T15 exit still spins. Record the next run and note tire % after 3 laps and at the end.",
    "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T11 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 18 turns numbered 1 to 6, 6A, 6B, 11 to 20 (NASCAR fan map, 2026-11-25), no T7 to T10 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
    "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.467 (Grokbot HUD read, Nov 26, Braking Strength 65). Race 8, not run yet",
@@ -685,7 +685,7 @@
       0
      ]
     ],
-    "note": "Braking Strength 70 is loaded and was run (feels better, tires wore less, per Brandon, no footage). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
+    "note": "Braking Strength 70 is loaded and was run (session B, read by Grokbot). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
    },
    "race_log": [
     {
@@ -1358,7 +1358,7 @@
        "you": "48 mph, 1st",
        "pro": "52-53 mph, 2nd",
        "good": "Your braking point is already right: straight line at the gantry.",
-       "fix": "Start the turn a fraction earlier and carry 48-50 mph through the apex."
+       "fix": "Start the turn a fraction earlier and carry 48-50 mph through the apex. One spin at the 6A exit in session B: feed the throttle in gradually until the wheel is straight."
       },
       "how": [
        "Heavy brake in a straight line at the gantry. Your point is already right.",
@@ -1716,8 +1716,8 @@
       "row": {
        "you": "41 mph, 1st",
        "pro": "49-52 mph, 2nd",
-       "good": "Exit clean on every timed lap in clips 3 and 4. This was a spin and an off before.",
-       "fix": "Apex speed. Hold 10-20% throttle through the apex like the Pro Line driver."
+       "good": "Two spins in session B (49 to 57 mph in 1st on the green paint), so the T15 exit is not fixed. Hard to say if that is the setup or your throttle.",
+       "fix": "Wait until the car points down the exit before more than part throttle. Keep the right side tires off the green paint. Hold 10 to 20% through the apex."
       },
       "how": [
        "Double apex: out, then back in.",
@@ -1964,8 +1964,8 @@
     "goal": "Goal: every sector at or under 1.5% off the target (leader qualifying pace 98.431). Colors are recomputed from each run's clean laps.",
     "priorities": [
      [
-      "Stadium apex curbs",
-      "T12 and T15 inside curb and paint: four spins, 10 to 18 s lost each bad lap. Turn in later, stay off the curb until straight. If you spin at T12, go easy through T15, both T15 spins came right after."
+      "T15 exit and the curbs",
+      "T15 exit spins again in session B (2 of 3 spins, 49 to 57 mph in 1st on the green paint). Wait until the car points down the exit before more than part throttle. T12 apex curb spins went from 2 to 0 on brake 70."
      ],
      [
       "T5/T6 cuts",
@@ -1995,9 +1995,9 @@
     "keep": [
      "Esses T2 to T6: fast and steady, apart from the cuts.",
      "Braking points at T1, 6A, T11 and T19 match the Pro Line.",
-     "T15 exit: clean on every timed lap since the throttle fix.",
      "T1 and T11 exits were clean on the race laps.",
-     "Carousel is your most consistent sector."
+     "Carousel is your most consistent sector.",
+     "T12 apex curb: no spins in the brake 70 run (it was 2 in the 65 run)."
     ]
    },
    "progress": {
@@ -2106,7 +2106,8 @@
      "plan": [
       "Next test, one change only, only if you want to push further: all four tires to 20.",
       "Check tire % after 3 laps and at the end of every run, even by phone photo of the HUD.",
-      "Record the run so Grokbot can check the stadium and update the colors."
+      "Record the run so Grokbot can check the stadium and update the colors.",
+      "Write the setup on the screen or tell me before every run so clips can be tagged."
      ],
      "targets": [
       [
@@ -2182,17 +2183,17 @@
      [
       "Braking Strength 65",
       "1:41.467 (lap 1)",
-      "New best by 0.218 s. Stable in every braking zone. T19 now 3rd at 78-82. Four spins, all at the stadium curbs, none in braking zones."
+      "Session A: new best by 0.218 s. Clean average 1:42.87, spread 2.36 s. T19 now 3rd at 78-82. 4 spins, all at the stadium curbs, none in braking zones."
      ],
      [
       "Braking Strength 70",
-      "1:41.704 (lap 2, unverified)",
-      "Your report: braking feels better, tires wore less. No footage, so Grokbot cannot read it. Not a new best (best is 1:41.467)."
+      "1:41.704 (lap 2)",
+      "Session B (Grokbot read): clean average 1:42.81, spread 1.92 s, tighter than 65. 3 spins (6A exit, T15 exit x2), no T12 curb spins (65 had 2). Later laps held up better. Not a new best."
      ],
      [
       "All four tires 17.5",
       "1:41.703 (practice board)",
-      "Same pace as 15 fronts. Stadium noticeably better (Brandon): stayed inside, no hot entries, passed cars in practice. Tire wear not known, no tire % taken. No footage."
+      "Same pace as 15 fronts. Stadium noticeably better (Brandon). Tire wear not known. No footage. Brake setting assumed 70, not confirmed."
      ]
     ],
     "theo": "1:39.925*"
