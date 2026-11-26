@@ -235,6 +235,16 @@ summary::-webkit-details-marker{display:none}summary:after{content:"  +";color:v
 .stbl{width:100%;border-collapse:collapse;font-size:13px}.stbl th{font:700 10px var(--bd);letter-spacing:1px;text-transform:uppercase;color:var(--mut);text-align:right;padding:4px 4px}.stbl th:first-child,.stbl td:first-child{text-align:left}.stbl td{padding:7px 4px;border-top:1px solid rgba(255,255,255,.07);text-align:right;font-variant-numeric:tabular-nums}.stbl i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .hit{background:rgba(255,255,255,.04);border-radius:8px;padding:8px 10px;margin:6px 0}.hit em{font:700 10px var(--bd);letter-spacing:1px;text-transform:uppercase;font-style:normal;color:var(--cy)}
 .cbody details{margin:0 0 12px}.cbody summary{cursor:pointer;color:#cfd5de;font:700 13px var(--bd);letter-spacing:.8px;text-transform:uppercase;padding:10px 2px}
+
+.ctabs{grid-template-columns:repeat(5,1fr)!important;gap:5px!important}.ctabs button{font-size:12.5px!important;padding:11px 2px!important;letter-spacing:.4px!important}
+.rep .sg.gray{stroke:#566170}.rls .gray{background:#3a4350;color:#9aa5b5}
+.rls span{display:block;border-radius:4px;height:26px;color:#06090d;font:800 11px/26px var(--bd);text-align:center;min-width:0;overflow:hidden}
+.rls.bl span{height:8px;border-radius:3px;font-size:0}
+.spn{fill:#ff4d5a;stroke:#fff}.spt{fill:#fff;font-weight:800;text-anchor:middle;dominant-baseline:central}
+.rchips{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px}.rchips button{flex:0 0 auto;border:1px solid var(--line);background:var(--c2);color:#cfd5de;border-radius:999px;padding:9px 14px;font:700 13px var(--bd)}.rchips button.on{background:rgba(95,208,255,.16);border-color:var(--cy);color:#fff}
+.gx td{text-align:center!important;font-size:12px}.gx td.red{background:rgba(255,77,90,.28)}.gx td.orange{background:rgba(255,138,61,.28)}.gx td.amber{background:rgba(255,210,63,.24)}.gx td.green{background:rgba(47,224,127,.24)}.gx td.gray{color:var(--mut)}
+.gl{margin:6px 0 0 18px;padding:0;font-size:13.5px;line-height:1.45;color:#dfe3ea}.gl li{margin:0 0 5px}
+.rlb{font:700 10px var(--bd);letter-spacing:1px;text-transform:uppercase;color:var(--mut);margin:8px 0 3px}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d5a"/><stop offset=".5" stop-color="#ffc83d"/><stop offset="1" stop-color="#2ee27a"/></linearGradient>
@@ -450,10 +460,30 @@ h+='<div class="card pro"><div class="lbl">Pro Line<em>the benchmark</em></div><
 h+=hotCard(L);
 h+='<details><summary>All laps</summary><div class="card"><div style="max-height:420px;overflow:auto">'+lapList(L,[],t.pb,t.track,t)+'</div></div></details><details><summary>Notes and open questions</summary><div class="card"><div style="max-height:420px;overflow:auto">'+feed(t)+'</div></div></details>';
 return h}
+
+var runSel="B";
+function runMap(r,run){var v=r.vb,k=r.k,sv='<svg viewBox="'+v.join(' ')+'" style="--k:'+k+'" role="img" aria-label="Run map"><path class="cs" d="'+r.loop+'"/>';
+r.sectors.forEach(function(sc){var q=run.sectors?run.sectors.filter(function(x){return x.id===sc.id})[0]:null;sv+='<path class="sg '+(q?q.tier:'gray')+'" d="'+sc.d+'"/>'});
+var f=r.sf,nx=-f.ty,ny=f.tx,hl=13*k;sv+='<line class="sfm" x1="'+(f.x-nx*hl)+'" y1="'+(f.y-ny*hl)+'" x2="'+(f.x+nx*hl)+'" y2="'+(f.y+ny*hl)+'"/><text class="sft" x="'+(f.x-nx*26*k-6*k)+'" y="'+(f.y-ny*26*k+4*k)+'">S/F</text>';
+r.turns.forEach(function(q){sv+='<g class="tn"><line class="ld" x1="'+q.x+'" y1="'+q.y+'" x2="'+q.lx+'" y2="'+q.ly+'"/><circle class="dt" cx="'+q.x+'" cy="'+q.y+'" r="'+(3.4*k).toFixed(2)+'"/><circle class="tc" cx="'+q.lx+'" cy="'+q.ly+'" r="'+(12*k).toFixed(2)+'"/><text class="tx" x="'+q.lx+'" y="'+(q.ly+.3*k)+'">'+q.n+'</text></g>'});
+(run.spins||[]).forEach(function(sp){var q=r.turns.filter(function(x){return x.n===sp.turn})[0];if(!q)return;sv+='<circle class="spn" cx="'+q.x+'" cy="'+q.y+'" r="'+(7*k).toFixed(2)+'" stroke-width="'+(1.2*k).toFixed(2)+'"/><text class="spt" x="'+q.x+'" y="'+q.y+'" style="font-size:'+(8*k).toFixed(2)+'px">'+sp.n+'</text>'});
+return sv+'</svg>'}
+function runStrip(r,arr,cls){return'<div class="rls '+(cls||'')+'">'+r.sectors.map(function(sc){var q=arr?arr.filter(function(x){return x.id===sc.id})[0]:null;return'<span class="'+(q?q.tier:'gray')+'" style="flex:'+(sc.f1-sc.f0).toFixed(3)+'">'+(cls?'':sc.id)+'</span>'}).join('')+'</div>'}
+function runsTab(t){var c=t.crew,R=c.runs,r=t.report,run=R.filter(function(x){return x.id===runSel})[0]||R[R.length-1],h='';
+h+='<div class="rchips">'+R.map(function(x){return'<button data-run="'+x.id+'" class="'+(x.id===run.id?'on':'')+'">'+esc(x.tag)+'</button>'}).join('')+'</div>';
+h+='<div class="card"><div class="lbl">'+esc(run.name)+'<em>'+(run.sectors?'colors from this run':'no sector times')+'</em></div><div class="mut sm" style="margin-bottom:8px">'+esc(run.setup)+'</div><div class="big3"><div><small>Best lap</small><b class="g">'+esc(run.best)+'</b></div><div><small>Clean avg</small><b>'+(run.clean?esc(run.clean):'n/a')+'</b></div><div><small>Spread</small><b>'+(run.spread?esc(run.spread):'n/a')+'</b></div></div><div class="mut sm" style="margin-top:8px">'+esc(run.src)+'</div></div>';
+h+='<div class="card rep"><div class="lbl">Where you were<em>this run only</em></div>'+runMap(r,run)+runStrip(r,run.sectors)+(run.bestlap?'<div class="rlb">Best lap, sector by sector</div>'+runStrip(r,run.bestlap,'bl'):'')+'<div class="rlg" style="margin-top:8px"><span><i style="background:var(--red)"></i>Needs work</span><span><i style="background:var(--orange)"></i>Getting there</span><span><i style="background:var(--gold)"></i>Small gain</span><span><i style="background:var(--green)"></i>Locked in</span><span><i style="background:#566170"></i>Not read</span><span><i style="background:#ff4d5a;border-radius:50%"></i>Spin, with count</span></div></div>';
+h+='<div class="card"><div class="lbl">This run</div><h4 class="ch4 g">Good</h4><ul class="gl">'+run.good.map(function(x){return'<li>'+esc(x)+'</li>'}).join('')+'</ul><h4 class="ch4">Bad</h4><ul class="gl">'+run.bad.map(function(x){return'<li>'+esc(x)+'</li>'}).join('')+'</ul></div>';
+if(run.sectors){h+='<div class="card"><div class="lbl">Sectors in this run<em>against the target</em></div><table class="stbl"><tr><th>Sector</th><th>Avg</th><th>Gap</th><th>Best lap</th></tr>'+run.sectors.map(function(q,i){var col={red:'var(--red)',orange:'var(--orange)',amber:'var(--gold)',green:'var(--green)'}[q.tier],b=run.bestlap?run.bestlap[i]:null;return'<tr><td><i style="background:'+col+'"></i>'+q.id+'</td><td>'+q.mean.toFixed(2)+'</td><td>'+(q.pct>0?'+':'')+q.pct.toFixed(1)+'%</td><td>'+(b?(b.pct>0?'+':'')+b.pct.toFixed(1)+'%':'n/a')+'</td></tr>'}).join('')+'</table><div class="mut sm" style="margin-top:8px">Gap is your clean-lap average against the target (the Pro Line sector scaled to the leader qualifying lap). Best lap shows the same for your fastest lap.</div></div>'}
+var D2=R.filter(function(x){return x.sectors});
+h+='<div class="card"><div class="lbl">All runs<em>sector gap to target</em></div><table class="stbl gx"><tr><th>Sector</th>'+R.map(function(x){return'<th>'+esc(x.tag.split(' \u00b7 ')[0])+'</th>'}).join('')+'</tr>'+r.sectors.map(function(sc){return'<tr><td>'+sc.id+'</td>'+R.map(function(x){var q=x.sectors?x.sectors.filter(function(y){return y.id===sc.id})[0]:null;return q?'<td class="'+q.tier+'">'+(q.pct>0?'+':'')+q.pct.toFixed(1)+'%</td>':'<td class="gray">n/a</td>'}).join('')+'</tr>'}).join('')+'</table>';
+if(D2.length>1){var f0=D2[0],l0=D2[D2.length-1],up=[],dn=[];r.sectors.forEach(function(sc){var a=f0.sectors.filter(function(y){return y.id===sc.id})[0],b=l0.sectors.filter(function(y){return y.id===sc.id})[0],dl=b.pct-a.pct;if(dl<=-.5)up.push(sc.id+' ('+dl.toFixed(1)+'%)');else if(dl>=.5)dn.push(sc.id+' (+'+dl.toFixed(1)+'%)')});
+h+='<div class="rlb">'+esc(f0.tag.split(' \u00b7 ')[0])+' to '+esc(l0.tag.split(' \u00b7 ')[0])+'</div><div class="sub" style="color:#cfd5de;font-size:13.5px"><b class="g">Closer to target:</b> '+(up.join(', ')||'none')+'<br><b class="r">Further away:</b> '+(dn.join(', ')||'none')+'</div><div class="mut sm" style="margin-top:8px">Only '+D2.length+' runs have sector times, so this is a first look, not a trend. Run A averages in three laps, including the slow ones after the tires faded. Sector times are about 0.3 s off.</div>'}
+h+='</div>';return h}
 function fixTab(t){return cornerList(t)}
 function crewBody(t){var L=D.laps.filter(function(x){return x.track===t.track&&x.series==="main"});
-if(crewTab==="setup")return setupTab(t);if(crewTab==="track")return reportCard(t);if(crewTab==="fix")return fixTab(t);return timesTab(t,L)}
-function renderCrew(name){var t=trk(name),tabs=[["setup","Setup"],["track","Track"],["fix","Fix"],["times","Times"]];
+if(crewTab==="runs")return runsTab(t);if(crewTab==="setup")return setupTab(t);if(crewTab==="track")return reportCard(t);if(crewTab==="fix")return fixTab(t);return timesTab(t,L)}
+function renderCrew(name){var t=trk(name),tabs=[["setup","Setup"],["track","Track"],["fix","Fix"],["times","Times"],["runs","Runs"]];
 document.getElementById("main").innerHTML=bar(name)+hero(name,'')+'<nav class="ctabs">'+tabs.map(function(x){return'<button data-ctab="'+x[0]+'" class="'+(crewTab===x[0]?'on':'')+'">'+x[1]+'</button>'}).join('')+'</nav><div class="cbody" id="cbody">'+crewBody(t)+'</div>';if(crewTab==="track")repInit()}
 function render(name){cur=name;
 var t=trk(name);if(!t){renderOther(name);return}
@@ -490,6 +520,7 @@ return L.join("\n")}
 var sheet=document.getElementById("sheet"),msgEl=document.getElementById("msg");
 document.getElementById("main").addEventListener("click",function(e){
 var b=e.target.closest(".send");if(b){var s=D.setups.filter(function(x){return x.id===b.getAttribute("data-id")})[0];if(!s)return;msgEl.value=buildMsg(s);sheet.hidden=false;document.getElementById("shr").style.display=navigator.share?"":"none";return}
+var rn=e.target.closest("[data-run]");if(rn){runSel=rn.getAttribute("data-run");document.getElementById("cbody").innerHTML=crewBody(trk(cur));return}
 var ct=e.target.closest("[data-ctab]");if(ct){setCrewTab(ct.getAttribute("data-ctab"));return}
 var rt=e.target.closest("[data-rtab]");if(rt){repTab=rt.getAttribute("data-rtab");selSpot(repSel);return}
 var spt=e.target.closest("[data-spot]");if(spt){selSpot(spt.getAttribute("data-spot"));return}
@@ -505,7 +536,7 @@ document.getElementById("shr").addEventListener("click",function(){try{navigator
 function openTrack(n){snapI=1e9;render(n);window.scrollTo(0,0);try{history.replaceState(null,"","#"+encodeURIComponent(n))}catch(x){}}
 function goHome(){renderHome();window.scrollTo(0,0);try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}}
 function boot(){var h="";try{h=decodeURIComponent((location.hash||"").slice(1))}catch(x){}
-var pr=h.split("/");h=pr[0];if(pr[1]&&/^(setup|track|fix|times)$/.test(pr[1]))crewTab=pr[1];if(h&&ALL.indexOf(h)>=0)openTrack(h);else renderHome()}
+var pr=h.split("/");h=pr[0];if(pr[1]&&/^(setup|track|fix|times|runs)$/.test(pr[1]))crewTab=pr[1];if(pr[2]&&/^(N24|A|B|C)$/.test(pr[2]))runSel=pr[2];if(h&&ALL.indexOf(h)>=0)openTrack(h);else renderHome()}
 if(D&&MAPS)boot();else{document.getElementById("main").innerHTML='<div class="mut" style="padding:48px 8px">Loading Crew Chief HQ...</div>';
 Promise.all([fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}),fetch("maps.json").then(function(r){return r.json()})]).then(function(a){D=a[0];MAPS=a[1];boot()}).catch(function(){document.getElementById("main").innerHTML='<div class="mut" style="padding:48px 8px">Could not load data. Check your connection and reopen.</div>'})}
 if('serviceWorker' in navigator&&location.protocol==='https:'&&!D_EMBED){try{navigator.serviceWorker.register('sw.js')}catch(x){}}

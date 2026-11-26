@@ -2200,7 +2200,316 @@
       "Same pace as 15 fronts. Stadium noticeably better (Brandon). Tire wear not known. No footage. Brake setting assumed 70, not confirmed."
      ]
     ],
-    "theo": "1:39.925*"
+    "theo": "1:39.925*",
+    "runs": [
+     {
+      "id": "N24",
+      "name": "Nov 24 practice",
+      "tag": "Nov 24",
+      "setup": "Brake 75 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "best": "1:41.685",
+      "clean": "1:43.1 to 1:43.4",
+      "spread": "",
+      "src": "Grokbot sector file, clips 2 to 4",
+      "sectors": [
+       {
+        "id": "S1",
+        "mean": 13.26,
+        "target": 12.96,
+        "pct": 2.3,
+        "tier": "orange"
+       },
+       {
+        "id": "S2",
+        "mean": 15.29,
+        "target": 14.71,
+        "pct": 3.9,
+        "tier": "orange"
+       },
+       {
+        "id": "S3",
+        "mean": 10.25,
+        "target": 9.41,
+        "pct": 8.9,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "mean": 10.41,
+        "target": 9.75,
+        "pct": 6.8,
+        "tier": "red"
+       },
+       {
+        "id": "S5",
+        "mean": 18.95,
+        "target": 17.84,
+        "pct": 6.2,
+        "tier": "red"
+       },
+       {
+        "id": "S6",
+        "mean": 10.17,
+        "target": 9.73,
+        "pct": 4.5,
+        "tier": "orange"
+       },
+       {
+        "id": "S7",
+        "mean": 25.22,
+        "target": 24.03,
+        "pct": 5.0,
+        "tier": "orange"
+       }
+      ],
+      "bestlap": [
+       {
+        "id": "S1",
+        "t": 13.03,
+        "pct": 0.6,
+        "tier": "green"
+       },
+       {
+        "id": "S2",
+        "t": 14.98,
+        "pct": 1.8,
+        "tier": "amber"
+       },
+       {
+        "id": "S3",
+        "t": 9.99,
+        "pct": 6.1,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "t": 10.0,
+        "pct": 2.6,
+        "tier": "amber"
+       },
+       {
+        "id": "S5",
+        "t": 18.98,
+        "pct": 6.4,
+        "tier": "red"
+       },
+       {
+        "id": "S6",
+        "t": 10.01,
+        "pct": 2.9,
+        "tier": "amber"
+       },
+       {
+        "id": "S7",
+        "t": 24.69,
+        "pct": 2.8,
+        "tier": "amber"
+       }
+      ],
+      "spins": [
+       {
+        "turn": "1",
+        "n": 2
+       },
+       {
+        "turn": "11",
+        "n": 4
+       },
+       {
+        "turn": "6",
+        "n": 1
+       }
+      ],
+      "good": [
+       "Carousel was your most consistent sector.",
+       "Esses fast and steady apart from the cuts.",
+       "Wedge 51 and Throttle Non Linear 60 each helped."
+      ],
+      "bad": [
+       "T11 exit: 4 incidents, about 9.6 s lost.",
+       "T1 exit spins, now the main one.",
+       "T5/T6 corner cuts."
+      ]
+     },
+     {
+      "id": "A",
+      "name": "Nov 26 session A",
+      "tag": "A · brake 65",
+      "setup": "Brake 65 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "best": "1:41.467",
+      "clean": "1:42.87",
+      "spread": "2.36 s",
+      "src": "Grokbot, 3 clean laps (lap 1, 3, 4). Sector times about 0.3 s off.",
+      "sectors": [
+       {
+        "id": "S1",
+        "mean": 13.23,
+        "target": 12.96,
+        "pct": 2.1,
+        "tier": "amber"
+       },
+       {
+        "id": "S2",
+        "mean": 15.58,
+        "target": 14.71,
+        "pct": 5.9,
+        "tier": "red"
+       },
+       {
+        "id": "S3",
+        "mean": 10.4,
+        "target": 9.41,
+        "pct": 10.4,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "mean": 10.17,
+        "target": 9.75,
+        "pct": 4.3,
+        "tier": "orange"
+       },
+       {
+        "id": "S5",
+        "mean": 18.68,
+        "target": 17.84,
+        "pct": 4.7,
+        "tier": "orange"
+       },
+       {
+        "id": "S6",
+        "mean": 10.27,
+        "target": 9.73,
+        "pct": 5.6,
+        "tier": "red"
+       },
+       {
+        "id": "S7",
+        "mean": 24.54,
+        "target": 24.03,
+        "pct": 2.1,
+        "tier": "amber"
+       }
+      ],
+      "bestlap": [
+       {
+        "id": "S1",
+        "t": 13.39,
+        "pct": 3.3,
+        "tier": "orange"
+       },
+       {
+        "id": "S2",
+        "t": 14.78,
+        "pct": 0.4,
+        "tier": "green"
+       },
+       {
+        "id": "S3",
+        "t": 10.19,
+        "pct": 8.2,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "t": 9.81,
+        "pct": 0.6,
+        "tier": "green"
+       },
+       {
+        "id": "S5",
+        "t": 19.77,
+        "pct": 10.8,
+        "tier": "red"
+       },
+       {
+        "id": "S6",
+        "t": 9.49,
+        "pct": -2.4,
+        "tier": "green"
+       },
+       {
+        "id": "S7",
+        "t": 24.03,
+        "pct": 0.0,
+        "tier": "green"
+       }
+      ],
+      "spins": [
+       {
+        "turn": "12",
+        "n": 2
+       },
+       {
+        "turn": "15",
+        "n": 2
+       }
+      ],
+      "good": [
+       "New best lap, 1:41.467.",
+       "T19 now 3rd gear at 78 to 82 mph (was 74 in 2nd).",
+       "Best-ever S1 (12.59) and S5 (17.97) on lap 3.",
+       "No spins in any braking zone."
+      ],
+      "bad": [
+       "4 spins at the stadium apex curbs (T12 twice, T15 twice). Each bad lap lost 10 to 18 s.",
+       "T1 over-slowed to 34 to 42 mph, exit soft.",
+       "Time fades 1.4 to 1.9 s after lap 1, mostly in the T1 exit and esses."
+      ]
+     },
+     {
+      "id": "B",
+      "name": "Nov 26 session B",
+      "tag": "B · brake 70",
+      "setup": "Brake 70 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "best": "1:41.704",
+      "clean": "1:42.81",
+      "spread": "1.92 s",
+      "src": "Grokbot lap times and spins. Sector times and corner speeds not read.",
+      "sectors": null,
+      "bestlap": null,
+      "spins": [
+       {
+        "turn": "6A",
+        "n": 1
+       },
+       {
+        "turn": "15",
+        "n": 2
+       }
+      ],
+      "good": [
+       "Tightest run: spread 1.92 s against 2.36 s.",
+       "Later laps held up (lap 6 faster than lap 4).",
+       "No T12 curb spins (A had 2) and no T1 spin."
+      ],
+      "bad": [
+       "T15 exit: 2 spins in 1st on the green paint at 49 to 57 mph.",
+       "6A exit: 1 spin, throttle in 1st.",
+       "Best lap 0.237 s slower than A."
+      ]
+     },
+     {
+      "id": "C",
+      "name": "Nov 26 session C",
+      "tag": "C · tires 17.5",
+      "setup": "Brake 70 (assumed) · wedge 51 · tires 17.5 all four",
+      "best": "1:41.703",
+      "clean": "",
+      "spread": "",
+      "src": "Your report and the practice board. No footage, Grokbot has not read it.",
+      "sectors": null,
+      "bestlap": null,
+      "spins": [],
+      "good": [
+       "Stadium ran much better: you stayed inside and were not carrying too much speed.",
+       "Passed cars in practice."
+      ],
+      "bad": [
+       "Not known. No footage and no tire % taken."
+      ]
+     }
+    ]
    }
   }
  ],
