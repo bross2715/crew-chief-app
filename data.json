@@ -741,13 +741,13 @@
      {
       "id": "S1",
       "name": "S/F to T1 exit",
-      "tier": "amber",
+      "tier": "orange",
       "f0": 0,
       "f1": 0.131,
       "d": "M105.5 97.5 L155.5 114.3 L169.0 118.2 L175.8 119.3 L178.2 119.2 L180.1 118.5 L180.6 118.0 L180.8 117.3 L180.3 115.8 L177.9 112.6 L166.0 100.8",
       "spot": "1",
       "stats": {
-       "tier": "amber",
+       "tier": "orange",
        "clean_mean": 13.26,
        "std": 0.402,
        "n": 12,
@@ -761,22 +761,23 @@
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
-        "tier": "amber",
+        "tier": "orange",
         "gap": 0.3,
-        "pct": 2.3
+        "pct": 2.3,
+        "inc": 1
        }
       ]
      },
      {
       "id": "S2",
       "name": "Esses T2-T6",
-      "tier": "amber",
+      "tier": "orange",
       "f0": 0.131,
       "f1": 0.313,
       "d": "M166.0 100.8 L164.4 98.9 L163.3 97.1 L162.7 95.6 L162.5 94.1 L162.7 92.1 L163.3 90.4 L164.4 88.7 L165.9 87.2 L169.0 85.0 L172.3 83.2 L188.9 76.5 L200.2 72.3 L203.8 70.7 L206.6 69.0 L209.4 66.5 L210.5 64.8 L212.7 60.2 L213.7 58.8 L215.0 57.8 L219.0 55.7 L229.7 51.9 L231.7 50.9 L233.1 49.9 L233.9 48.7 L234.5 47.2 L234.6 46.0 L234.3 42.2 L234.6 40.7 L235.2 39.2 L236.2 37.8 L237.8 36.3 L242.6 33.2",
       "spot": "2",
       "stats": {
-       "tier": "amber",
+       "tier": "orange",
        "clean_mean": 15.291,
        "std": 0.261,
        "n": 12,
@@ -790,9 +791,10 @@
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
-        "tier": "amber",
+        "tier": "orange",
         "gap": 0.58,
-        "pct": 3.9
+        "pct": 3.9,
+        "inc": 2
        }
       ]
      },
@@ -821,7 +823,8 @@
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
         "gap": 0.84,
-        "pct": 8.9
+        "pct": 8.9,
+        "inc": 0
        }
       ]
      },
@@ -850,7 +853,8 @@
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
         "gap": 0.66,
-        "pct": 6.8
+        "pct": 6.8,
+        "inc": 3
        }
       ]
      },
@@ -879,20 +883,21 @@
         "run": "Nov 24 practice (clips 2-4)",
         "tier": "red",
         "gap": 1.11,
-        "pct": 6.2
+        "pct": 6.2,
+        "inc": 1
        }
       ]
      },
      {
       "id": "S6",
       "name": "Carousel T16-T18",
-      "tier": "red",
+      "tier": "orange",
       "f0": 0.625,
       "f1": 0.735,
       "d": "M144.5 40.4 L158.5 49.5 L160.6 51.3 L162.0 53.0 L162.7 55.0 L162.4 57.8 L161.0 61.7 L159.5 63.8 L157.2 65.4 L153.8 66.7 L143.3 69.8 L137.4 70.9 L132.5 71.2 L125.0 71.0 L119.5 70.4 L114.3 69.4",
       "spot": "car",
       "stats": {
-       "tier": "red",
+       "tier": "orange",
        "clean_mean": 10.168,
        "std": 0.216,
        "n": 12,
@@ -906,22 +911,23 @@
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
-        "tier": "red",
+        "tier": "orange",
         "gap": 0.44,
-        "pct": 4.5
+        "pct": 4.5,
+        "inc": 1
        }
       ]
      },
      {
       "id": "S7",
       "name": "T19, T20, line",
-      "tier": "red",
+      "tier": "orange",
       "f0": 0.735,
       "f1": 1.0,
       "d": "M114.3 69.4 L109.8 68.1 L105.4 66.3 L85.2 55.3 L73.8 49.6 L70.1 48.2 L66.6 47.7 L63.2 47.9 L59.2 48.7 L21.9 59.6 L12.8 61.9 L9.7 63.1 L8.6 63.9 L8.1 64.6 L8.1 65.6 L8.9 66.6 L10.1 67.4 L12.1 68.2 L20.8 70.5 L44.8 78.2 L52.9 81.1 L60.0 83.2 L67.4 86.0 L76.6 88.4 L100.4 96.3 L105.0 97.4",
       "spot": "19",
       "stats": {
-       "tier": "red",
+       "tier": "orange",
        "clean_mean": 25.22,
        "std": 0.476,
        "n": 11,
@@ -935,9 +941,10 @@
       "hist": [
        {
         "run": "Nov 24 practice (clips 2-4)",
-        "tier": "red",
+        "tier": "orange",
         "gap": 1.19,
-        "pct": 5.0
+        "pct": 5.0,
+        "inc": 0
        }
       ]
      }
@@ -1095,8 +1102,8 @@
        "1"
       ],
       "title": "Turn 1 exit",
-      "chip": "Fix first",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "The hairpin at the end of the front straight. Your spins happen on the exit now.",
       "stats": [
        [
@@ -1168,7 +1175,12 @@
        "pro": "46-47 mph, 2nd",
        "good": "Braking point and exit speed are about the same as the Pro Line. T1 was clean on both race laps.",
        "fix": "Exit spins in 1st when throttle goes down before the wheel is straight. Hold about a quarter throttle until the wheel unwinds."
-      }
+      },
+      "how": [
+       "Brake late up the hill in a straight line, but do not turn in late.",
+       "Aim for about 46 mph at the apex (you: 43).",
+       "About a quarter throttle until the wheel unwinds, then build."
+      ]
      },
      {
       "id": "2",
@@ -1176,8 +1188,8 @@
        "2"
       ],
       "title": "T2",
-      "chip": "Small gain",
-      "tier": "amber",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "Fast right-hander after the T1 exit. About 5 s flat out follows it, up to 133 mph, before T3.",
       "stats": [
        [
@@ -1211,7 +1223,12 @@
        "pro": "no read yet",
        "good": "Fast and steady, then flat out to 133 mph. No incidents.",
        "fix": "Nothing to fix. No Pro Line read of this corner yet."
-      }
+      },
+      "how": [
+       "No brake. Lift only if the car is loose.",
+       "Hold about 100 mph in 3rd.",
+       "Flat out after it, up to 133 mph."
+      ]
      },
      {
       "id": "5",
@@ -1222,8 +1239,8 @@
        "6"
       ],
       "title": "T3 to T6",
-      "chip": "No cutting",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "Four quick flicks back to back, about 20.5 to 26.5 s on the lap clock. The car handles fine here. The only losses are corner cuts at T5 and T6.",
       "stats": [
        [
@@ -1278,7 +1295,12 @@
        "pro": "no read yet",
        "good": "Fast and steady. You passed cars here in the race.",
        "fix": "Corner cuts at T5/T6 cost 6 to 8 s each, four times so far. Keep the outside tires on the asphalt."
-      }
+      },
+      "how": [
+       "No brake through T3 and T4. Full throttle.",
+       "T5 about 105 mph, T6 about 95 to 98 mph. Stay inside the track limit.",
+       "Practice only: test the edge one step at a time (outer wheels on the curb, then two over, then three). Stop one step before the game flags you."
+      ]
      },
      {
       "id": "6a",
@@ -1337,7 +1359,12 @@
        "pro": "52-53 mph, 2nd",
        "good": "Your braking point is already right: straight line at the gantry.",
        "fix": "Start the turn a fraction earlier and carry 48-50 mph through the apex."
-      }
+      },
+      "how": [
+       "Heavy brake in a straight line at the gantry. Your point is already right.",
+       "Turn in a fraction earlier, set up on the right side of the curb.",
+       "Apex 48 to 50 mph, then partial throttle on exit so it does not spin."
+      ]
      },
      {
       "id": "6b",
@@ -1345,8 +1372,8 @@
        "6B"
       ],
       "title": "6B",
-      "chip": "Clean",
-      "tier": "gray",
+      "chip": "Needs work",
+      "tier": "red",
       "sub": "The exit onto the back straight.",
       "stats": [
        [
@@ -1403,14 +1430,19 @@
        "pro": "92-93 mph, 3rd",
        "good": "No spins or penalties in 15 timed laps.",
        "fix": "You lift and coast. The Pro Line driver holds 20-26% throttle. Use light throttle through the apex and aim for 88-90 mph."
-      }
+      },
+      "how": [
+       "No brake.",
+       "Track out toward the outside wall on exit.",
+       "20 to 26% throttle through the apex for about 1.4 s, then full. Aim for 88 to 90 mph."
+      ]
      },
      {
       "id": "bs",
       "turns": [],
       "title": "Back straight into T11",
-      "chip": "Info",
-      "tier": "gray",
+      "chip": "Needs work",
+      "tier": "red",
       "sub": "Where your speed comes from before the T11 braking zone.",
       "stats": [
        [
@@ -1472,7 +1504,12 @@
        "pro": "top 126 mph",
        "good": "You brake for T11 at about the same spot as the Pro Line.",
        "fix": "The speed gap comes off 6B. Fix 6B first."
-      }
+      },
+      "how": [
+       "Full throttle. Top speed target about 126 mph (you: 119). Most of that gap is carried off 6B.",
+       "Brake for T11 at the same spot you use now.",
+       "Stay off the curb while braking."
+      ]
      },
      {
       "id": "12",
@@ -1480,7 +1517,7 @@
        "11"
       ],
       "title": "T11 hairpin",
-      "chip": "Fix first",
+      "chip": "Needs work",
       "tier": "red",
       "sub": "The corner that keeps biting. 4 incidents on timed laps, about 9.6 s lost.",
       "stats": [
@@ -1541,7 +1578,12 @@
        "pro": "55-56 mph, 2nd",
        "good": "Clean on both race laps and in clip 4.",
        "fix": "Lost the car 3 times in clip 3. Quarter throttle until the nose points at the tower. The Pro Line driver trail brakes for 3.2 s, then 3-25% throttle."
-      }
+      },
+      "how": [
+       "Heavy brake that tapers off for about 3 s, trail braking into the turn.",
+       "Apex about 50 mph (Pro Line 55 to 56, you 43).",
+       "Quarter throttle until the nose points at the tower. Stay off the green paint."
+      ]
      },
      {
       "id": "13",
@@ -1615,7 +1657,12 @@
        "pro": "52-53 mph, 2nd",
        "good": "The speed is in you: your best-ever S5 is 18.06 s.",
        "fix": "Your least consistent sector. Release the brake earlier, aim for about 50 mph, and first throttle at the apex."
-      }
+      },
+      "how": [
+       "Release the brake earlier than you do now.",
+       "T12 apex about 50 mph (you: 45). Be patient, front is numb and the rear wants to snap.",
+       "First throttle at the apex, then build to full over about 3.5 s. T14 has no read yet."
+      ]
      },
      {
       "id": "15",
@@ -1671,7 +1718,12 @@
        "pro": "49-52 mph, 2nd",
        "good": "Exit clean on every timed lap in clips 3 and 4. This was a spin and an off before.",
        "fix": "Apex speed. Hold 10-20% throttle through the apex like the Pro Line driver."
-      }
+      },
+      "how": [
+       "Double apex: out, then back in.",
+       "Hold 10 to 20% throttle through the apex (you: 41 mph).",
+       "Work the throttle up over the curb toward the runoff. Do not stab it on the green paint."
+      ]
      },
      {
       "id": "car",
@@ -1681,8 +1733,8 @@
        "18"
       ],
       "title": "Carousel, T16 to T18",
-      "chip": "Needs work",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "Your most consistent sector.",
       "stats": [
        [
@@ -1745,7 +1797,12 @@
        "pro": "95 mph, 4th",
        "good": "Your most consistent sector: spread 0.22 s.",
        "fix": "Three slowdowns, and the middle one looks like a brake stab. One lift at T16, then a steady squeeze. Aim for 92+ mph."
-      }
+      },
+      "how": [
+       "Lift once at T16. No brake in the middle of the carousel.",
+       "Aim for 92+ mph (you: 90, 95, 91 in 3rd).",
+       "Squeeze throttle steadily: about 30%, then 55%, then 75%+. One small dip at T18 is fine."
+      ]
      },
      {
       "id": "19",
@@ -1753,8 +1810,8 @@
        "19"
       ],
       "title": "T19",
-      "chip": "Biggest gain",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "Start of the last sector. S7 is the longest at about 24.7 s.",
       "stats": [
        [
@@ -1811,7 +1868,12 @@
        "pro": "95-97 mph, 3rd",
        "good": "Your best lap holds the best-ever S7. Same braking point as the Pro Line (about 128 mph).",
        "fix": "You slow down too much, about 20 mph. Use about half the brake and come off sooner. Aim for 85 mph, then 90."
-      }
+      },
+      "how": [
+       "Brake from about 128 mph but only a third to half brake for about 2 s.",
+       "Set up on the right. Aim for 85 mph minimum, then 90 (you: 74 to 77).",
+       "20 to 35% throttle through the middle, full throttle about 3 s after turn-in."
+      ]
      },
      {
       "id": "20",
@@ -1819,8 +1881,8 @@
        "20"
       ],
       "title": "T20 and the line",
-      "chip": "Biggest gain",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "The last corner, then the front straight to the line.",
       "stats": [
        [
@@ -1874,7 +1936,12 @@
        "pro": "54-56 mph, 2nd",
        "good": "No spins of your own at T20.",
        "fix": "About 8 mph slower at the apex. Fix T19 first, most of the S7 gap is there."
-      }
+      },
+      "how": [
+       "Light brake only.",
+       "Clip the inside curb. Get the car straight early. Apex about 50 mph (you: 47).",
+       "Throttle once straight, full to the line. Stay off the orange turtles."
+      ]
      }
     ],
     "bs": {
@@ -2016,6 +2083,99 @@
     ],
     "gaps": "Your theoretical best, 1:39.925, is only 0.079 s off the practice goal.",
     "note": "Times are leaderboard and HUD numbers. Technique notes come from a reference guide to the NASCAR 26 Cup COTA layout and from Grokbot's sector read of a benchmark hot lap (timing error about 0.4 s per sector). Where nothing was measured, the turn says so. Tap a turn in the track report and switch to Pro Line to see it turn by turn."
+   },
+   "crew": {
+    "next": {
+     "title": "Next session",
+     "change": {
+      "name": "Braking Strength",
+      "from": 75,
+      "to": 65,
+      "why": "Softer brake response, so you slow down less and carry more speed at T19, the carousel and 6B. Biggest sector gap is S7 (T19, T20), about 1.2 s."
+     },
+     "hold": "Everything else stays exactly as is.",
+     "plan": [
+      "Load Braking Strength 65. Do not touch anything else.",
+      "1 warmup lap, then 10 timed laps. Record a clip.",
+      "If T1 runs wide on entry: Braking Strength to 70.",
+      "If T1 still spins: Throttle Non Linear 60 to 70."
+     ],
+     "targets": [
+      [
+       "T1, T11",
+       "quarter throttle until the wheel unwinds"
+      ],
+      [
+       "T11, T12, T15, T20",
+       "about 50 mph at the apex, light throttle through it"
+      ],
+      [
+       "T19",
+       "half brake, 85 mph minimum"
+      ],
+      [
+       "Carousel",
+       "one lift at T16, no brake mid-carousel"
+      ]
+     ],
+     "report": "Best lap, clean average, clean laps out of 10, T19 minimum speed, wide entries, spins and where. Also tell me your Stability Help and Brake Smoothing values.",
+     "race": "Race rule: no cutting at T5/T6. Leave a car length before T15."
+    },
+    "car": {
+     "preset": "Neutral",
+     "unit": "psi",
+     "lf": 15.0,
+     "rf": 15.0,
+     "lr": 17.5,
+     "rr": 17.5,
+     "wedge": 51,
+     "note": "Garage control is limited to four tire pressures, wedge and a base preset.",
+     "loose": "25% Loose was dropped: Neutral steers better."
+    },
+    "levers": [
+     [
+      "Braking Strength",
+      "75, going to 65",
+      "Slow down less. Targets T19, carousel, 6B."
+     ],
+     [
+      "Throttle Non Linear",
+      "60",
+      "Softer first part of the throttle. Targets T1, T11, T15 exits."
+     ],
+     [
+      "Wedge",
+      "51",
+      "Tested: 1.46 s faster than 50."
+     ],
+     [
+      "Rear tire pressure",
+      "17.5",
+      "Tested 15: not faster. Back to 17.5."
+     ],
+     [
+      "Front tire pressure",
+      "15",
+      "Not tested separately yet."
+     ]
+    ],
+    "tested": [
+     [
+      "Neutral, wedge 50",
+      "1:43.487",
+      "baseline"
+     ],
+     [
+      "Neutral, wedge 51",
+      "1:42.028",
+      "-1.459"
+     ],
+     [
+      "Throttle Non Linear 60",
+      "1:41.685",
+      "-0.343"
+     ]
+    ]
    }
   }
  ],

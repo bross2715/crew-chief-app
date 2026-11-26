@@ -9,7 +9,7 @@ Same label twice replaces that run, so it is safe to repeat.
 Rule (all numbers come from the sector file, nothing is typed by hand):
   target sector time = Pro Line sector time scaled so the lap equals the field leader's qualifying lap
   gap % = your clean-lap average in the sector against that target
-  green <= 1.5%, amber <= 4%, red > 4%. Any spin, off or cut in the sector caps it at amber.
+  green <= 1.5%, yellow <= 3%, orange <= 5%, red > 5%. Any spin, off or cut in the sector caps it at orange.
 """
 import json, argparse, pathlib
 root = pathlib.Path(__file__).resolve().parent.parent
@@ -20,7 +20,13 @@ a = ap.parse_args()
 
 PRO = {"S1": 12.47, "S2": 14.16, "S3": 9.06, "S4": 9.38, "S5": 17.17, "S6": 9.36, "S7": 23.12}  # Pro Line hot lap sectors, HUD re-read 2026-11-25
 LEADER = 98.431  # field leader qualifying lap, seconds
-GREEN, AMBER = 0.015, 0.04
+GREEN, YELLOW, ORANGE = 0.015, 0.03, 0.05
+
+def tier_of(pct, inc):
+    t = 'green' if pct <= GREEN else 'amber' if pct <= YELLOW else 'orange' if pct <= ORANGE else 'red'
+    if inc > 0 and t in ('green', 'amber'):
+        t = 'orange'
+    return t
 scale = LEADER / sum(PRO.values())
 
 d = json.loads((root / "data.json").read_text())
@@ -37,9 +43,7 @@ for s in r["sectors"]:
     tgt = PRO[s["id"]] * scale
     gap = c["mean_s"] - tgt
     pct = c["mean_s"] / tgt - 1
-    tier = "green" if pct <= GREEN else "amber" if pct <= AMBER else "red"
-    if inc > 0 and tier == "green":
-        tier = "amber"
+    tier = tier_of(pct, inc)
     new[s["id"]] = dict(tier=tier, clean_mean=round(c["mean_s"], 3), std=round(c["std_s"], 3), n=c["n"],
                         incidents=inc, best_ever=q["best_ever_s"], target=round(tgt, 2), gap=round(gap, 2), pct=round(pct * 100, 1))
 
@@ -54,14 +58,16 @@ for s in r["sectors"]:
                 + (f"{n['incidents']} spin, off or cut lap(s) not counted. " if n["incidents"] else "")
                 + ("Biggest gap on the lap." if s["id"] == big else ""))
     h = s.setdefault("hist", [])
-    h[:] = [x for x in h if x["run"] != a.run] + [dict(run=a.run, tier=n["tier"], gap=n["gap"], pct=n["pct"])]
+    h[:] = [x for x in h if x["run"] != a.run] + [dict(run=a.run, tier=n["tier"], gap=n["gap"], pct=n["pct"], inc=n["incidents"])]
+    for x in h:
+        x["tier"] = tier_of(x["pct"] / 100, x.get("inc", 0))
 
 # spot chips follow their sector unless pinned (hand-set coach calls) or info-only (gray)
-PIN = {"1", "5", "12"}
-LBL = {"green": "Keep", "amber": "Small gain", "red": "Needs work"}
+PIN = set()
+LBL = {"green": "Locked in", "amber": "Small gain", "orange": "Getting there", "red": "Needs work"}
 secs = {s["id"]: s for s in r["sectors"]}
 for sp in r["spots"]:
-    if sp["id"] in PIN or sp["tier"] == "gray" or sp.get("sec") not in secs:
+    if sp["id"] in PIN or sp.get("sec") not in secs:
         continue
     st = secs[sp["sec"]]["tier"]
     sp["tier"] = st
