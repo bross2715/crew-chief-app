@@ -2086,45 +2086,46 @@
    },
    "crew": {
     "next": {
-     "title": "Next session",
+     "title": "Test run",
      "change": {
-      "name": "Decide after Grokbot reads the video",
-      "from": "70",
-      "to": "?",
-      "why": "Braking Strength 70 is loaded and ran: best 1:41.704 on lap 2, braking feels better, tires wore less. Next candidate: front tires 15 to 17.5, one change only, wedge stays 51."
+      "name": "Front tires LF and RF",
+      "from": 15,
+      "to": 17.5,
+      "why": "Testing tire wear. Rears already 17.5 (proven), so all four are 17.5. Higher pressure usually means less grip, so expect more push on entries and a looser exit."
      },
-     "hold": "Nothing changes until Grokbot reads the 70 run.",
+     "hold": "Braking Strength stays 70, wedge stays 51, Throttle Non Linear stays 60.",
      "plan": [
-      "Send the full video to Grokbot.",
-      "Pick the next single change from the read.",
-      "Note tire % after 3 laps and at the end."
+      "Set LF and RF to 17.5. Touch nothing else.",
+      "1 warmup lap, then timed laps. Record a clip.",
+      "Note tire % after 3 laps and at the end. Last run it was into the 60s after 6 laps at 65.",
+      "Tell me what the car does on corner entry and on exit, not only the lap time."
      ],
      "targets": [
       [
-       "T11 to T15",
-       "patient, steady throttle, stay off the turtles and curbs"
+       "Entries",
+       "does the front push or wash wide"
       ],
       [
-       "T19, T20",
-       "half brake at T19, avoid the orange turtles"
+       "Exits",
+       "is the rear looser at T1 and T11"
       ],
       [
-       "T1, T11",
-       "quarter throttle until the wheel unwinds"
+       "Tire %",
+       "after 3 laps and at the end"
       ]
      ],
-     "report": "Best lap, tire % at the end, and which turtle or curb is giving you trouble.",
-     "race": "Race rule: no cutting at T5/T6. Leave a car length before T15."
+     "report": "Best lap, tire % after 3 laps and at the end, entry and exit feel. Send the video to Grokbot.",
+     "race": "If it feels worse, go back to 15 front. That is the proven setup."
     },
     "car": {
      "preset": "Neutral",
      "unit": "psi",
-     "lf": 15.0,
-     "rf": 15.0,
+     "lf": 17.5,
+     "rf": 17.5,
      "lr": 17.5,
      "rr": 17.5,
      "wedge": 51,
-     "note": "Garage control is limited to four tire pressures, wedge and a base preset.",
+     "note": "Front tires 17.5 is under test (was 15). Garage control is limited to four tire pressures, wedge and a base preset.",
      "loose": "25% Loose was dropped: Neutral steers better."
     },
     "levers": [
@@ -2150,8 +2151,8 @@
      ],
      [
       "Front tire pressure",
-      "15",
-      "Not tested separately yet."
+      "17.5 (testing, was 15)",
+      "Higher: less grip, may reduce wear. Unproven in this game."
      ]
     ],
     "tested": [
