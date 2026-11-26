@@ -616,7 +616,7 @@
    "finish": null,
    "pref_race": "15 / 15 / 17.5 / 17.5, wedge 51, Neutral",
    "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T11 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
-   "next_obj": "Next run, one change: Braking Strength 70 (65 was faster but too strong). Record a clip, note tire % at the end. Smooth brake, no lockups, quarter throttle at T1 and T11 until the wheel unwinds. T19 half brake, 85 mph minimum. In a race, no cutting at T5/T6.",
+   "next_obj": "Braking Strength 70 is loaded and ran (best 1:41.704, feels better, tires better). Waiting on Grokbot's read of the video. Next single change after that. Hardest part: T11 to T15 and the turtles.",
    "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T11 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 18 turns numbered 1 to 6, 6A, 6B, 11 to 20 (NASCAR fan map, 2026-11-25), no T7 to T10 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
    "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.685 (13th fastest, 2.839 s off the leader when reported). Race 8, not run yet",
@@ -666,7 +666,7 @@
      ],
      [
       "Braking Strength",
-      65
+      70
      ],
      [
       "Throttle Rate",
@@ -685,7 +685,7 @@
       0
      ]
     ],
-    "note": "Menu: Settings, Adv. Controls, Car Handling Config, Custom. Steering Dead Zone stays 0 (stick stays centered, tested by Brandon). Throttle Non Linear raised 50 to 60 (reported by Brandon, 2 clips pending review). Braking Strength 65 was run (6 laps, too strong for feel, reported faster, unverified). Next: 70. Throttle Non Linear stays 60."
+    "note": "Braking Strength 70 is loaded and was run (feels better, tires wore less, per Brandon, not yet read by Grokbot). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
    },
    "race_log": [
     {
@@ -2088,37 +2088,32 @@
     "next": {
      "title": "Next session",
      "change": {
-      "name": "Braking Strength",
-      "from": 65,
-      "to": 70,
-      "why": "65 felt like too much but you reported a faster lap (about 1:41, not read yet). 70 is the middle: keeps most of the speed, easier to control. Tires wore fast at 2x, so a smoother brake also helps wear."
+      "name": "Decide after Grokbot reads the video",
+      "from": "70",
+      "to": "?",
+      "why": "Braking Strength 70 is loaded and ran: best 1:41.704 on lap 2, braking feels better, tires wore less. Next candidate: front tires 15 to 17.5, one change only, wedge stays 51."
      },
-     "hold": "Everything else stays exactly as is.",
+     "hold": "Nothing changes until Grokbot reads the 70 run.",
      "plan": [
-      "Load Braking Strength 70. Do not touch anything else.",
-      "1 warmup lap, then timed laps. Record a clip.",
-      "Note tire % after each 3 laps and at the end. Last run: into the 60s after 6 laps (about 6% a lap).",
-      "If T1 runs wide on entry: stay at 70 and brake a touch earlier, do not change settings."
+      "Send the full video to Grokbot.",
+      "Pick the next single change from the read.",
+      "Note tire % after 3 laps and at the end."
      ],
      "targets": [
       [
-       "Tire wear",
-       "brake in a straight line, no lockups, no wheelspin on exit. Both eat tires at 2x"
+       "T11 to T15",
+       "patient, steady throttle, stay off the turtles and curbs"
+      ],
+      [
+       "T19, T20",
+       "half brake at T19, avoid the orange turtles"
       ],
       [
        "T1, T11",
        "quarter throttle until the wheel unwinds"
-      ],
-      [
-       "T11, T12, T15, T20",
-       "about 50 mph at the apex, light throttle through it"
-      ],
-      [
-       "T19",
-       "half brake, 85 mph minimum"
       ]
      ],
-     "report": "Send the video to Grokbot. Tell me best lap, tire % at the end and how many laps you ran.",
+     "report": "Best lap, tire % at the end, and which turtle or curb is giving you trouble.",
      "race": "Race rule: no cutting at T5/T6. Leave a car length before T15."
     },
     "car": {
@@ -2135,8 +2130,8 @@
     "levers": [
      [
       "Braking Strength",
-      "65 tested, going to 70",
-      "Slow down less. Targets T19, carousel, 6B. Lower is faster but harder to control and harder on tires."
+      "70",
+      "Loaded. Slow down less than 75, easier to control than 65."
      ],
      [
       "Throttle Non Linear",
@@ -2178,7 +2173,12 @@
      [
       "Braking Strength 65",
       "about 1:41 (unverified)",
-      "Your report: faster, but too strong. Tires were already in the 60s % after 6 laps (2x wear). Grokbot has not read the video yet."
+      "Too strong for feel. Tires into the 60s % after 6 laps."
+     ],
+     [
+      "Braking Strength 70",
+      "1:41.704 (lap 2, unverified)",
+      "Your report: braking feels better, tires wore less. Not a new best (best is 1:41.685)."
      ]
     ]
    }
