@@ -616,7 +616,7 @@
    "finish": null,
    "pref_race": "15 / 15 / 17.5 / 17.5, wedge 51, Neutral",
    "key_issue": "Rear steps out in 1st gear when throttle goes down before the wheel is straight. T15 is fixed for now. T11 exit is better but not solved. T1 exit is now the main spin. Best lap is 1.4 to 1.7 s quicker than a typical clean lap. In the AI race, the T5/T6 cut cost about 6 to 8 s (stopped at 0 mph at 6A, P18 to P24).",
-   "next_obj": "Setup now: Braking Strength 70, wedge 51, all tires 17.5. Session B (70) was tighter than 65 but T15 exit still spins. Record the next run and note tire % after 3 laps and at the end.",
+   "next_obj": "Next run, one change: Throttle Non Linear 60 to 70. Braking 70, wedge 51, tires 17.5 stay. Record, say the setup out loud, tire % after 3 laps and at the end. Targets: T15 exit and 6A exit throttle patience.",
    "flags": "Throttle Non Linear 60 clips (Grokbot HUD read, inputs inferred): best 1:41.685, clean laps average 1:43.436 in clip 3 and 1:43.089 in clip 4. Clean pace barely moved against 1:43.23 in clip 2 | T15 exit clean on every timed lap in both clips. Grokbot credits driving, not the slider, so the slider is not proven | T11 exit: lost the car 3 times in clip 3 (about 4.8 s and 6.0 s lost on two laps), clean on both laps of clip 4 | T1 exit is now the main spin: clip 3 lap 8 in traffic, clip 4 lap 11 solo | Every step-out is in 1st gear on automatic above about 6,000 rpm, throttle added before the wheel is straight (inferred) | One corner cut penalty in clip 3 (T6) and none in clip 4 | Garage pause at 2:25 in clip 3 not explained: setup change or just a reset is unconfirmed | Neutral against 25% Loose is not isolated: 25% Loose best 1:44.585 with damage in an earlier session | Turn map: 18 turns numbered 1 to 6, 6A, 6B, 11 to 20 (NASCAR fan map, 2026-11-25), no T7 to T10 | Controller profile is proposed from BoxThisLap guidance and not independently verified | One entrance pushes, turn not identified yet | Pit road and tire wear at 2x are untested on this track, long run behavior not established",
    "league": null,
    "finish_label": "Qualified 10th: 1:43.085, +4.654 off the 1:38.431 leader. Practice best 1:41.467 (Grokbot HUD read, Nov 26, Braking Strength 65). Race 8, not run yet",
@@ -685,7 +685,7 @@
       0
      ]
     ],
-    "note": "Braking Strength 70 is loaded and was run (session B, read by Grokbot). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
+    "note": "Braking Strength 70 loaded and run (session B, read by Grokbot). Next: Throttle Non Linear 60 to 70. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
    },
    "race_log": [
     {
@@ -2095,35 +2095,39 @@
    },
    "crew": {
     "next": {
-     "title": "Current setup",
+     "title": "Next run",
      "change": {
-      "name": "Keep",
-      "from": "",
-      "to": "",
-      "why": "All four tires at 17.5 gave the same pace, and Brandon says the stadium ran much better: he stayed inside and was not carrying too much speed into the corners. Tire wear is not known. Keep it as the setup to race on until a test beats it."
+      "name": "Throttle Non Linear",
+      "from": 60,
+      "to": 70,
+      "why": "Every spin left in your data is throttle on the exit in 1st: T15 exit twice and 6A exit once. This softens the first part of the throttle so it is easier to stay at 20 to 30% until the car is straight."
      },
-     "hold": "Braking Strength 70, wedge 51, Throttle Non Linear 60, all tires 17.5.",
+     "hold": "Everything else stays: Braking Strength 70, wedge 51, all tires 17.5, Neutral.",
      "plan": [
-      "Next test, one change only, only if you want to push further: all four tires to 20.",
-      "Check tire % after 3 laps and at the end of every run, even by phone photo of the HUD.",
-      "Record the run so Grokbot can check the stadium and update the colors.",
-      "Write the setup on the screen or tell me before every run so clips can be tagged."
+      "Set Throttle Non Linear 70. Touch nothing else.",
+      "1 warmup lap, then 8 timed laps. Record from the first lap and say the setup out loud at the start.",
+      "Check tire % after 3 laps and at the end.",
+      "If exits feel lazy or lap times drop more than half a second with no fewer spins, go back to 60."
      ],
      "targets": [
       [
-       "Stadium T11 to T15",
-       "turn in late, off the inside curb, steady throttle"
+       "T15 exit",
+       "wait until the car points down the exit, then build throttle, stay off the green paint"
       ],
       [
-       "T1, T11",
-       "quarter throttle until the wheel unwinds"
+       "6A exit",
+       "feed throttle in slowly until the wheel is straight"
+      ],
+      [
+       "Stadium T11 to T15",
+       "turn in late, off the inside curb"
       ],
       [
        "T19",
        "half brake, 85 mph minimum"
       ]
      ],
-     "report": "Tire % at the end of the run, best lap, and anything that felt loose or pushed.",
+     "report": "Best lap, spins and where, tire % after 3 laps and at the end. Send the video to Grokbot.",
      "race": "Race rule: no cutting at T5/T6. Leave a car length before T15."
     },
     "car": {
@@ -2145,8 +2149,8 @@
      ],
      [
       "Throttle Non Linear",
-      "60",
-      "Softer first part of the throttle. Targets T1, T11, T15 exits."
+      "60, going to 70",
+      "Softer first part of the throttle. Targets the T15 exit and 6A exit spins."
      ],
      [
       "Wedge",
