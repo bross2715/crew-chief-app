@@ -685,7 +685,7 @@
       0
      ]
     ],
-    "note": "Braking Strength 70 is loaded and was run (feels better, tires wore less, per Brandon, not yet read by Grokbot). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
+    "note": "Braking Strength 70 is loaded and was run (feels better, tires wore less, per Brandon, no footage). Throttle Non Linear stays 60. Menu: Settings, Adv. Controls, Car Handling Config, Custom."
    },
    "race_log": [
     {
@@ -2106,7 +2106,7 @@
      "plan": [
       "Next test, one change only: all four tires to 20, only if tire wear is still too high.",
       "Write down tire % after 3 laps and at the end of every run.",
-      "Send each video to Grokbot."
+      "Record the next run. Without footage Grokbot cannot update the sector colors or the corner notes."
      ],
      "targets": [
       [
@@ -2187,12 +2187,12 @@
      [
       "Braking Strength 70",
       "1:41.704 (lap 2, unverified)",
-      "Your report: braking feels better, tires wore less. Not a new best (best is 1:41.685)."
+      "Your report: braking feels better, tires wore less. No footage, so Grokbot cannot read it. Not a new best (best is 1:41.467)."
      ],
      [
       "All four tires 17.5",
       "1:41.703 (practice board)",
-      "Same pace as 15 fronts. Tire wear better (Brandon). Kept as the current setup."
+      "Same pace as 15 fronts. Tire wear better (Brandon). No footage. Kept as the current setup."
      ]
     ],
     "theo": "1:39.925*"
