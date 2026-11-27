@@ -1220,9 +1220,9 @@
       "pro": null,
       "row": {
        "you": "100 mph, 3rd",
-       "pro": "no read yet",
+       "pro": "S2 sector 14.16 s. In 4th, full throttle through the first S. Speed not read.",
        "good": "Fast and steady, then flat out to 133 mph. No incidents.",
-       "fix": "Nothing to fix. No Pro Line read of this corner yet."
+       "fix": "No problem here. Esses sector time (S2): you 14.98 on your best lap, Pro Line 14.16. The gap comes from T5 and T6, not T2."
       },
       "how": [
        "No brake. Lift only if the car is loose.",
@@ -1292,9 +1292,9 @@
       },
       "row": {
        "you": "T3 118, T4 110-114, T5 105, T6 95-98",
-       "pro": "no read yet",
+       "pro": "S2 sector 14.16 s (you 14.98). 4th gear, one lift, down to 3rd. Wraps the first curb, small brake for the last right-left. Speeds not read.",
        "good": "Fast and steady. You passed cars here in the race.",
-       "fix": "Corner cuts at T5/T6 cost 6 to 8 s each, four times so far. Keep the outside tires on the asphalt."
+       "fix": "Corner cuts at T5/T6 cost 6 to 8 s each, four times so far. He cuts with relaxed track limits, you get flagged. Keep the outside tires on the asphalt. He is about 0.8 s faster through the whole esses."
       },
       "how": [
        "No brake through T3 and T4. Full throttle.",
