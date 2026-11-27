@@ -753,53 +753,95 @@
       "spot": "1",
       "stats": {
        "tier": "orange",
-       "clean_mean": 13.26,
-       "std": 0.402,
-       "n": 12,
-       "incidents": 1,
-       "best_ever": 12.78,
+       "clean_mean": 13.5,
+       "std": 0.255,
+       "n": 4,
+       "incidents": 2,
+       "best_ever": 13.03,
        "target": 12.96,
-       "gap": 0.3,
-       "pct": 2.3
+       "gap": 0.54,
+       "pct": 4.2
       },
-      "why": "S1: you average 13.26 s on clean laps, target 12.96 s, +0.30 s (+2.3%). Spread 0.40 s (loose). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S1: you average 13.50 s on clean laps, target 12.96 s, +0.54 s (+4.2%). Spread 0.26 s (tight). 2 spin, off or cut lap(s) not counted.",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "orange",
         "gap": 0.3,
         "pct": 2.3,
-        "inc": 1
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "amber",
+        "gap": 0.27,
+        "pct": 2.1,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "amber",
+        "gap": 0.24,
+        "pct": 1.9,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "orange",
+        "gap": 0.54,
+        "pct": 4.2,
+        "inc": 0
        }
       ]
      },
      {
       "id": "S2",
       "name": "Esses T2-T6",
-      "tier": "orange",
+      "tier": "red",
       "f0": 0.131,
       "f1": 0.313,
       "d": "M166.0 100.8 L164.4 98.9 L163.3 97.1 L162.7 95.6 L162.5 94.1 L162.7 92.1 L163.3 90.4 L164.4 88.7 L165.9 87.2 L169.0 85.0 L172.3 83.2 L188.9 76.5 L200.2 72.3 L203.8 70.7 L206.6 69.0 L209.4 66.5 L210.5 64.8 L212.7 60.2 L213.7 58.8 L215.0 57.8 L219.0 55.7 L229.7 51.9 L231.7 50.9 L233.1 49.9 L233.9 48.7 L234.5 47.2 L234.6 46.0 L234.3 42.2 L234.6 40.7 L235.2 39.2 L236.2 37.8 L237.8 36.3 L242.6 33.2",
       "spot": "2",
       "stats": {
-       "tier": "orange",
-       "clean_mean": 15.291,
-       "std": 0.261,
-       "n": 12,
-       "incidents": 2,
-       "best_ever": 15.0,
+       "tier": "red",
+       "clean_mean": 15.53,
+       "std": 0.507,
+       "n": 4,
+       "incidents": 0,
+       "best_ever": 14.78,
        "target": 14.71,
-       "gap": 0.58,
-       "pct": 3.9
+       "gap": 0.82,
+       "pct": 5.5
       },
-      "why": "S2: you average 15.29 s on clean laps, target 14.71 s, +0.58 s (+3.9%). Spread 0.26 s (tight). 2 spin, off or cut lap(s) not counted. ",
+      "why": "S2: you average 15.53 s on clean laps, target 14.71 s, +0.82 s (+5.5%). Spread 0.51 s (loose).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "orange",
         "gap": 0.58,
         "pct": 3.9,
-        "inc": 2
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "red",
+        "gap": 0.87,
+        "pct": 5.9,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "orange",
+        "gap": 0.62,
+        "pct": 4.2,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "red",
+        "gap": 0.82,
+        "pct": 5.5,
+        "inc": 0
        }
       ]
      },
@@ -813,22 +855,43 @@
       "spot": "6a",
       "stats": {
        "tier": "red",
-       "clean_mean": 10.254,
-       "std": 0.328,
-       "n": 14,
-       "incidents": 0,
-       "best_ever": 9.6,
+       "clean_mean": 10.28,
+       "std": 0.756,
+       "n": 4,
+       "incidents": 1,
+       "best_ever": 9.2,
        "target": 9.41,
-       "gap": 0.84,
-       "pct": 8.9
+       "gap": 0.87,
+       "pct": 9.1
       },
-      "why": "S3: you average 10.25 s on clean laps, target 9.41 s, +0.84 s (+8.9%). Spread 0.33 s (loose). ",
+      "why": "S3: you average 10.28 s on clean laps, target 9.41 s, +0.87 s (+9.1%). Spread 0.76 s (loose). 1 spin, off or cut lap(s) not counted. Biggest gap on the lap. S3 and S4 are read as a pair (splits about 0.4 s off).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "red",
         "gap": 0.84,
         "pct": 8.9,
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "red",
+        "gap": 0.99,
+        "pct": 10.4,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "red",
+        "gap": 0.49,
+        "pct": 5.2,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "red",
+        "gap": 0.87,
+        "pct": 9.1,
         "inc": 0
        }
       ]
@@ -843,112 +906,196 @@
       "spot": "12",
       "stats": {
        "tier": "red",
-       "clean_mean": 10.409,
-       "std": 0.323,
-       "n": 10,
-       "incidents": 3,
-       "best_ever": 10.0,
+       "clean_mean": 10.2,
+       "std": 0.412,
+       "n": 4,
+       "incidents": 0,
+       "best_ever": 9.81,
        "target": 9.75,
-       "gap": 0.66,
-       "pct": 6.8
+       "gap": 0.45,
+       "pct": 4.6
       },
-      "why": "S4: you average 10.41 s on clean laps, target 9.75 s, +0.66 s (+6.8%). Spread 0.32 s (loose). 3 spin, off or cut lap(s) not counted. ",
+      "why": "S4: you average 10.20 s on clean laps, target 9.75 s, +0.45 s (+4.6%). Spread 0.41 s (loose).  S3 and S4 are read as a pair (splits about 0.4 s off).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "red",
         "gap": 0.66,
         "pct": 6.8,
-        "inc": 3
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "orange",
+        "gap": 0.42,
+        "pct": 4.3,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "orange",
+        "gap": 0.48,
+        "pct": 5.0,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "red",
+        "gap": 0.45,
+        "pct": 4.6,
+        "inc": 0
        }
       ]
      },
      {
       "id": "S5",
       "name": "T12 to T15",
-      "tier": "red",
+      "tier": "orange",
       "f0": 0.48,
       "f1": 0.625,
       "d": "M161.6 22.0 L175.3 29.2 L186.6 35.8 L188.4 37.1 L189.5 38.2 L189.9 39.5 L189.4 40.4 L188.7 41.1 L187.3 41.7 L183.6 42.4 L175.1 42.5 L170.2 41.9 L168.0 41.2 L166.1 40.3 L160.0 35.5 L151.4 31.3 L146.3 29.6 L140.9 29.1 L137.4 29.3 L135.3 29.9 L134.0 30.9 L133.8 32.1 L134.6 33.4 L136.1 34.7 L144.5 40.4",
       "spot": "13",
       "stats": {
-       "tier": "red",
-       "clean_mean": 18.949,
-       "std": 0.594,
-       "n": 9,
-       "incidents": 1,
-       "best_ever": 18.06,
+       "tier": "orange",
+       "clean_mean": 18.7,
+       "std": 0.339,
+       "n": 4,
+       "incidents": 0,
+       "best_ever": 18.2,
        "target": 17.84,
-       "gap": 1.11,
-       "pct": 6.2
+       "gap": 0.86,
+       "pct": 4.8
       },
-      "why": "S5: you average 18.95 s on clean laps, target 17.84 s, +1.11 s (+6.2%). Spread 0.59 s (loose). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S5: you average 18.70 s on clean laps, target 17.84 s, +0.86 s (+4.8%). Spread 0.34 s (loose).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "red",
         "gap": 1.11,
         "pct": 6.2,
-        "inc": 1
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "orange",
+        "gap": 0.84,
+        "pct": 4.7,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "red",
+        "gap": 1.63,
+        "pct": 9.1,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "orange",
+        "gap": 0.86,
+        "pct": 4.8,
+        "inc": 0
        }
       ]
      },
      {
       "id": "S6",
       "name": "Carousel T16-T18",
-      "tier": "orange",
+      "tier": "amber",
       "f0": 0.625,
       "f1": 0.735,
       "d": "M144.5 40.4 L158.5 49.5 L160.6 51.3 L162.0 53.0 L162.7 55.0 L162.4 57.8 L161.0 61.7 L159.5 63.8 L157.2 65.4 L153.8 66.7 L143.3 69.8 L137.4 70.9 L132.5 71.2 L125.0 71.0 L119.5 70.4 L114.3 69.4",
       "spot": "car",
       "stats": {
-       "tier": "orange",
-       "clean_mean": 10.168,
-       "std": 0.216,
-       "n": 12,
-       "incidents": 1,
-       "best_ever": 9.8,
+       "tier": "amber",
+       "clean_mean": 10.55,
+       "std": 0.409,
+       "n": 4,
+       "incidents": 0,
+       "best_ever": 9.49,
        "target": 9.73,
-       "gap": 0.44,
-       "pct": 4.5
+       "gap": 0.82,
+       "pct": 8.5
       },
-      "why": "S6: you average 10.17 s on clean laps, target 9.73 s, +0.44 s (+4.5%). Spread 0.22 s (tight). 1 spin, off or cut lap(s) not counted. ",
+      "why": "S6: you average 10.55 s on clean laps, target 9.73 s, +0.82 s (+8.5%). Spread 0.41 s (loose).  S6 and S7 are read as a pair (splits about 0.7 s off).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "orange",
         "gap": 0.44,
         "pct": 4.5,
-        "inc": 1
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "red",
+        "gap": 0.54,
+        "pct": 5.6,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "orange",
+        "gap": 0.3,
+        "pct": 3.1,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "amber",
+        "gap": 0.82,
+        "pct": 8.5,
+        "inc": 0
        }
       ]
      },
      {
       "id": "S7",
       "name": "T19, T20, line",
-      "tier": "orange",
+      "tier": "amber",
       "f0": 0.735,
       "f1": 1.0,
       "d": "M114.3 69.4 L109.8 68.1 L105.4 66.3 L85.2 55.3 L73.8 49.6 L70.1 48.2 L66.6 47.7 L63.2 47.9 L59.2 48.7 L21.9 59.6 L12.8 61.9 L9.7 63.1 L8.6 63.9 L8.1 64.6 L8.1 65.6 L8.9 66.6 L10.1 67.4 L12.1 68.2 L20.8 70.5 L44.8 78.2 L52.9 81.1 L60.0 83.2 L67.4 86.0 L76.6 88.4 L100.4 96.3 L105.0 97.4",
       "spot": "19",
       "stats": {
-       "tier": "orange",
-       "clean_mean": 25.22,
-       "std": 0.476,
-       "n": 11,
+       "tier": "amber",
+       "clean_mean": 23.72,
+       "std": 0.482,
+       "n": 4,
        "incidents": 0,
-       "best_ever": 24.685,
+       "best_ever": 23.11,
        "target": 24.03,
-       "gap": 1.19,
-       "pct": 5.0
+       "gap": -0.31,
+       "pct": -1.3
       },
-      "why": "S7: you average 25.22 s on clean laps, target 24.03 s, +1.19 s (+5.0%). Spread 0.48 s (loose). Biggest gap on the lap.",
+      "why": "S7: you average 23.72 s on clean laps, target 24.03 s, -0.31 s (-1.3%). Spread 0.48 s (loose).  S6 and S7 are read as a pair (splits about 0.7 s off).",
       "hist": [
        {
-        "run": "Nov 24 practice (clips 2-4)",
+        "run": "Nov 24",
         "tier": "orange",
         "gap": 1.19,
         "pct": 5.0,
+        "inc": 0
+       },
+       {
+        "run": "Run 1",
+        "tier": "amber",
+        "gap": 0.51,
+        "pct": 2.1,
+        "inc": 0
+       },
+       {
+        "run": "Run 2",
+        "tier": "amber",
+        "gap": 0.61,
+        "pct": 2.6,
+        "inc": 0
+       },
+       {
+        "run": "Run 4",
+        "tier": "amber",
+        "gap": -0.31,
+        "pct": -1.3,
         "inc": 0
        }
       ]
@@ -1193,8 +1340,8 @@
        "2"
       ],
       "title": "T2",
-      "chip": "Getting there",
-      "tier": "orange",
+      "chip": "Needs work",
+      "tier": "red",
       "sub": "Fast right-hander after the T1 exit. About 5 s flat out follows it, up to 133 mph, before T3.",
       "stats": [
        [
@@ -1244,8 +1391,8 @@
        "6"
       ],
       "title": "T3 to T6",
-      "chip": "Getting there",
-      "tier": "orange",
+      "chip": "Needs work",
+      "tier": "red",
       "sub": "Four quick flicks back to back, about 20.5 to 26.5 s on the lap clock. The car handles fine here. The only losses are corner cuts at T5 and T6.",
       "stats": [
        [
@@ -1314,7 +1461,7 @@
        "6A"
       ],
       "title": "6A hairpin",
-      "chip": "Needs work",
+      "chip": "Biggest gain",
       "tier": "red",
       "sub": "The slowest corner in S3. More minimum speed is the gain.",
       "stats": [
@@ -1379,7 +1526,7 @@
        "6B"
       ],
       "title": "6B",
-      "chip": "Needs work",
+      "chip": "Biggest gain",
       "tier": "red",
       "sub": "The exit onto the back straight.",
       "stats": [
@@ -1600,8 +1747,8 @@
        "14"
       ],
       "title": "T12 to T14",
-      "chip": "Needs work",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "S5 holds the most time and is your least consistent sector.",
       "stats": [
        [
@@ -1677,8 +1824,8 @@
        "15"
       ],
       "title": "T15 exit",
-      "chip": "Needs work",
-      "tier": "red",
+      "chip": "Getting there",
+      "tier": "orange",
       "sub": "Fixed for now. Don't let it creep back.",
       "stats": [
        [
@@ -1740,8 +1887,8 @@
        "18"
       ],
       "title": "Carousel, T16 to T18",
-      "chip": "Getting there",
-      "tier": "orange",
+      "chip": "Small gain",
+      "tier": "amber",
       "sub": "Your most consistent sector.",
       "stats": [
        [
@@ -1817,8 +1964,8 @@
        "19"
       ],
       "title": "T19",
-      "chip": "Getting there",
-      "tier": "orange",
+      "chip": "Small gain",
+      "tier": "amber",
       "sub": "Start of the last sector. S7 is the longest at about 24.7 s.",
       "stats": [
        [
@@ -1888,8 +2035,8 @@
        "20"
       ],
       "title": "T20 and the line",
-      "chip": "Getting there",
-      "tier": "orange",
+      "chip": "Small gain",
+      "tier": "amber",
       "sub": "The last corner, then the front straight to the line.",
       "stats": [
        [
@@ -1962,13 +2109,16 @@
      "ty": 0.227
     },
     "k": 0.483,
-    "head": "Best 1:40.505 (Run 4) · theoretical about 1:39.5 (best sectors across Runs 1, 2 and 4, plus or minus 0.5)",
+    "head": "Best 1:40.505 (Run 4) · theoretical about 1:39.3 (best sector pieces from all runs, plus or minus 0.5)",
     "first": "1",
     "note": "Sector colors come from Grokbot's clean-lap numbers. Turn positions follow the official NASCAR National Course map.",
     "runs": [
-     "Nov 24 practice (clips 2-4)"
+     "Nov 24",
+     "Run 1",
+     "Run 2",
+     "Run 4"
     ],
-    "goal": "Goal: every sector at or under 1.5% off the target (leader qualifying pace 98.431). Colors are recomputed from each run's clean laps.",
+    "goal": "Goal: fill every sector green, at or under 1.5% off the target (leader qualifying pace 1:38.431). Colors come from your latest run.",
     "priorities": [
      [
       "T1 exit and 6A entry",
@@ -2070,7 +2220,7 @@
      [
       "Theoretical best",
       "1:39.925, from your best sectors",
-      "Now about 1:39.5, 1.0 s under your best lap"
+      "Now about 1:39.3, 1.2 s under your best lap"
      ]
     ],
     "fixed": [
@@ -2219,7 +2369,7 @@
       "New best by 0.962 s, but on new tires. Before the stop: 1:43.7 on worn tires. After: 1:42.0 then 1:40.505. Stadium S5 18.2 s, best yet. Earlier practice with only 17.5 tires gave 1:41.703, same pace as before, stadium felt better (no video). Cannot separate pressure, throttle and new tires."
      ]
     ],
-    "theo": "1:39.5*",
+    "theo": "1:39.3*",
     "runs": [
      {
       "id": "N24",
