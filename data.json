@@ -2961,7 +2961,38 @@
        47,
        2
       ],
-      "tip": "Same brake point; let off the brake earlier and roll 46-47 through the top instead of dragging to 42 a second later, then squeeze throttle."
+      "tip": "Same brake point; let off the brake earlier and roll 46-47 through the top instead of dragging to 42 a second later, then squeeze throttle.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.62,
+       "wa": 0.1,
+       "ga": false,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.085,
+        false
+       ],
+       "th": [
+        0.74,
+        false
+       ]
+      }
      },
      {
       "t": "T2",
@@ -2977,7 +3008,26 @@
        113,
        4
       ],
-      "tip": "No brake for either. The loss here is carried from the slow T1 exit: 103 in 3rd vs 113 in 4th."
+      "tip": "No brake for either. The loss here is carried from the slow T1 exit: 103 in 3rd vs 113 in 4th.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": 0.0,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false
+      }
      },
      {
       "t": "T3",
@@ -2993,7 +3043,34 @@
        123,
        4
       ],
-      "tip": "Close to the Pro Line. Peak before the lift is 128 vs 139 (carried from T1/T2)."
+      "tip": "Close to the Pro Line. Peak before the lift is 128 vs 139 (carried from T1/T2).",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.3,
+       "gx": false,
+       "b": [
+        0.1,
+        false
+       ]
+      }
      },
      {
       "t": "T4",
@@ -3009,7 +3086,30 @@
        105,
        3
       ],
-      "tip": "Even. You stay in 4th and carry more mid-corner speed."
+      "tip": "Even. You stay in 4th and carry more mid-corner speed.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": 0.0,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false
+      }
      },
      {
       "t": "T5",
@@ -3025,7 +3125,22 @@
        104,
        3
       ],
-      "tip": "Even. Red HUD warning icons light up from T4 to 6A on your lap (meaning CAN'T TELL; possibly track-limit warnings)."
+      "tip": "Even. Red HUD warning icons light up from T4 to 6A on your lap (meaning CAN'T TELL; possibly track-limit warnings).",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false
+      }
      },
      {
       "t": "T6",
@@ -3041,7 +3156,30 @@
        97,
        3
       ],
-      "tip": "Small gain (within precision). Keep it."
+      "tip": "Small gain (within precision). Keep it.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": 0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false
+      }
      },
      {
       "t": "6A",
@@ -3057,7 +3195,38 @@
        53,
        2
       ],
-      "tip": "You start slowing ~1.3 s earlier (relative to the Pro Line's spot, guess) and reach the minimum early; exit 65 in 1st vs 72 in 2nd two seconds later. Brake at the Pro Line's spot, release smoothly, drive out."
+      "tip": "You start slowing ~1.3 s earlier (relative to the Pro Line's spot, guess) and reach the minimum early; exit 65 in 1st vs 72 in 2nd two seconds later. Brake at the Pro Line's spot, release smoothly, drive out.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.95,
+       "gx": false,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.38,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.95,
+       "gx": false,
+       "b": [
+        0.035,
+        false
+       ],
+       "th": [
+        0.5,
+        false
+       ]
+      }
      },
      {
       "t": "6B",
@@ -3073,7 +3242,30 @@
        92,
        3
       ],
-      "tip": "82 in 2nd vs 92 in 3rd. Back straight top speed 114 vs 125 follows from this exit."
+      "tip": "82 in 2nd vs 92 in 3rd. Back straight top speed 114 vs 125 follows from this exit.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.0,
+       "ga": true,
+       "wx": 0.95,
+       "gx": false,
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "th": [
+        0.62,
+        false
+       ]
+      }
      },
      {
       "t": "T11",
@@ -3089,7 +3281,38 @@
        55,
        2
       ],
-      "tip": "Arrive 7 mph slower but drop to 40 in 1st vs 55 in 2nd. Brake at the same spot, carry more speed to the apex and use the exit runoff."
+      "tip": "Arrive 7 mph slower but drop to 40 in 1st vs 55 in 2nd. Brake at the same spot, carry more speed to the apex and use the exit runoff.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 1.1,
+       "gx": false,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.48,
+       "wa": -0.1,
+       "ga": false,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.085,
+        false
+       ],
+       "th": [
+        0.6,
+        false
+       ]
+      }
      },
      {
       "t": "T12",
@@ -3105,7 +3328,38 @@
        52,
        2
       ],
-      "tip": "Small loss; 47 in 1st vs 52 in 2nd."
+      "tip": "Small loss; 47 in 1st vs 52 in 2nd.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.505,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.115,
+        false
+       ],
+       "th": [
+        0.625,
+        false
+       ]
+      }
      },
      {
       "t": "T13",
@@ -3121,7 +3375,22 @@
        93,
        2
       ],
-      "tip": "No separate read."
+      "tip": "No separate read.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true
+      },
+      "ly": {
+       "sa": 0.5,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true
+      }
      },
      {
       "t": "T14",
@@ -3153,7 +3422,38 @@
        51,
        2
       ],
-      "tip": "You brake ~0.75 s later than the Pro Line's spot (guess) and your minimum comes ~0.8 s later: 41 in 1st vs 51 in 2nd. Brake earlier, carry 48-50, then partial throttle."
+      "tip": "You brake ~0.75 s later than the Pro Line's spot (guess) and your minimum comes ~0.8 s later: 41 in 1st vs 51 in 2nd. Brake earlier, carry 48-50, then partial throttle.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.0,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.62,
+       "wa": 0.1,
+       "ga": false,
+       "wx": 1.1,
+       "gx": false,
+       "b": [
+        0.138,
+        false
+       ],
+       "th": [
+        0.74,
+        false
+       ]
+      }
      },
      {
       "t": "T16-T18",
@@ -3169,7 +3469,38 @@
        95,
        4
       ],
-      "tip": "Hug the inside curb in 4th like the Pro Line; 91 in 3rd vs 95 in 4th."
+      "tip": "Hug the inside curb in 4th like the Pro Line; 91 in 3rd vs 95 in 4th.",
+      "lr": "R",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 0.6,
+       "gx": true,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.55,
+       "wa": 0.25,
+       "ga": false,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.09,
+        false
+       ],
+       "th": [
+        0.67,
+        false
+       ]
+      }
      },
      {
       "t": "T19",
@@ -3185,7 +3516,38 @@
        96,
        3
       ],
-      "tip": "73 in 2nd vs 96 in 3rd: brake lighter and shorter, cut the inside, run out onto the runoff."
+      "tip": "73 in 2nd vs 96 in 3rd: brake lighter and shorter, cut the inside, run out onto the runoff.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": -0.1,
+       "ga": true,
+       "wx": 1.1,
+       "gx": false,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.62,
+       "wa": 0.15,
+       "ga": true,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.115,
+        false
+       ],
+       "th": [
+        0.74,
+        false
+       ]
+      }
      },
      {
       "t": "T20",
@@ -3201,7 +3563,38 @@
        55,
        2
       ],
-      "tip": "Clip the inside curb and use the exit curb; 47 in 1st vs 55 in 2nd."
+      "tip": "Clip the inside curb and use the exit curb; 47 in 1st vs 55 in 2nd.",
+      "lr": "L",
+      "lp": {
+       "sa": 0.5,
+       "wa": 0.0,
+       "ga": true,
+       "wx": 1.1,
+       "gx": false,
+       "b": [
+        0.1,
+        true
+       ],
+       "th": [
+        0.62,
+        true
+       ]
+      },
+      "ly": {
+       "sa": 0.62,
+       "wa": 0.1,
+       "ga": false,
+       "wx": 0.6,
+       "gx": false,
+       "b": [
+        0.115,
+        false
+       ],
+       "th": [
+        0.74,
+        false
+       ]
+      }
      }
     ]
    }
