@@ -2338,8 +2338,8 @@
      },
      {
       "id": "A",
-      "name": "Nov 26 session A",
-      "tag": "A · brake 65",
+      "name": "Run 1 · Nov 26, brake 65",
+      "tag": "Run 1 · brake 65",
       "setup": "Brake 65 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
       "best": "1:41.467",
       "clean": "1:42.87",
@@ -2464,8 +2464,8 @@
      },
      {
       "id": "B",
-      "name": "Nov 26 session B",
-      "tag": "B · brake 70",
+      "name": "Run 2 · Nov 26, brake 70",
+      "tag": "Run 2 · brake 70",
       "setup": "Brake 70 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
       "best": "1:41.704",
       "clean": "1:42.81",
@@ -2496,8 +2496,8 @@
      },
      {
       "id": "C",
-      "name": "Nov 26 session C",
-      "tag": "C · tires 17.5",
+      "name": "Run 3 · Nov 26, tires 17.5",
+      "tag": "Run 3 · tires 17.5",
       "setup": "Brake 70 (assumed) · wedge 51 · tires 17.5 all four",
       "best": "1:41.703",
       "clean": "",
@@ -2516,8 +2516,8 @@
      },
      {
       "id": "D",
-      "name": "Nov 26 online practice",
-      "tag": "D · online",
+      "name": "Run 4 · Nov 26, online with brother",
+      "tag": "Run 4 · online",
       "setup": "Throttle Non Linear 70 · Neutral · tires 15/15/17.5/17.5, then all four 17.5 partway. Brake and wedge assumed 70 and 51, not confirmed.",
       "best": "not read",
       "clean": "",
