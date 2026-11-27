@@ -1245,11 +1245,11 @@
       "stats": [
        [
         "T3 and T4",
-        "110-118 mph, 5th"
+        "Pro 122 / 105 mph"
        ],
        [
         "T5 and T6",
-        "95-105 mph, 4th"
+        "Pro 103 / 97 mph"
        ],
        [
         "Cost of cuts",
@@ -1292,11 +1292,12 @@
       },
       "row": {
        "you": "T3 118, T4 110-114, T5 105, T6 95-98",
-       "pro": "S2 sector 14.16 s (you 14.98). 4th gear, one lift, down to 3rd. Wraps the first curb, small brake for the last right-left. Speeds not read.",
+       "pro": "T3 122 mph 4th, T4 105 mph 3rd, T5 103-104 mph 3rd, T6 97 mph 3rd. Short brake at T3, T4 and T6. T5 is a lift to partial throttle.",
        "good": "Fast and steady. You passed cars here in the race.",
        "fix": "Corner cuts at T5/T6 cost 6 to 8 s each, four times so far. He cuts with relaxed track limits, you get flagged. Keep the outside tires on the asphalt. He is about 0.8 s faster through the whole esses."
       },
       "how": [
+       "Pro Line: short brake at T3, 4th to 3rd at T4, lift at T5, short brake at T6, partial throttle out of each.",
        "No brake through T3 and T4. Full throttle.",
        "T5 about 105 mph, T6 about 95 to 98 mph. Stay inside the track limit.",
        "Practice only: test the edge one step at a time (outer wheels on the curb, then two over, then three). Stop one step before the game flags you."
@@ -1356,11 +1357,12 @@
       },
       "row": {
        "you": "48 mph, 1st",
-       "pro": "52-53 mph, 2nd",
+       "pro": "52-53 mph, 2nd. Brakes at about 97-99 mph in 3rd, well before the gantry. Peak about 40% of the bar, down to 2nd, off the brake by the apex. Never uses 1st.",
        "good": "Your braking point is already right: straight line at the gantry.",
        "fix": "Start the turn a fraction earlier and carry 48-50 mph through the apex. One spin at the 6A exit in session B: feed the throttle in gradually until the wheel is straight."
       },
       "how": [
+       "Pro Line starts braking before the gantry, gets to 2nd gear and is off the brake by the apex.",
        "Heavy brake in a straight line at the gantry. Your point is already right.",
        "Turn in a fraction earlier, set up on the right side of the curb.",
        "Apex 48 to 50 mph, then partial throttle on exit so it does not spin."
@@ -1503,7 +1505,7 @@
        "you": "top 119 mph",
        "pro": "top 126 mph",
        "good": "You brake for T11 at about the same spot as the Pro Line.",
-       "fix": "The speed gap comes off 6B. Fix 6B first."
+       "fix": "The speed gap comes off 6B. Fix 6B first. Run 2 T11 minimums were 32 to 42 mph in 1st, the biggest corner gap in that run."
       },
       "how": [
        "Full throttle. Top speed target about 126 mph (you: 119). Most of that gap is carried off 6B.",
@@ -1955,7 +1957,7 @@
      "ty": 0.227
     },
     "k": 0.483,
-    "head": "Best 1:41.467 · old theoretical 1:39.925, recompute pending Grokbot's sector file",
+    "head": "Best 1:41.467 · theoretical about 1:40.3 (best sectors across Runs 1 and 2, plus or minus 0.5)",
     "first": "1",
     "note": "Sector colors come from Grokbot's clean-lap numbers. Turn positions follow the official NASCAR National Course map.",
     "runs": [
@@ -2205,7 +2207,7 @@
       "Felt loose on 15 fronts, good after all four went to 17.5, more consistent and faster laps (your report). Second time 17.5 helped by feel. Waiting on Grokbot."
      ]
     ],
-    "theo": "1:39.925*",
+    "theo": "1:40.3*",
     "runs": [
      {
       "id": "N24",
@@ -2470,9 +2472,102 @@
       "best": "1:41.704",
       "clean": "1:42.81",
       "spread": "1.92 s",
-      "src": "Grokbot lap times and spins. Sector times and corner speeds not read.",
-      "sectors": null,
-      "bestlap": null,
+      "src": "Grokbot, 3 clean laps (2, 4, 6). Sector splits about 0.3 s off. S3 and S4 split is about 0.4 s off, their sum is solid.",
+      "sectors": [
+       {
+        "id": "S1",
+        "mean": 13.2,
+        "target": 12.96,
+        "pct": 1.9,
+        "tier": "amber"
+       },
+       {
+        "id": "S2",
+        "mean": 15.33,
+        "target": 14.71,
+        "pct": 4.2,
+        "tier": "orange"
+       },
+       {
+        "id": "S3",
+        "mean": 9.9,
+        "target": 9.41,
+        "pct": 5.2,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "mean": 10.23,
+        "target": 9.75,
+        "pct": 5.0,
+        "tier": "orange"
+       },
+       {
+        "id": "S5",
+        "mean": 19.47,
+        "target": 17.84,
+        "pct": 9.1,
+        "tier": "red"
+       },
+       {
+        "id": "S6",
+        "mean": 10.03,
+        "target": 9.73,
+        "pct": 3.1,
+        "tier": "orange"
+       },
+       {
+        "id": "S7",
+        "mean": 24.64,
+        "target": 24.03,
+        "pct": 2.6,
+        "tier": "amber"
+       }
+      ],
+      "bestlap": [
+       {
+        "id": "S1",
+        "t": 13.0,
+        "pct": 0.3,
+        "tier": "green"
+       },
+       {
+        "id": "S2",
+        "t": 15.1,
+        "pct": 2.6,
+        "tier": "amber"
+       },
+       {
+        "id": "S3",
+        "t": 10.1,
+        "pct": 7.3,
+        "tier": "red"
+       },
+       {
+        "id": "S4",
+        "t": 9.8,
+        "pct": 0.5,
+        "tier": "green"
+       },
+       {
+        "id": "S5",
+        "t": 19.1,
+        "pct": 7.0,
+        "tier": "red"
+       },
+       {
+        "id": "S6",
+        "t": 9.9,
+        "pct": 1.8,
+        "tier": "amber"
+       },
+       {
+        "id": "S7",
+        "t": 24.21,
+        "pct": 0.8,
+        "tier": "green"
+       }
+      ],
       "spins": [
        {
         "turn": "6A",
@@ -2486,12 +2581,15 @@
       "good": [
        "Tightest run: spread 1.92 s against 2.36 s.",
        "Later laps held up (lap 6 faster than lap 4).",
-       "No T12 curb spins (A had 2) and no T1 spin."
+       "No T12 curb spins (Run 1 had 2) and no T1 spin.",
+       "T19 held 78 to 80 mph in 3rd every lap."
       ],
       "bad": [
-       "T15 exit: 2 spins in 1st on the green paint at 49 to 57 mph.",
+       "S5 (T12 to T15) is the biggest gap: +2.3 s on average, 1.9 s on the best lap.",
+       "T11 minimum 32 to 42 mph in 1st, Pro Line 55 mph in 2nd.",
+       "T15 exit: 2 spins in 1st on the green paint.",
        "6A exit: 1 spin, throttle in 1st.",
-       "Best lap 0.237 s slower than A."
+       "Best lap 0.237 s slower than Run 1."
       ]
      },
      {
