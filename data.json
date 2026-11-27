@@ -2214,14 +2214,9 @@
       "Session B (Grokbot read): clean average 1:42.81, spread 1.92 s, tighter than 65. 3 spins (6A exit, T15 exit x2), no T12 curb spins (65 had 2). Later laps held up better. Not a new best."
      ],
      [
-      "All four tires 17.5",
-      "1:41.703 (practice board)",
-      "Same pace as 15 fronts. Stadium noticeably better (Brandon). Tire wear not known. No footage. Brake setting assumed 70, not confirmed."
-     ],
-     [
-      "Throttle Non Linear 70 + all four tires 17.5, new tires (online)",
+      "All four tires 17.5 + Throttle Non Linear 70 (Run 4, online)",
       "1:40.505 (lap 14)",
-      "New best by 0.962 s. Clean laps: 1:43.7 on worn 15/15 tires, 1:41.3 on new 17.5 tires. Stadium S5 18.2 s, the best yet. Cannot separate 17.5 psi from fresh tires. Two T1 exit offs and a 6A overshoot, none look like setup problems."
+      "New best by 0.962 s, but on new tires. Before the stop: 1:43.7 on worn tires. After: 1:42.0 then 1:40.505. Stadium S5 18.2 s, best yet. Earlier practice with only 17.5 tires gave 1:41.703, same pace as before, stadium felt better (no video). Cannot separate pressure, throttle and new tires."
      ]
     ],
     "theo": "1:39.5*",
@@ -2640,34 +2635,14 @@
       }
      },
      {
-      "id": "C",
-      "name": "Run 3 · Nov 26, tires 17.5",
-      "tag": "Run 3 · tires 17.5",
-      "setup": "Brake 70 (assumed) · wedge 51 · tires 17.5 all four",
-      "best": "1:41.703",
-      "clean": "",
-      "spread": "",
-      "src": "Your report and the practice board. No footage, Grokbot has not read it.",
-      "sectors": null,
-      "bestlap": null,
-      "spins": [],
-      "good": [
-       "Stadium ran much better: you stayed inside and were not carrying too much speed.",
-       "Passed cars in practice."
-      ],
-      "bad": [
-       "Not known. No footage and no tire % taken."
-      ]
-     },
-     {
       "id": "D",
       "name": "Run 4 · Nov 26, online race with brother",
-      "tag": "Run 4 · online",
-      "setup": "Throttle Non Linear 70 · Neutral · wedge 51 · tires 15/15/17.5/17.5, then all four 17.5 with 4 new tires at the stop. 25% race, 24 laps, 16 cars, tire wear and damage on.",
+      "tag": "Run 4 · 17.5 + throttle",
+      "setup": "All four tires 17.5, Throttle Non Linear 70, Braking 70, wedge 51, Neutral. First part on 15/15/17.5/17.5, then 17.5 on all four with new tires at the stop.",
       "best": "1:40.505",
       "clean": "1:42.47",
       "spread": "3.21 s",
-      "src": "Grokbot read of your 21 min video, 4 clean laps (8, 10, 13, 14). Sector splits about 0.3 s off, S6 and S7 about 0.7 s, so read S6 plus S7 together. The 17.5 tires and the new tires came at the same stop, so the gain cannot be split between them. Colors for S3 with S4 and S6 with S7 use each pair, since the pair sums are the reliable part.",
+      "src": "Grokbot read of the 21 min video, 4 clean laps. Includes your earlier practice with all four tires at 17.5 (1:41.703 on the board, no video, stadium felt better). The tire change and new tires came at the same stop, so the gain cannot be split. Sector splits are about 0.3 s off. S3 with S4 and S6 with S7 are colored as pairs.",
       "sectors": [
        {
         "id": "S1",
