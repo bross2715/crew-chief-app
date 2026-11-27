@@ -199,7 +199,7 @@
    "finish_label": "League race 7: qualified P8 (39.376), finished P10 of 16. Best race lap 39.408 (slowest of 15 recorded). Wrecked, cautions, black flag",
    "snaps": [
     {
-     "label": "MIC-05 · practice lap 20 · solo",
+     "label": "MIC-05 \u00b7 practice lap 20 \u00b7 solo",
      "setup": "15 / 15 / 15 / 15, wedge 45",
      "aero": 100,
      "engine": 100,
@@ -242,15 +242,15 @@
       }
      },
      "read": [
-      "Fronts wear faster: RF 44% and LF 50% against 59% on both rears 🟢",
-      "RF is the hottest tire and the worst on wear. Its three temps read 287, 267, 202, an 85 point spread. LF spread is 69, LR is 30, RR is only 14 🟢",
-      "Rears are cool and even, fronts are hot and uneven. Hypothesis: 15 PSI is overheating the fronts 🟠 (unproven, one stint, no other pressure to compare)",
+      "Fronts wear faster: RF 44% and LF 50% against 59% on both rears \ud83d\udfe2",
+      "RF is the hottest tire and the worst on wear. Its three temps read 287, 267, 202, an 85 point spread. LF spread is 69, LR is 30, RR is only 14 \ud83d\udfe2",
+      "Rears are cool and even, fronts are hot and uneven. Hypothesis: 15 PSI is overheating the fronts \ud83d\udfe0 (unproven, one stint, no other pressure to compare)",
       "Order of the three temps on the game panel was not read, so I show them as 1, 2, 3 as displayed",
       "Practice wear is 2x, same as the race, so the race will wear tires about like this stint (driver confirmed)"
      ]
     },
     {
-     "label": "MIC-06 · practice lap 41 · second stint on new tires",
+     "label": "MIC-06 \u00b7 practice lap 41 \u00b7 second stint on new tires",
      "setup": "15 / 17.5 / 15 / 15, wedge 45",
      "aero": 99,
      "engine": 100,
@@ -293,14 +293,14 @@
       }
      },
      "read": [
-      "Second stint, about 21 laps on new tires (tires and fuel are changed at the stop). Wear matches MIC-05 at lap 20 (LF 50, RF 44, LR 59, RR 59) 🟢",
-      "Earlier claim that MIC-06 halved tire wear was wrong. It compared a second stint to a first stint 🟢",
-      "RF temp 269 / 249 / 192 against 287 / 267 / 202 on MIC-05 at lap 20 🟢",
+      "Second stint, about 21 laps on new tires (tires and fuel are changed at the stop). Wear matches MIC-05 at lap 20 (LF 50, RF 44, LR 59, RR 59) \ud83d\udfe2",
+      "Earlier claim that MIC-06 halved tire wear was wrong. It compared a second stint to a first stint \ud83d\udfe2",
+      "RF temp 269 / 249 / 192 against 287 / 267 / 202 on MIC-05 at lap 20 \ud83d\udfe2",
       "Lap times were not recorded, so late stint pace is unproven. Order of the three temps on the panel was not read"
      ]
     },
     {
-     "label": "MIC-07 · practice lap 20 · after the incident",
+     "label": "MIC-07 \u00b7 practice lap 20 \u00b7 after the incident",
      "setup": "15 / 20 / 15 / 15, wedge 45",
      "aero": 82,
      "engine": 100,
@@ -343,13 +343,13 @@
       }
      },
      "read": [
-      "Wear at lap 20 matches MIC-05 (RF 45 against 44). Moving RF from 15 to 20 did not change wear 🟢",
+      "Wear at lap 20 matches MIC-05 (RF 45 against 44). Moving RF from 15 to 20 did not change wear \ud83d\udfe2",
       "Temps are low because the driver cooled the tires braking after a lock up and spin. Do not compare these temps",
       "Driver said 97% aero, 100% radiator and 47% fronts. The screenshot reads 82% aero, 93% radiator, LF 51 and RF 45, so it is a different moment or a misremembered number"
      ]
     },
     {
-     "label": "MIC-08 · practice lap 41 · second stint on new tires",
+     "label": "MIC-08 \u00b7 practice lap 41 \u00b7 second stint on new tires",
      "setup": "17.5 / 17.5 / 15 / 15, wedge 45",
      "aero": 95,
      "engine": 100,
@@ -392,14 +392,14 @@
       }
      },
      "read": [
-      "Best lap on the panel is 39.855, the fastest custom setup lap at Michigan so far 🟢",
-      "Lap 40 was 41.066, so late fade is still there 🟢",
-      "Wear after about 21 laps on new tires matches the other setups within a few points. RF 41 is the lowest so far 🟢",
-      "Driver reports a much better feel from the start, loose on the apron, 40.4s on lap 18 🟡"
+      "Best lap on the panel is 39.855, the fastest custom setup lap at Michigan so far \ud83d\udfe2",
+      "Lap 40 was 41.066, so late fade is still there \ud83d\udfe2",
+      "Wear after about 21 laps on new tires matches the other setups within a few points. RF 41 is the lowest so far \ud83d\udfe2",
+      "Driver reports a much better feel from the start, loose on the apron, 40.4s on lap 18 \ud83d\udfe1"
      ]
     },
     {
-     "label": "MIC-09 · practice lap 61 · third stint on new tires",
+     "label": "MIC-09 \u00b7 practice lap 61 \u00b7 third stint on new tires",
      "setup": "20 / 17.5 / 15 / 15, wedge 45",
      "aero": 99,
      "engine": 100,
@@ -442,14 +442,14 @@
       }
      },
      "read": [
-      "Wear after about 20 laps matches every other setup 🟢",
-      "Fronts ran cooler than MIC-08 (LF 223 against 236, RF 259 against 276) 🟢",
-      "Best lap on the panel is still 39.855 from the MIC-08 stint, so this stint set no new best 🟢",
-      "Driver reports 40.4 every lap from about lap 10 to 16 or 17 and a better feel 🟡. Lap 60 was 40.785"
+      "Wear after about 20 laps matches every other setup \ud83d\udfe2",
+      "Fronts ran cooler than MIC-08 (LF 223 against 236, RF 259 against 276) \ud83d\udfe2",
+      "Best lap on the panel is still 39.855 from the MIC-08 stint, so this stint set no new best \ud83d\udfe2",
+      "Driver reports 40.4 every lap from about lap 10 to 16 or 17 and a better feel \ud83d\udfe1. Lap 60 was 40.785"
      ]
     },
     {
-     "label": "Race · lap 77 of 100 · final stage lap 18",
+     "label": "Race \u00b7 lap 77 of 100 \u00b7 final stage lap 18",
      "setup": "MIC-08 values reported, race started on 50% Loose (base not confirmed)",
      "aero": 100,
      "engine": 100,
@@ -492,14 +492,14 @@
       }
      },
      "read": [
-      "Wear after 18 laps matches practice (about 50 / 44 / 59 / 59), except RR at 55 🟢",
-      "Rears and RF ran hotter than in practice: RR 221 / 209 / 200 against about 196 / 188 / 180, RF 304 against 276 🟢",
-      "Driver says the car got loose later in the race, worst in the final stage, and spun there 🟡. Hotter rears fit a sliding rear 🟠 (not proven)",
+      "Wear after 18 laps matches practice (about 50 / 44 / 59 / 59), except RR at 55 \ud83d\udfe2",
+      "Rears and RF ran hotter than in practice: RR 221 / 209 / 200 against about 196 / 188 / 180, RF 304 against 276 \ud83d\udfe2",
+      "Driver says the car got loose later in the race, worst in the final stage, and spun there \ud83d\udfe1. Hotter rears fit a sliding rear \ud83d\udfe0 (not proven)",
       "Setup and base preset used in the race are not confirmed"
      ]
     },
     {
-     "label": "MIC-10 · practice lap 20 · solo hot laps",
+     "label": "MIC-10 \u00b7 practice lap 20 \u00b7 solo hot laps",
      "setup": "17.5 / 17.5 / 15 / 17.5, wedge 45",
      "aero": 94,
      "engine": 100,
@@ -542,9 +542,9 @@
       }
      },
      "read": [
-      "Best wear logged at 20 laps: 53 / 48 / 61 / 61 against about 50 / 44 / 59 / 59 on earlier setups 🟢",
-      "Fronts cooler than MIC-08 (RF 259 / 235 / 186 against 276 / 250 / 193) 🟢",
-      "Best lap 39.802, lap 19 was 40.501 🟢. First two laps about 39.9 and 39.8 (driver reported) 🟡",
+      "Best wear logged at 20 laps: 53 / 48 / 61 / 61 against about 50 / 44 / 59 / 59 on earlier setups \ud83d\udfe2",
+      "Fronts cooler than MIC-08 (RF 259 / 235 / 186 against 276 / 250 / 193) \ud83d\udfe2",
+      "Best lap 39.802, lap 19 was 40.501 \ud83d\udfe2. First two laps about 39.9 and 39.8 (driver reported) \ud83d\udfe1",
       "No baseline stint in the same session, so track conditions and driving are confounded with RR 17.5. Solo laps, no cars. Aero 94 from wall hits, one 43.x lap"
      ]
     }
@@ -2109,7 +2109,7 @@
      "ty": 0.227
     },
     "k": 0.483,
-    "head": "Best 1:40.505 (Run 4) · theoretical about 1:39.3 (best sector pieces from all runs, plus or minus 0.5)",
+    "head": "Best 1:40.505 (Run 4) \u00b7 theoretical about 1:39.3 (best sector pieces from all runs, plus or minus 0.5)",
     "first": "1",
     "note": "Sector colors come from Grokbot's clean-lap numbers. Turn positions follow the official NASCAR National Course map.",
     "runs": [
@@ -2375,7 +2375,7 @@
       "id": "N24",
       "name": "Nov 24 practice",
       "tag": "Nov 24",
-      "setup": "Brake 75 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "setup": "Brake 75 \u00b7 wedge 51 \u00b7 Throttle Non Linear 60 \u00b7 tires 15/15/17.5/17.5",
       "best": "1:41.685",
       "clean": "1:43.1 to 1:43.4",
       "spread": "",
@@ -2502,9 +2502,9 @@
      },
      {
       "id": "A",
-      "name": "Run 1 · Nov 26, brake 65",
-      "tag": "Run 1 · brake 65",
-      "setup": "Brake 65 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "name": "Run 1 \u00b7 Nov 26, brake 65",
+      "tag": "Run 1 \u00b7 brake 65",
+      "setup": "Brake 65 \u00b7 wedge 51 \u00b7 Throttle Non Linear 60 \u00b7 tires 15/15/17.5/17.5",
       "best": "1:41.467",
       "clean": "1:42.87",
       "spread": "2.36 s",
@@ -2628,9 +2628,9 @@
      },
      {
       "id": "B",
-      "name": "Run 2 · Nov 26, brake 70",
-      "tag": "Run 2 · brake 70",
-      "setup": "Brake 70 · wedge 51 · Throttle Non Linear 60 · tires 15/15/17.5/17.5",
+      "name": "Run 2 \u00b7 Nov 26, brake 70",
+      "tag": "Run 2 \u00b7 brake 70",
+      "setup": "Brake 70 \u00b7 wedge 51 \u00b7 Throttle Non Linear 60 \u00b7 tires 15/15/17.5/17.5",
       "best": "1:41.704",
       "clean": "1:42.81",
       "spread": "1.92 s",
@@ -2786,8 +2786,8 @@
      },
      {
       "id": "D",
-      "name": "Run 4 · Nov 26, online race with brother",
-      "tag": "Run 4 · 17.5 + throttle",
+      "name": "Run 4 \u00b7 Nov 26, online race with brother",
+      "tag": "Run 4 \u00b7 17.5 + throttle",
       "setup": "All four tires 17.5, Throttle Non Linear 70, Braking 70, wedge 51, Neutral. First part on 15/15/17.5/17.5, then 17.5 on all four with new tires at the stop.",
       "best": "1:40.505",
       "clean": "1:42.47",
@@ -2940,6 +2940,268 @@
         "pro": "54 mph, 2nd"
        }
       }
+     }
+    ]
+   },
+   "corners": {
+    "k": 0.358,
+    "rawtotal": 5.79,
+    "rows": [
+     {
+      "t": "T1",
+      "dir": "L hairpin, uphill",
+      "raw": 1.23,
+      "sc": 0.44,
+      "st": "needs work",
+      "you": [
+       42,
+       1
+      ],
+      "pro": [
+       47,
+       2
+      ],
+      "tip": "Same brake point; let off the brake earlier and roll 46-47 through the top instead of dragging to 42 a second later, then squeeze throttle."
+     },
+     {
+      "t": "T2",
+      "dir": "R",
+      "raw": 0.56,
+      "sc": 0.2,
+      "st": "getting there",
+      "you": [
+       103,
+       3
+      ],
+      "pro": [
+       113,
+       4
+      ],
+      "tip": "No brake for either. The loss here is carried from the slow T1 exit: 103 in 3rd vs 113 in 4th."
+     },
+     {
+      "t": "T3",
+      "dir": "L",
+      "raw": 0.17,
+      "sc": 0.06,
+      "st": "locked in",
+      "you": [
+       120,
+       4
+      ],
+      "pro": [
+       123,
+       4
+      ],
+      "tip": "Close to the Pro Line. Peak before the lift is 128 vs 139 (carried from T1/T2)."
+     },
+     {
+      "t": "T4",
+      "dir": "R",
+      "raw": 0.03,
+      "sc": 0.01,
+      "st": "locked in",
+      "you": [
+       113,
+       4
+      ],
+      "pro": [
+       105,
+       3
+      ],
+      "tip": "Even. You stay in 4th and carry more mid-corner speed."
+     },
+     {
+      "t": "T5",
+      "dir": "L",
+      "raw": 0.0,
+      "sc": 0.0,
+      "st": "locked in",
+      "you": [
+       106,
+       4
+      ],
+      "pro": [
+       104,
+       3
+      ],
+      "tip": "Even. Red HUD warning icons light up from T4 to 6A on your lap (meaning CAN'T TELL; possibly track-limit warnings)."
+     },
+     {
+      "t": "T6",
+      "dir": "R",
+      "raw": -0.19,
+      "sc": -0.07,
+      "st": "locked in",
+      "you": [
+       102,
+       4
+      ],
+      "pro": [
+       97,
+       3
+      ],
+      "tip": "Small gain (within precision). Keep it."
+     },
+     {
+      "t": "6A",
+      "dir": "L hairpin",
+      "raw": 0.32,
+      "sc": 0.11,
+      "st": "small gain",
+      "you": [
+       52,
+       1
+      ],
+      "pro": [
+       53,
+       2
+      ],
+      "tip": "You start slowing ~1.3 s earlier (relative to the Pro Line's spot, guess) and reach the minimum early; exit 65 in 1st vs 72 in 2nd two seconds later. Brake at the Pro Line's spot, release smoothly, drive out."
+     },
+     {
+      "t": "6B",
+      "dir": "L",
+      "raw": 0.28,
+      "sc": 0.1,
+      "st": "small gain",
+      "you": [
+       82,
+       2
+      ],
+      "pro": [
+       92,
+       3
+      ],
+      "tip": "82 in 2nd vs 92 in 3rd. Back straight top speed 114 vs 125 follows from this exit."
+     },
+     {
+      "t": "T11",
+      "dir": "L",
+      "raw": 0.91,
+      "sc": 0.33,
+      "st": "getting there",
+      "you": [
+       40,
+       1
+      ],
+      "pro": [
+       55,
+       2
+      ],
+      "tip": "Arrive 7 mph slower but drop to 40 in 1st vs 55 in 2nd. Brake at the same spot, carry more speed to the apex and use the exit runoff."
+     },
+     {
+      "t": "T12",
+      "dir": "R",
+      "raw": 0.25,
+      "sc": 0.09,
+      "st": "small gain",
+      "you": [
+       47,
+       1
+      ],
+      "pro": [
+       52,
+       2
+      ],
+      "tip": "Small loss; 47 in 1st vs 52 in 2nd."
+     },
+     {
+      "t": "T13",
+      "dir": "R",
+      "raw": null,
+      "sc": null,
+      "st": "not read",
+      "you": [
+       75,
+       2
+      ],
+      "pro": [
+       93,
+       2
+      ],
+      "tip": "No separate read."
+     },
+     {
+      "t": "T14",
+      "dir": "not identified",
+      "raw": null,
+      "sc": null,
+      "st": "not read",
+      "you": [
+       null,
+       null
+      ],
+      "pro": [
+       null,
+       null
+      ],
+      "tip": "Fan-map T14 not separately identified in the video (CAN'T TELL)."
+     },
+     {
+      "t": "T15",
+      "dir": "L",
+      "raw": 0.74,
+      "sc": 0.27,
+      "st": "getting there",
+      "you": [
+       41,
+       1
+      ],
+      "pro": [
+       51,
+       2
+      ],
+      "tip": "You brake ~0.75 s later than the Pro Line's spot (guess) and your minimum comes ~0.8 s later: 41 in 1st vs 51 in 2nd. Brake earlier, carry 48-50, then partial throttle."
+     },
+     {
+      "t": "T16-T18",
+      "dir": "R carousel",
+      "raw": 0.53,
+      "sc": 0.19,
+      "st": "getting there",
+      "you": [
+       91,
+       3
+      ],
+      "pro": [
+       95,
+       4
+      ],
+      "tip": "Hug the inside curb in 4th like the Pro Line; 91 in 3rd vs 95 in 4th."
+     },
+     {
+      "t": "T19",
+      "dir": "L",
+      "raw": 0.76,
+      "sc": 0.27,
+      "st": "getting there",
+      "you": [
+       73,
+       2
+      ],
+      "pro": [
+       96,
+       3
+      ],
+      "tip": "73 in 2nd vs 96 in 3rd: brake lighter and shorter, cut the inside, run out onto the runoff."
+     },
+     {
+      "t": "T20",
+      "dir": "L",
+      "raw": 0.2,
+      "sc": 0.07,
+      "st": "locked in",
+      "you": [
+       47,
+       1
+      ],
+      "pro": [
+       55,
+       2
+      ],
+      "tip": "Clip the inside curb and use the exit curb; 47 in 1st vs 55 in 2nd."
      }
     ]
    }
@@ -4387,7 +4649,7 @@
     "lap_of": 15
    },
    "narrative": {
-    "tag": "🟡 driver reported, hub numbers 🟢",
+    "tag": "\ud83d\udfe1 driver reported, hub numbers \ud83d\udfe2",
     "setup": "Wheel (G923). Wedge 47 all race (driver). Brother (car 15, controller) ran MIC-10 pressures, wedge 45, and had the third-fastest race lap.",
     "bridge": "Practice on the wheel: pack laps 39.1 to 39.5, qualifying 39.457 P22 (AI 104). League: qualified 39.376 P8, best race lap 39.408, 15th of 15. League packs run faster than practice AI, so practice pack laps overstated race pace.",
     "worked": [
@@ -4418,56 +4680,56 @@
    "evidence": "League race 7: restart mistake started the chain that cost the race. Cold tires and a loose car on the low side.",
    "drill": "Middle or high lane, light throttle until the tires are up to temperature.",
    "status": "open",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   },
   {
    "issue": "Green flag pit stops",
    "evidence": "Michigan practice race: wrecked leaving pit road on a green flag stop. Second practice race: the caution came before you could practice one.",
    "drill": "Entry and exit only: brake early, hold the limiter, exit clean. Do 3 reps in practice.",
    "status": "open",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   },
   {
    "issue": "Spin recovery",
    "evidence": "League race 7: stayed on the throttle in a spin and got a black flag, down a lap.",
    "drill": "Lift fully, let the car stop, then go.",
    "status": "open",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   },
   {
    "issue": "Race pace in the pack",
    "evidence": "Michigan: best race lap 39.408 was 15th of 15, field best 38.611, median 39.036. Practice AI laps ran faster than the league pack.",
    "drill": "Judge pace against league race laps, not practice AI. Log pack and solo laps separately.",
    "status": "open",
-   "tag": "🟢"
+   "tag": "\ud83d\udfe2"
   },
   {
    "issue": "Controller or wheel",
    "evidence": "Michigan: wheel is faster solo (39.376 to 39.457 against 39.599) and slower in the pack (39.1 to 39.5 against about 38.8). COTA so far: every clip is the DualSense. The G923 has not been tested at COTA",
    "drill": "Ovals: controller unless the wheel proves pack parity. COTA: stay on the DualSense until the setup settles, then run a matched 8 lap wheel test",
    "status": "testing",
-   "tag": "🟠"
+   "tag": "\ud83d\udfe0"
   },
   {
    "issue": "Exit step-outs in 1st (T11, T1, T15)",
    "evidence": "COTA clips 3 and 4: T15 clean on every timed lap. T11 exit lost the car 3 times in clip 3, clean in clip 4. T1 exit spun in clip 3 lap 8 and clip 4 lap 11. All in 1st gear with throttle added before the wheel was straight (Grokbot, inputs inferred)",
    "drill": "About a quarter throttle until the wheel unwinds, then build it. Same trick that fixed T15. Right tires off the green paint",
    "status": "improving",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   },
   {
    "issue": "Corner cuts (T5/T6)",
    "evidence": "COTA clips: two corner cut penalties, one 9 s stop on the 1:51.022 lap (Grokbot)",
    "drill": "Keep at least two wheels on the track. Cut slightly less each lap until the popup stops",
    "status": "open",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   },
   {
    "issue": "Lap consistency",
    "evidence": "COTA throttle 60 clips: best 1:41.685 but laps ranged to 1:55.768 in clip 3. Clean laps average 1:43.1 to 1:43.4, so the best lap is 1.4 to 1.7 s better than a typical clean lap",
    "drill": "Run 10 timed laps with no setup change. Judge on the median clean lap and the count of clean laps, not the best lap",
    "status": "open",
-   "tag": "🟡"
+   "tag": "\ud83d\udfe1"
   }
  ],
  "updated": "2026-11-27"
