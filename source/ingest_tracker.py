@@ -14,7 +14,7 @@ META = {
     'R7R': ('Run 7', 'race', True),
 }
 K = {'S1': 'S1', 'S2': 'S2', 'S3-4': 'S3+S4', 'S5': 'S5', 'S6-7': 'S6+S7'}
-LEAGUE_SCALE = 1.03919  # Pro Line sector x this = the league target
+LEAGUE_SCALE = 98.8 / 94.717  # Pro Line group sum x this = 1:38.8, Brandon's target lap (Grokbot best-3 average, DE-28)
 
 def main(path):
     tk = json.load(open(path))

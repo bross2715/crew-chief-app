@@ -1,0 +1,74 @@
+{
+ "T1": {
+  "name": "Uphill hairpin",
+  "features": "The outside of the hairpin has broad painted runoff. The downhill exit curb is a useful landmark for throttle pickup."
+ },
+ "T2": {
+  "name": "Downhill right",
+  "features": "The sweeping right follows the T1 downhill exit. The inside curb and the longer outside runoff run through different parts of the arc."
+ },
+ "T3": {
+  "name": "Esses entry",
+  "features": "This left starts the esses. The red, white and blue runoff outside the bend continues toward T5."
+ },
+ "T4": {
+  "name": "Esses right",
+  "features": "The right-hand apex sits opposite the red outside paint. Gold marks a documented real-event turtle zone with approximate placement."
+ },
+ "T5": {
+  "name": "Esses left",
+  "features": "The curb, green paint and adjacent tricolor runoff are distinct surfaces. Gold marks the approximate real-event turtle zone."
+ },
+ "T6": {
+  "name": "Long right",
+  "features": "The long right leads into the 6A shortcut. Blue runoff and the red-and-white curb are distinct surfaces. The turtle zone is approximate."
+ },
+ "6A": {
+  "name": "Shortcut hairpin",
+  "features": "The sharp left leaves the Grand Prix route toward 6B. The approach fans out and the shortcut pavement changes shade. Surface edges here are schematic."
+ },
+ "6B": {
+  "name": "Back-straight merge",
+  "features": "The shortcut turns left onto the back straight. Local curb and runoff placement are approximate."
+ },
+ "T12": {
+  "name": "Back-straight braking",
+  "features": "The back straight feeds the left into the stadium. Broad red, white and blue runoff sits outside the braking corner."
+ },
+ "T13": {
+  "name": "Stadium right",
+  "features": "The first stadium right wraps the end of the straight from T12. Green runoff sits outside the bending section."
+ },
+ "T14": {
+  "name": "Stadium transition",
+  "features": "This short right transitions toward T15. The tight spacing makes the green paint and curb easy to confuse in an onboard view."
+ },
+ "T15": {
+  "name": "Stadium hairpin",
+  "features": "The left hairpin wraps around the painted stadium runoff, then leads toward the carousel."
+ },
+ "T16": {
+  "name": "Carousel entry",
+  "features": "First part of the continuous right-hand carousel. The outer tricolor runoff starts on the approach."
+ },
+ "T17": {
+  "name": "Carousel center",
+  "features": "Middle of the continuous right-hand carousel. The inside curb and outer tricolor runoff carry through the arc."
+ },
+ "T18": {
+  "name": "Carousel exit",
+  "features": "Final part of the carousel before the run to T19. The painted outside shoulder continues down the exit."
+ },
+ "T16\u2013T18": {
+  "name": "Carousel",
+  "features": "Read the three right-hand apex zones in sequence. The shared colored runoff follows the outer arc."
+ },
+ "T19": {
+  "name": "Late left",
+  "features": "The late left leads across to the final corner. Approaching from the carousel, pick up the inside curb and outside exit paint."
+ },
+ "T20": {
+  "name": "Final left",
+  "features": "The final left opens onto the front straight. The outside exit curb follows the direction of travel."
+ }
+}
