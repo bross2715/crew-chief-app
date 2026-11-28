@@ -504,7 +504,7 @@ function tick(now){if(!document.getElementById("rpl"))return;if(RP.last&&RP.play
 Array.prototype.forEach.call(el.querySelectorAll("[data-rp]"),function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-rp");if(k==="play"){RP.play=!RP.play;b.textContent=RP.play?"Pause":"Play"}else{RP.spd=+k;Array.prototype.forEach.call(el.querySelectorAll("[data-rp]"),function(q){q.classList.toggle("on",q.getAttribute("data-rp")===k)})}})});
 draw();RP.raf=requestAnimationFrame(tick)}
 new MutationObserver(function(){replayInit()}).observe(document.getElementById("main"),{childList:true,subtree:true});
-var SECN={S1:"T1",S2:"T2 to T6",S3:"6A and 6B",S4:"the back straight and T11",S5:"T12 to T15",S6:"T16 to T18",S7:"T19 and T20"};
+var SECN={S1:"T1",S2:"T2 to T6",S3:"6A and 6B",S4:"the back straight and T12",S5:"T13 to T15",S6:"T16 to T18",S7:"T19 and T20"};
 function secOf(r,id){return r.sectors.filter(function(x){return x.id===id})[0]}
 function rq(run,id){return run.sectors?run.sectors.filter(function(x){return x.id===id})[0]:null}
 function secWords(run,id){var q=rq(run,id);if(!q)return'';var g=q.mean-q.target,v={green:"You are <b class=g>fast</b> here.",amber:"You are <b class=g>close</b> here.",orange:"You are a <b class=o>little slow</b> here.",red:"You are <b class=r>slow</b> here."}[q.tier];
@@ -549,7 +549,7 @@ var UN=[["S1"],["S2"],["S3","S4"],["S5"],["S6","S7"]];
 function unGap(run,u){var g=0;u.forEach(function(id){var q=rq(run,id);if(q)g+=q.mean-q.target});return g}
 function secSum(run,k){var v=0;run.sectors.forEach(function(q){v+=k==="m"?q.mean:q.target});return v}
 function proj(t){var R=t.crew.runs.filter(function(x){return x.sectors}),L=R[R.length-1],typ=secSum(L,"m"),g=UN.map(function(u){return[u.join("+"),unGap(L,u)]}).filter(function(x){return x[1]>.05}).sort(function(a,b){return b[1]-a[1]}),rows=[],h=typ,a=typ;g.forEach(function(x){h-=x[1]/2;a-=x[1];rows.push([x[0],x[1],h,a])});return{typ:typ,rows:rows,L:L,R:R}}
-function bestStitch(R){var tot=0,from=[];UN.forEach(function(u){var b=1e9;R.forEach(function(x){if(!x.bestlap)return;var v=0;u.forEach(function(id){v+=x.bestlap.filter(function(y){return y.id===id})[0].t});if(v<b)b=v});tot+=b});return tot}
+function bestStitch(R){var tot=0,from=[];UN.forEach(function(u){var b=1e9;R.forEach(function(x){if(!x.bestlap)return;if(x.nst&&x.nst.some(function(i){return u.indexOf(i)>=0}))return;var v=0;u.forEach(function(id){v+=x.bestlap.filter(function(y){return y.id===id})[0].t});if(v<b)b=v});tot+=b});return tot}
 function gameTiles(t){var P=proj(t),L=P.L,prev=P.R[P.R.length-2],gr=L.sectors.filter(function(q){return q.tier==="green"}).length,fa=0,fb=0;UN.forEach(function(u){var g=unGap(L,u);if(g>0)fa+=g;if(prev){var h=unGap(prev,u);if(h>0)fb+=h}});
 return'<div class="card"><div class="lbl">The game<em>fill every sector green</em></div><div class="big3"><div><small>Green sectors</small><b class="'+(gr?'g':'')+'">'+gr+' of 7</b></div><div><small>Time to find</small><b>'+fa.toFixed(1)+' s</b></div><div><small>Since last run</small><b class="'+(prev&&fa<fb?'g':'')+'">'+(prev?(fa<=fb?'-':'+')+Math.abs(fa-fb).toFixed(1)+' s':'n/a')+'</b></div></div><div class="mut sm" style="margin-top:8px">Time to find is how many seconds a lap you give away to the target in your slow sectors. Lower is better, zero is all green.</div></div>'}
 function lapTxt(v){return fmtT(v)}
