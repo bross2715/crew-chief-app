@@ -1,14 +1,13 @@
-"""Snap every corner line onto the drawn track ribbon and smooth it in (distance, lateral) space.
-Reads raw lines from source/raw_lines.json (created on first run from data.json), writes tg/you/pro back to data.json.
-Each output line: s=[[style,[[x,y]...]]...] at 2 m spacing, a0=start distance along the ribbon, st=2.
+"""Snap every corner line onto the drawn track ribbon, smooth it in (distance, lateral) space, and extend it
+over the whole ribbon piece (borrowing the other line where it has no read, else holding its last side).
+Reads raw lines from source/raw_lines.json; writes tg/you/pro + smoothed cl back to data.json.
+Each output line: s=[[style,[[x,y]...]]...] at 2 m spacing, a0=0, st=2, covered parts solid, extended parts grey_dotted.
 Usage: python3 -I source/smooth_lines.py"""
-import json,math,os
+import json,math
 ST=2.0; CLAMP=9.0; SIG=6.0
 D=json.load(open('data.json')); t=[x for x in D['tracks'] if x['track']=='COTA'][0]; G=t['corners']['geo']
-RAW='source/raw_lines.json'
-if not os.path.exists(RAW):
-    json.dump({k:dict({n:G[k][n] for n in('tg','you','pro') if n in G[k]},cl=G[k]['cl']) for k in G},open(RAW,'w'),separators=(',',':'))
-R=json.load(open(RAW))
+R=json.load(open('source/raw_lines.json'))
+STY={'tg':'green_solid','you':'orange_dashed','pro':'white_solid'}
 def smooth_cl(cl,step=2.0,sig=10.0):
     cum=[0.0]
     for i in range(1,len(cl)): cum.append(cum[-1]+math.hypot(cl[i][0]-cl[i-1][0],cl[i][1]-cl[i-1][1]))
@@ -16,10 +15,9 @@ def smooth_cl(cl,step=2.0,sig=10.0):
     for k in range(n):
         a=k*step
         while j<len(cum)-2 and cum[j+1]<a:j+=1
-        u=(a-cum[j])/((cum[j+1]-cum[j]) or 1);u=max(0,min(1,u));pts.append([cl[j][0]+u*(cl[j+1][0]-cl[j][0]),cl[j][1]+u*(cl[j+1][1]-cl[j][1])])
+        u=max(0,min(1,(a-cum[j])/((cum[j+1]-cum[j]) or 1)));pts.append([cl[j][0]+u*(cl[j+1][0]-cl[j][0]),cl[j][1]+u*(cl[j+1][1]-cl[j][1])])
     pts.append(list(cl[-1]))
-    K=int(sig*2.5/step);ker=[math.exp(-.5*((i*step)/sig)**2) for i in range(-K,K+1)];out=[]
-    m=len(pts)
+    K=int(sig*2.5/step);ker=[math.exp(-.5*((i*step)/sig)**2) for i in range(-K,K+1)];out=[];m=len(pts)
     for k in range(m):
         sx=sy=w=0
         for i,kv in enumerate(ker):
@@ -46,59 +44,73 @@ def at(a,cl,cum):
     while i<len(cum)-2 and cum[i+1]<a:i+=1
     L=cum[i+1]-cum[i] or 1e-9;u=(a-cum[i])/L;dx,dy=cl[i+1][0]-cl[i][0],cl[i+1][1]-cl[i][1];n=math.hypot(dx,dy) or 1
     return cl[i][0]+u*dx,cl[i][1]+u*dy,-dy/n,dx/n
-def lane(sgs,cl,cum):
-    pts=[];sty=[]
-    for st,P in sgs:
-        for q in P: pts.append(q);sty.append(st=='grey_dotted')
-    pr=[project(q,cl,cum) for q in pts]
-    fwd=pr[-1][0]-pr[0][0]
-    if fwd<0: pr=pr[::-1];sty=sty[::-1]
-    A=[];O=[];S=[];m=-1e9
-    for (a,o),d in zip(pr,sty):
-        m=max(m,a);A.append(m);O.append(o);S.append(d)
-    # collapse equal a
-    ua=[];uo=[];us=[]
-    for a,o,d in zip(A,O,S):
-        if ua and abs(a-ua[-1])<.5: uo[-1]=(uo[-1]+o)/2;us[-1]=us[-1] and d;continue
-        ua.append(a);uo.append(o);us.append(d)
-    if len(ua)<2: return None
-    a0=math.ceil(ua[0]/ST)*ST;a1=math.floor(ua[-1]/ST)*ST;n=int((a1-a0)/ST)+1
-    if n<3: return None
-    G2=[];D2=[];j=0
-    for k in range(n):
-        a=a0+k*ST
-        while j<len(ua)-2 and ua[j+1]<a:j+=1
-        w=(a-ua[j])/((ua[j+1]-ua[j]) or 1);o=uo[j]+(uo[j+1]-uo[j])*max(0,min(1,w));G2.append(max(-CLAMP,min(CLAMP,o)));D2.append(us[j] and us[j+1])
-    K=int(SIG*2.5/ST);ker=[math.exp(-.5*((i*ST)/SIG)**2) for i in range(-K,K+1)];sm=[]
+def gsm(v,sig):
+    n=len(v);K=int(sig*2.5/ST);ker=[math.exp(-.5*((i*ST)/sig)**2) for i in range(-K,K+1)];out=[]
     for k in range(n):
         s=w=0
         for i,kv in enumerate(ker):
             q=k+i-K
-            if 0<=q<n:s+=kv*G2[q];w+=kv
-        sm.append(s/w)
-    sm[0]=G2[0]*.5+sm[0]*.5;sm[-1]=G2[-1]*.5+sm[-1]*.5
-    xy=[]
-    for k in range(n):
-        x,y,nx,ny=at(a0+k*ST,cl,cum);xy.append([round(x+sm[k]*nx,2),round(y+sm[k]*ny,2)])
-    segs=[];cur=[xy[0]];cd=D2[0]
-    for k in range(1,n):
-        if D2[k]==cd:cur.append(xy[k])
-        else:
-            cur.append(xy[k]);segs.append([('grey_dotted' if cd else 'X'),cur]);cur=[xy[k]];cd=D2[k]
-    segs.append([('grey_dotted' if cd else 'X'),cur])
-    return a0,segs,max(abs(v) for v in sm)
-rep={}
+            if 0<=q<n:s+=kv*v[q];w+=kv
+        out.append(s/w)
+    return out
+def read(sgs,cl,cum,n):
+    """own offsets on the full 2 m grid (None where no read)"""
+    pts=[q for st,P in sgs for q in P]
+    pr=[project(q,cl,cum) for q in pts]
+    if pr[-1][0]-pr[0][0]<0: pr=pr[::-1]
+    A=[];O=[];m=-1e9
+    for a,o in pr:
+        m=max(m,a)
+        if A and abs(m-A[-1])<.5: O[-1]=(O[-1]+o)/2;continue
+        A.append(m);O.append(o)
+    if len(A)<2: return None
+    i0=int(math.ceil(A[0]/ST));i1=int(math.floor(A[-1]/ST))
+    if i1-i0<2: return None
+    off=[None]*n;j=0
+    for k in range(max(0,i0),min(n-1,i1)+1):
+        a=k*ST
+        while j<len(A)-2 and A[j+1]<a:j+=1
+        w=max(0,min(1,(a-A[j])/((A[j+1]-A[j]) or 1)));off[k]=max(-CLAMP,min(CLAMP,O[j]+(O[j+1]-O[j])*w))
+    cov=[k for k in range(n) if off[k] is not None]
+    sm=gsm([off[k] for k in cov],SIG)
+    for idx,k in enumerate(cov):off[k]=sm[idx]
+    return off
+def extend(off,other,n):
+    """fill None: borrow other's offsets (continuity-corrected), else hold-and-ease; returns offsets, dotted flags"""
+    cov=[o is not None for o in off];out=list(off);dot=[not c for c in cov]
+    first=cov.index(True);last=n-1-cov[::-1].index(True)
+    for side,rng in((-1,range(first-1,-1,-1)),(1,range(last+1,n))):
+        edge=first if side<0 else last
+        eo=off[edge];oo=other[edge] if other and other[edge] is not None else None
+        for k in rng:
+            d=abs(k-edge)*ST
+            if other and other[k] is not None:
+                base=other[k]+((eo-oo) if oo is not None else 0)*math.exp(-d/20.0)
+            else:
+                base=eo*(0.6+0.4*math.exp(-d/40.0))
+            out[k]=base
+    # smooth extended zones lightly so joins are clean
+    sm=gsm(out,3.0)
+    return [max(-CLAMP,min(CLAMP,v)) for v in sm],dot
+rep=0;mo=0
 for k,g in G.items():
-    cl=smooth_cl(R[k]['cl']);cum=prep(cl);g['cl']=cl
-    for name,sty in(('tg','green_solid'),('you','orange_dashed'),('pro','white_solid')):
-        raw=R.get(k,{}).get(name)
-        if not raw: continue
-        out=lane(raw['s'],cl,cum)
-        if not out: continue
-        a0,segs,mo=out
-        for s in segs:
-            if s[0]=='X': s[0]=sty
-        g[name]={'s':segs,'a0':a0,'st':ST}
-        rep[(k,name)]=(len(segs),round(mo,1))
+    cl=smooth_cl(R[k]['cl']);cum=prep(cl);g['cl']=cl;n=int(cum[-1]/ST)+1
+    own={nm:(read(R[k][nm]['s'],cl,cum,n) if nm in R[k] else None) for nm in STY}
+    for nm in STY:
+        off=own[nm]
+        if off is None: continue
+        other=own['tg'] if nm!='tg' else own['you']
+        if nm=='pro': other=own['tg']
+        oo,dot=extend(off,other,n)
+        xy=[]
+        for kk in range(n):
+            x,y,nx,ny=at(kk*ST,cl,cum);xy.append([round(x+oo[kk]*nx,2),round(y+oo[kk]*ny,2)])
+        segs=[];cur=[xy[0]];cd=dot[0]
+        for kk in range(1,n):
+            if dot[kk]==cd:cur.append(xy[kk])
+            else:
+                cur.append(xy[kk]);segs.append(['grey_dotted' if cd else STY[nm],cur]);cur=[xy[kk]];cd=dot[kk]
+        segs.append(['grey_dotted' if cd else STY[nm],cur])
+        g[nm]={'s':segs,'a0':0.0,'st':ST};rep+=1;mo=max(mo,max(abs(v) for v in oo))
 json.dump(D,open('data.json','w'),separators=(',',':'),ensure_ascii=False)
-print(len(rep),'lines smoothed; max |offset| m:',max(v[1] for v in rep.values()))
+print(rep,'lines, max |offset| m',round(mo,1))
