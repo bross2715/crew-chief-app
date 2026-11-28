@@ -33,7 +33,8 @@ for name,gk,members,label in GROUPS:
     ssum=sum(r['sc'] for r in mem if r.get('sc') is not None)
     tip=("You lose %.2f s a lap in this whole section (%.1f%% over the target, median of every lap in your last race, +-0.5 s). Slowest points, you against the Pro Line: %s. "
          "The single turn gaps add to only %.2f s, so they read low: they come from one lap each. Trust this section number."%(gap,pct,per,ssum))
-    cg[name]={'combo':True,'label':label,'dir':'','st':stt,'cl':cl,'eh':eh,'tgmph':None,'tw':tw,'yw':yw,'fix':tip,
+    mk=[m for q in members for m in (C['geo'].get(q,{}).get('mk') or [])]
+    cg[name]={'combo':True,'mk':mk,'label':label,'dir':'','st':stt,'cl':cl,'eh':eh,'tgmph':None,'tw':tw,'yw':yw,'fix':tip,
         'tg':{'s':segs(sl(fl['tg']),ftg,'green_solid'),'a0':0.0,'st':st},'you':{'s':segs(sl(fl['you']),fyo,'orange_dashed'),'a0':0.0,'st':st}}
     cr.append({'t':name,'dir':'','raw':None,'sc':round(gap,2),'st':stt,'you':ymin,'pro':pmin,'tip':tip,'combo':True,'label':label})
 C['cg']=cg;C['cr']=cr
